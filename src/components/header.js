@@ -12,7 +12,6 @@ import {
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types';
-import { PlayCircleFilledWhite } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -21,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 	buttons: {
 		color: 'white',
-		padding: 20
+		padding: 20,
+		fontWeight: 'bold'
 	},
 	logo: {
 		marginRight: 20,
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-const Header = ({ menuLinks, titleLink }) => {
+const Header = ({ menuLinks }) => {
 	const classes = useStyles();
 	
 	const theme = useTheme()
@@ -91,6 +91,7 @@ const Header = ({ menuLinks, titleLink }) => {
 						onClose={handleClose}
 						>
 						{menuLinks.map((item, i) => (
+							
 							<Link className={classes.link} to={item.link} key={i}>
 								<MenuItem className={classes.menuItem} onClick={handleClose}>
 									{item.name}
@@ -116,7 +117,7 @@ const Header = ({ menuLinks, titleLink }) => {
 					</Link>
 					{menuLinks.map((item, i) => (
 						<Link className={classes.link} to={item.link} key={i}>
-						<Button size='large' className={classes.buttons}>{item.link}</Button>
+						<Button size='large' className={classes.buttons}>{item.name}</Button>
 						</Link>
 					))}
 				</>)
