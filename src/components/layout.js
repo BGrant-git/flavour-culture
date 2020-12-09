@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
+import Navbar from './Navbar/navbar'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -31,7 +31,7 @@ const Layout = ({ children }) => (
           ]}
         >
         </Helmet>
-        <Header titleLink={data.site.siteMetadata.titleLink} menuLinks={data.site.siteMetadata.menuLinks} />
+        <Navbar titleLink={data.site.siteMetadata.titleLink} menuLinks={data.site.siteMetadata.menuLinks} />
         <div
           style={{
             margin: '0 auto'
