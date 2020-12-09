@@ -1,13 +1,9 @@
-import React, { useState, createContext } from "react"
-import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core/styles'
-import { Grid } from '@material-ui/core'
-import './index.css'
-
-// import Header from '../components/header'
-import Layout from '../components/layout'
+import React from "react"
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
   root: {
+    
   }
 })
 
@@ -15,15 +11,7 @@ const Index = () => {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
-
-      <Layout>
-        
-      </Layout>
-      {/* <Header /> */}
-      
-
-    </div>
+    <div>Hello World!</div>
   )
   
 }
