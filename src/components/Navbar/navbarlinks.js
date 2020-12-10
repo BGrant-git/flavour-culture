@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const NavItem = styled(Link)`  
+const NavItem = styled.div`  
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
@@ -35,12 +35,18 @@ const NavItem = styled(Link)`
     z-index: 6;
   }
 `
+
+const Links = styled(Link)`
+  text-decoration: none;
+  color: black;
+`
+
 const NavbarLinks = ({ menuLinks }) => {
   return (
     <>    
       {menuLinks.map((item, i) => (
         <NavItem key={i}>
-          <Link style={{textDecoration:'none',color:'black'}} to={item.link}>{item.name}</Link>
+          <Links to={item.link}>{item.name}</Links>
         </NavItem>
       ))}
     </>
