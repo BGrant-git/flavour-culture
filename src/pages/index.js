@@ -1,6 +1,6 @@
 import React from "react"
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
-import './index.css'
+import './css/index.css'
 
 import Layout from '../components/layout'
 import Home from '../components/homepage/home'

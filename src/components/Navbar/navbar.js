@@ -5,13 +5,12 @@ import { Link } from 'gatsby'
 import NavbarLinks from './navbarlinks'
 
 const Navigation = styled.nav`
-  height: 10vh;
+  height: 7vh;
   display: flex;
   background-color: #fff;
   position: relative;
   justify-content: space-between;
   text-transform: uppercase;
-  border-bottom: 2px solid #33333320;
   margin: 0 auto;
   padding: 0;
   z-index: 2;
@@ -95,8 +94,8 @@ const Title = styled.div`
   align-items: center;
   padding-left: 15px;
   text-decoration: none;
-  min-width: 300px;
-  font-size: 30px;
+  min-width: 400px;
+  font-size: 25px;
 `
 
 const Navbar = ({ menuLinks }) => {
@@ -123,7 +122,7 @@ const Navbar = ({ menuLinks }) => {
           <NavbarLinks menuLinks={menuLinks} />                   
         </Navbox>
       ) : (
-        <Navbox open style={{marginRight:'90%'}}>          
+        <Navbox open style={{marginRight:'60%'}}>          
           <NavbarLinks menuLinks={menuLinks} />          
         </Navbox>
       )}
