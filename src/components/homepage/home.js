@@ -1,16 +1,16 @@
 import React from 'react';
 
-import HomeMob from './homeMob'
-import HomeDesk from './homeDesk'
+import HomeMobile from './homeMobile'
+import HomeDesktop from './homeDesktop'
 
 const Home = ({ isMobile}) => {
 
 	return (
 		<>
 			{isMobile ? 
-				<HomeMob /> 
+				<HomeMobile /> 
 				:
-				<HomeDesk />	
+				<HomeDesktop />	
 			}
 		</>
 	);

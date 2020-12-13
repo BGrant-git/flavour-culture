@@ -48,7 +48,7 @@ const images = [
   },
 ];
 
-const HomeDesk = () => {
+const HomeDesktop = () => {
 	return (
 		<Grid columns={2} >
 			<CardContainer>
@@ -77,4 +77,4 @@ const HomeDesk = () => {
 	);
 }
  
-export default HomeDesk;
+export default HomeDesktop;
