@@ -1,29 +1,19 @@
-import React, { useState, createContext } from "react"
-import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core/styles'
-import { Grid } from '@material-ui/core'
-import './index.css'
+import React from "react"
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
+import './css/index.css'
 
-// import Header from '../components/header'
 import Layout from '../components/layout'
-
-const useStyles = makeStyles({
-  root: {
-  }
-})
+import Home from '../components/homepage/home'
 
 const Index = () => {
-  const classes = useStyles()
+
+  const breakpoints = useBreakpoint()
+	const isMobile = breakpoints.sm
 
   return (
-    <div className={classes.root}>
-
-      <Layout>
-        
-      </Layout>
-      {/* <Header /> */}
-      
-
-    </div>
+    <Layout>
+      <Home isMobile={isMobile} />
+    </Layout>
   )
   
 }
