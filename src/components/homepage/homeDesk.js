@@ -68,6 +68,7 @@ const HomeDesk = () => {
 							showThumbnails={false}
 							showFullscreenButton={false}
 							autoPlay={true}
+							showPlayButton={false}
 						/>
 					</HeroImgCard>
 				</ColumnWrapper>
