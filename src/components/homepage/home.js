@@ -1,16 +1,19 @@
 import React from 'react';
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
-import HomeMob from './homeMob'
-import HomeDesk from './homeDesk'
+import HomeMobile from './homeMobile'
+import HomeDesktop from './homeDesktop'
 
-const Home = ({ isMobile}) => {
+const Home = () => {
+
+	const breakpoints = useBreakpoint()
 
 	return (
 		<>
-			{isMobile ? 
-				<HomeMob /> 
+			{breakpoints.sm ? 
+				<HomeMobile /> 
 				:
-				<HomeDesk />	
+				<HomeDesktop />	
 			}
 		</>
 	);

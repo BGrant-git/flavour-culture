@@ -21,12 +21,13 @@ module.exports = {
       {
         name: 'Locations',
         link: '/locations'
-      },
+      }
     ]
   },
   plugins: [
     `gatsby-plugin-breakpoints`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

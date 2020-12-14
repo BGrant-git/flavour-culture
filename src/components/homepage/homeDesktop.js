@@ -4,33 +4,28 @@ import ImageGallery from 'react-image-gallery'
 
 import Grid from '../gridComponent'
 
-
 const ColumnWrapper = styled.div`
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-`
-
-const CardContainer = styled.div`
-	display: flex;
-	align-items: center;
+	margin-bottom: 5px;
+	width: 100%;
 `
 
 const HeroTextCard = styled.div`
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	flex-direction: column;
 	height: 500px;
 	width: 45vw;
+	padding: 0 1vw 0 3vw;
 `
 
 const HeroImgCard = styled.div`	
 	width: 55vw;
-`
-
-const HeroText = styled.div`
-	padding: 0 15px 0 5vw;
+	justify-content: flex-start;
+	align-items: center;
 `
 
 const images = [
@@ -48,21 +43,18 @@ const images = [
   },
 ];
 
-const HomeDesk = () => {
+const HomeDesktop = () => {
 	return (
 		<Grid columns={2} >
-			<CardContainer>
 				<ColumnWrapper>			
 					<HeroTextCard>
-						<HeroText>
-							<h3>AWARD WINNING FOOD</h3>
-							<h1 style={{fontSize:35,paddingBottom:15}}>Lorem ipsum dolor sit, amet consectetur.</h1>
-							<p>Dolore, consectetur? Culpa obcaecati velit magnam esse quod aspernatur, eos ut id sunt dicta.</p>
-						</HeroText>						
+						<h3>AWARD WINNING FOOD</h3>
+						<h1>Lorem ipsum dolor sit, amet consectetur.</h1>
+						<p>Dolore, consectetur? Culpa obcaecati velit magnam esse quod aspernatur, eos ut id sunt dicta.</p>
 					</HeroTextCard>
 				</ColumnWrapper>
 				<ColumnWrapper>
-					<HeroImgCard style={{justifyContent:'flex-start',alignItems:'center'}}>
+					<HeroImgCard >
 						<ImageGallery 
 							items={images} 
 							showThumbnails={false}
@@ -72,9 +64,10 @@ const HomeDesk = () => {
 						/>
 					</HeroImgCard>
 				</ColumnWrapper>
-			</CardContainer>
+				<ColumnWrapper>
+				</ColumnWrapper>
 		</Grid>
 	);
 }
  
-export default HomeDesk;
+export default HomeDesktop;
