@@ -18,8 +18,8 @@ const NavItem = styled.div`
     content: ".";
     color: transparent;
     background: black;
-    height: 1px;
-    transition: all 0.4s ease-in;
+    height: 2px;
+    transition: all 0.3s ease-in;
   }
 
   :hover {

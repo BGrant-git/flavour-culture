@@ -70,24 +70,29 @@ const Submit = styled.button`
 	}
 `
 
-const contactDesktop = () => {
+const contactDesktop = ({ handleSubmit }) => {
 	return (
 		<Grid columns={1}>
 			<ColumnWrapper>
 				<ContactContainer>
 					<ContactImg src='https://www.foodiesfeed.com/wp-content/uploads/2019/05/red-fruit-and-vegetables-on-a-white-background-3.jpg' alt='' />
 					<ContactOverlay>						
-						<ContactForm>
+						<ContactForm 
+							method="post" 
+							netlify-honeypot="bot-field" 
+							data-netlify="true" 
+							name="contact"
+						>								
 							<ContactTitle>
 								Contact Us!
 							</ContactTitle>
 							<p>Name:</p>
-							<Input />
+							<Input type="text" name="name" />
 							<p>Email Address:</p>
-							<Input />
+							<Input type="email" name="email" />
 							<p>Message:</p>
-							<InputMessage />
-							<Submit>SUBMIT</Submit>
+							<InputMessage name="message" />
+							<Submit type='submit'>SUBMIT</Submit>
 						</ContactForm>
 					</ContactOverlay>
 				</ContactContainer>

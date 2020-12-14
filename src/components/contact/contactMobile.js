@@ -72,7 +72,7 @@ const Submit = styled.button`
 	cursor: pointer;
 `
 
-const contactMobile = () => {
+const contactMobile = ({ handleSubmit }) => {
 	return (
 		<Grid collums={1}>
 			<ColumnWrapper>
@@ -86,14 +86,19 @@ const contactMobile = () => {
 								</Title>
 							</ColumnWrapper>
 							<ColumnWrapper>
-								<ContactForm>
+								<ContactForm
+									method="post"
+									netlify-honeypot="bot-field"
+									data-netlify="true"
+									name="contact"
+								>
 									<p>Name:</p>
-									<Input />
+									<Input type="text" name="name" />
 									<p>Email Address:</p>
-									<Input />
+									<Input  type="email" name="email" />
 									<p>Message:</p>
-									<InputMessage />
-									<Submit>SUBMIT</Submit>
+									<InputMessage name="message" />
+									<Submit type='submit'>SUBMIT</Submit>
 								</ContactForm>
 							</ColumnWrapper>
 						</Grid>

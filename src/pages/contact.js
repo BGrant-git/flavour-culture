@@ -10,12 +10,16 @@ const Contact = () => {
 	const breakpoints = useBreakpoint()
 	const isMobile = breakpoints.sm
 
+	const handleSubmit = event => {
+
+	}
+
 	return ( 
 		<Layout>
 			{isMobile ? 
-				<ContactMobile />
+				<ContactMobile handleSubmit={handleSubmit} />
 				:
-				<ContactDesktop />
+				<ContactDesktop handleSubmit={handleSubmit} />
 			}
 		</Layout>
 	)
