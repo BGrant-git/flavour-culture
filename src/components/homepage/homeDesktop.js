@@ -16,19 +16,16 @@ const ColumnWrapper = styled.div`
 const HeroTextCard = styled.div`
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	flex-direction: column;
 	height: 500px;
 	width: 45vw;
+	padding: 0 1vw 0 3vw;
 `
 
 const HeroImgCard = styled.div`	
 	width: 55vw;
 	justify-content: flex-start;
 	align=items: center;
-`
-
-const HeroText = styled.div`
-	padding: 0 15px 0 5vw;
 `
 
 const images = [
@@ -51,11 +48,9 @@ const HomeDesktop = () => {
 		<Grid columns={2} >
 				<ColumnWrapper>			
 					<HeroTextCard>
-						<HeroText>
-							<h3>AWARD WINNING FOOD</h3>
-							<h1 style={{fontSize:35,paddingBottom:15}}>Lorem ipsum dolor sit, amet consectetur.</h1>
-							<p>Dolore, consectetur? Culpa obcaecati velit magnam esse quod aspernatur, eos ut id sunt dicta.</p>
-						</HeroText>						
+						<h3>AWARD WINNING FOOD</h3>
+						<h1 style={{fontSize:35,paddingBottom:15}}>Lorem ipsum dolor sit, amet consectetur.</h1>
+						<p>Dolore, consectetur? Culpa obcaecati velit magnam esse quod aspernatur, eos ut id sunt dicta.</p>
 					</HeroTextCard>
 				</ColumnWrapper>
 				<ColumnWrapper>
