@@ -92,6 +92,7 @@ const contactMobile = ({ handleSubmit }) => {
 									data-netlify="true"
 									name="contact"
 								>
+									<input type="hidden" name="contact" value="contact" />
 									<p>Name:</p>
 									<Input type="text" name="name" />
 									<p>Email Address:</p>

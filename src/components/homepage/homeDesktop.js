@@ -49,7 +49,7 @@ const HomeDesktop = () => {
 				<ColumnWrapper>			
 					<HeroTextCard>
 						<h3>AWARD WINNING FOOD</h3>
-						<h1 style={{fontSize:35,paddingBottom:15}}>Lorem ipsum dolor sit, amet consectetur.</h1>
+						<h1>Lorem ipsum dolor sit, amet consectetur.</h1>
 						<p>Dolore, consectetur? Culpa obcaecati velit magnam esse quod aspernatur, eos ut id sunt dicta.</p>
 					</HeroTextCard>
 				</ColumnWrapper>
