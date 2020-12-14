@@ -3,7 +3,7 @@ import React from 'react';
 import HomeMobile from './homeMobile'
 import HomeDesktop from './homeDesktop'
 
-const Home = ({ isMobile}) => {
+const Home = ({ isMobile }) => {
 
 	return (
 		<>

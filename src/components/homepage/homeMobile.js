@@ -65,7 +65,7 @@ const HomeMobile = () => {
 						</Overlay>
 					</ImgContainer>						
 				</ColumnWrapper>
-
+				
 				<ColumnWrapper>2</ColumnWrapper>
 				<ColumnWrapper>3</ColumnWrapper>
 				

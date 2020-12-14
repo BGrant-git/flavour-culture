@@ -4,17 +4,13 @@ import ImageGallery from 'react-image-gallery'
 
 import Grid from '../gridComponent'
 
-
 const ColumnWrapper = styled.div`
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-`
-
-const CardContainer = styled.div`
-	display: flex;
-	align-items: center;
+	margin-bottom: 5px;
+	width: 100%;
 `
 
 const HeroTextCard = styled.div`
@@ -27,6 +23,8 @@ const HeroTextCard = styled.div`
 
 const HeroImgCard = styled.div`	
 	width: 55vw;
+	justify-content: flex-start;
+	align=items: center;
 `
 
 const HeroText = styled.div`
@@ -51,7 +49,6 @@ const images = [
 const HomeDesktop = () => {
 	return (
 		<Grid columns={2} >
-			<CardContainer>
 				<ColumnWrapper>			
 					<HeroTextCard>
 						<HeroText>
@@ -62,7 +59,7 @@ const HomeDesktop = () => {
 					</HeroTextCard>
 				</ColumnWrapper>
 				<ColumnWrapper>
-					<HeroImgCard style={{justifyContent:'flex-start',alignItems:'center'}}>
+					<HeroImgCard >
 						<ImageGallery 
 							items={images} 
 							showThumbnails={false}
@@ -72,7 +69,9 @@ const HomeDesktop = () => {
 						/>
 					</HeroImgCard>
 				</ColumnWrapper>
-			</CardContainer>
+				<ColumnWrapper>
+					<div>2</div>
+				</ColumnWrapper>
 		</Grid>
 	);
 }
