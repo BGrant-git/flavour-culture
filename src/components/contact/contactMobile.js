@@ -90,8 +90,7 @@ const contactMobile = ({ handleSubmit }) => {
 									method="post"
 									netlify-honeypot="bot-field"
 									data-netlify="true"
-									name="contact"
-								>
+									name="contact">
 									<input type="hidden" name="contact" value="contact" />
 									<p>Name:</p>
 									<Input type="text" name="name" />

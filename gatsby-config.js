@@ -21,7 +21,7 @@ module.exports = {
       {
         name: 'Locations',
         link: '/locations'
-      },
+      }
     ]
   },
   plugins: [

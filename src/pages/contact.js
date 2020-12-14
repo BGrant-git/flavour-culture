@@ -8,7 +8,6 @@ import ContactDesktop from '../components/contact/contactDesktop'
 const Contact = () => {
 
 	const breakpoints = useBreakpoint()
-	const isMobile = breakpoints.sm
 
 	const handleSubmit = event => {
 
@@ -16,7 +15,7 @@ const Contact = () => {
 
 	return ( 
 		<Layout>
-			{isMobile ? 
+			{breakpoints.sm ? // is mobile?
 				<ContactMobile handleSubmit={handleSubmit} />
 				:
 				<ContactDesktop handleSubmit={handleSubmit} />

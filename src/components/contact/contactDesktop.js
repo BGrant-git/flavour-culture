@@ -81,8 +81,7 @@ const contactDesktop = ({ handleSubmit }) => {
 							method="post" 
 							netlify-honeypot="bot-field" 
 							data-netlify="true" 
-							name="contact"
-						>	
+							name="contact">	
 							<input type="hidden" name="form-name" value="contact" />							
 							<ContactTitle>
 								Contact Us!
