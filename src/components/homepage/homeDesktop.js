@@ -25,7 +25,7 @@ const HeroTextCard = styled.div`
 const HeroImgCard = styled.div`	
 	width: 55vw;
 	justify-content: flex-start;
-	align=items: center;
+	align-items: center;
 `
 
 const images = [
@@ -65,7 +65,6 @@ const HomeDesktop = () => {
 					</HeroImgCard>
 				</ColumnWrapper>
 				<ColumnWrapper>
-					<div>2</div>
 				</ColumnWrapper>
 		</Grid>
 	);
