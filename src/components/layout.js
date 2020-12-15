@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Helmet } from "react-helmet";
 import { StaticQuery, graphql } from 'gatsby'
 
 import Navbar from './Navbar/navbar'
+import Footer from './footer'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -23,7 +24,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <React.Fragment>
+      <Fragment>
         <Helmet
           title={'Flavour Culture'}
           meta={[
@@ -39,7 +40,8 @@ const Layout = ({ children }) => (
         >
           {children}
         </div>
-      </React.Fragment>
+        <Footer style={{display:'flex'}} />
+      </Fragment>
     )}
   />
 )
