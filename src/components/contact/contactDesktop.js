@@ -38,6 +38,7 @@ const InputMessage = styled.textarea`
 	height: 200px;
 	padding: 20px;
 	margin-bottom: 10px;
+	resize: none;
 `
 
 const Submit = styled.button`

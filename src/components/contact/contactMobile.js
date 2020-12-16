@@ -64,6 +64,7 @@ const InputMessage = styled.textarea`
 	padding: 20px;
 	margin-bottom: 10px;
 	align-items: flex-start;
+	resize: none;
 `
 
 const Submit = styled.button`
