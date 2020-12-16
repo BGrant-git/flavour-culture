@@ -29,20 +29,35 @@ const HeroImgCard = styled.div`
 	margin-right: 0px;
 `
 
-const images = [
-  {
-    original: 'https://www.skipthedishes.com/img/home/hero/default/mobile-large.jpg',
-    thumbnail: '',
-  },
-  {
-    original: 'https://www.tasteofhome.com/wp-content/uploads/2019/08/vegetarian-samsa-or-samosasindian-special-traditional-street-food-punjabi-samosa-shutterstock_1189930276.jpg',
-    thumbnail: '',
-  },
-  {
-    original: 'https://www.tasteofhome.com/wp-content/uploads/2017/10/Melt-in-Your-Mouth-Chuck-Roast_EXPS_CWON16_41035_C06_29_3b.jpg',
-    thumbnail: '',
-  },
-];
+const ImageGalleryComponent = () => {
+	const images = [
+		{
+			original: 'https://www.skipthedishes.com/img/home/hero/default/mobile-large.jpg',
+			thumbnail: '',
+		},
+		{
+			original: 'https://www.tasteofhome.com/wp-content/uploads/2019/08/vegetarian-samsa-or-samosasindian-special-traditional-street-food-punjabi-samosa-shutterstock_1189930276.jpg',
+			thumbnail: '',
+		},
+		{
+			original: 'https://www.tasteofhome.com/wp-content/uploads/2017/10/Melt-in-Your-Mouth-Chuck-Roast_EXPS_CWON16_41035_C06_29_3b.jpg',
+			thumbnail: '',
+		},
+	];
+	
+
+	return (
+		<ImageGallery 
+			items={images} 
+			showThumbnails={false}
+			showFullscreenButton={false}
+			autoPlay={true}
+			showPlayButton={false}
+			showNav={false}
+		/>
+	)
+}
+
 
 const HomeDesktop = () => {
 	return (
@@ -56,14 +71,7 @@ const HomeDesktop = () => {
 				</ColumnWrapper>
 				<ColumnWrapper>
 					<HeroImgCard >
-						<ImageGallery 
-							items={images} 
-							showThumbnails={false}
-							showFullscreenButton={false}
-							autoPlay={true}
-							showPlayButton={false}
-							showNav={false}
-						/>
+						<ImageGalleryComponent />
 					</HeroImgCard>
 				</ColumnWrapper>
 				<ColumnWrapper>
