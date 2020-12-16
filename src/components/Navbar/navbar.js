@@ -92,9 +92,9 @@ const Hamburger = styled.div`
 const Title = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding-left: 10px;
   text-decoration: none;
-  min-width: 400px;
+  min-width: 380px;
   font-size: 25px;
 `
 
@@ -127,8 +127,7 @@ const Navbar = ({ menuLinks }) => {
         </Navbox>
       )}
       
-    </Navigation>    
-    
+    </Navigation>        
   )
 }
 

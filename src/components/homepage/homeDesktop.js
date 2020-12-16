@@ -26,6 +26,7 @@ const HeroImgCard = styled.div`
 	width: 55vw;
 	justify-content: flex-start;
 	align-items: center;
+	margin-right: 0px;
 `
 
 const images = [
@@ -61,6 +62,7 @@ const HomeDesktop = () => {
 							showFullscreenButton={false}
 							autoPlay={true}
 							showPlayButton={false}
+							showNav={false}
 						/>
 					</HeroImgCard>
 				</ColumnWrapper>

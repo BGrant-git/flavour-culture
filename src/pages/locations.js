@@ -4,7 +4,9 @@ import Layout from '../components/layout'
 
 const Locations = () => {
 	return (
-		<Layout>locations</Layout>
+		<Layout>
+			<div>locations</div>
+		</Layout>
 	);
 }
  
