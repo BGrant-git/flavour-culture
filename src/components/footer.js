@@ -25,9 +25,9 @@ const ColumnWrapper = styled.div`
 `
 
 const Links = styled.a`
-	text-decoratin: none;
 	color: white;
 `
+
 
 const Footer = () => {
 	return (
@@ -46,7 +46,7 @@ const Footer = () => {
 				</ColumnWrapper>			
 				<ColumnWrapper>
 					<p>
-				  	© 2020 Flavour Culture | site made by <a href='https://www.linkedin.com/in/ben-grant-397bbb1b6/'>Ben G</a> | <a href='#'>privacy policy</a>  
+				  	© 2020 Flavour Culture | site made by <strong><Links style={{textDecoration:'none'}} href='https://www.linkedin.com/in/ben-grant-397bbb1b6/'>Ben G</Links></strong> | <Links href='https://www.google.com'>privacy policy</Links>  
 					</p>
 				</ColumnWrapper>		
 			</Grid>

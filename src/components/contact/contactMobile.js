@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Grid from '../gridComponent'
+import thinFood from '../../images/food-images/thin-food.jpg'
 
 const ColumnWrapper = styled.div`
 	display: flex;
@@ -73,12 +74,12 @@ const Submit = styled.button`
 	cursor: pointer;
 `
 
-const contactMobile = ({ handleSubmit }) => {
+const contactMobile = ({}) => {
 	return (
 		<Grid collums={1} style={{marginBottom:'795px'}}>
 			<ColumnWrapper>
 				<ContactContainer>
-					<ContactImg src='https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max' alt='' />
+					<ContactImg src={thinFood} alt='' />
 					<ContactOverlay>
 						<Grid columns={2} style={{display:'flex',flexDirection:'column'}}>
 							<ColumnWrapper>

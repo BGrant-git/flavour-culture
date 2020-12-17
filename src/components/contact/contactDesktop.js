@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 import Grid from '../gridComponent'
 
+import backgroundImg from '../../images/food-images/white-plate.jpg'
+
 const ColumnWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
@@ -53,7 +55,7 @@ const Submit = styled.button`
 	}
 `
 
-const contactDesktop = ({ handleSubmit }) => {
+const contactDesktop = () => {
 	return (
 		<Grid columns={1}>
 			<ColumnWrapper>					
@@ -74,7 +76,7 @@ const contactDesktop = ({ handleSubmit }) => {
 					<InputMessage name="message" />
 					<Submit type='submit'>SUBMIT</Submit>
 				</ContactForm>
-				<ContactImg src='https://i.pinimg.com/originals/e1/e0/8a/e1e08af3f720d22b690c2323c50e702d.jpg' alt='' />
+				<ContactImg src={backgroundImg} alt='' />
 			</ColumnWrapper>
 		</Grid>
 	)
