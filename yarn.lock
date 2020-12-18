@@ -6313,17 +6313,6 @@ gatsby-plugin-breakpoints@^1.3.1:
   dependencies:
     "@babel/runtime" "^7.11.0"
 
-gatsby-plugin-manifest@^2.6.1:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.8.0.tgz#a0383e70201c3c4314fcd685de384258e0b797a1"
-  integrity sha512-NNHMfVA28BdMI2aGmdl6ra7sDe9lUOUsVrgK5mpWfIA+VA4hYSzvbGaQ3kj50gD9WscaTmgpZEjewSlOPnGSFw==
-  dependencies:
-    "@babel/runtime" "^7.12.5"
-    gatsby-core-utils "^1.6.0"
-    gatsby-plugin-utils "^0.5.0"
-    semver "^7.3.2"
-    sharp "^0.26.3"
-
 gatsby-plugin-offline@^3.4.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.6.0.tgz#781b959178c0721f2a8771f50d557c6003d1aa23"

@@ -1,24 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import Grid from '../gridComponent'
+import Grid from '@material-ui/core/Grid'
 
 import backgroundImg from '../../images/food-images/white-plate.jpg'
 
-const ColumnWrapper = styled.div`
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 5px;
-	width: 100%;
+const Container = styled(Grid)`
+	height: 600px;
 `
 
 const ContactImg = styled.img`
-	width: 40%;
+	height: 600px;
 `
 
 const ContactForm = styled.form`
+	min-width: 300px;
 `
 
 const ContactTitle = styled.h1`
@@ -57,27 +52,40 @@ const Submit = styled.button`
 
 const contactDesktop = () => {
 	return (
-		<Grid columns={1}>
-			<ColumnWrapper>					
-				<ContactForm 
-					method="post" 
-					netlify-honeypot="bot-field" 
-					data-netlify="true" 
-					name="contact">	
-					<input type="hidden" name="form-name" value="contact" />							
-					<ContactTitle>
-						Contact Us!
-					</ContactTitle>
-					<p>Name:</p>
-					<Input type="text" name="name" />
-					<p>Email Address:</p>
-					<Input type="email" name="email" />
-					<p>Message:</p>
-					<InputMessage name="message" />
-					<Submit type='submit'>SUBMIT</Submit>
-				</ContactForm>
-				<ContactImg src={backgroundImg} alt='' />
-			</ColumnWrapper>
+		<Grid container direction='row'>
+			<Grid item xs={false} sm={3} />
+			<Container 
+				item 
+				container 
+				xs={6}
+				alignItems='center'
+				justify='center'
+			>					
+				<Grid item sm={5}>
+					<ContactForm 
+						method="post" 
+						netlify-honeypot="bot-field" 
+						data-netlify="true" 
+						name="contact"
+					>	
+						<input type="hidden" name="form-name" value="contact" />							
+						<ContactTitle>
+							Contact Us!
+						</ContactTitle>
+						<p>Name:</p>
+						<Input type="text" name="name" />
+						<p>Email Address:</p>
+						<Input type="email" name="email" />
+						<p>Message:</p>
+						<InputMessage name="message" />
+						<Submit type='submit'>SUBMIT</Submit>
+					</ContactForm>
+				</Grid>
+				<Grid item sm={7}>
+					<ContactImg src={backgroundImg} alt='' />
+				</Grid>
+			</Container>
+			<Grid item xs={false} sm={3} />
 		</Grid>
 	)
 }
