@@ -1,32 +1,22 @@
 import React from 'react';
 import styled from 'styled-components'
 import ImageGallery from 'react-image-gallery'
-
-import Grid from '../gridComponent'
-
-const ColumnWrapper = styled.div`
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 5px;
-	width: 100%;
-`
+import Grid from '@material-ui/core/Grid'
 
 const HeroTextCard = styled.div`
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
 	height: 500px;
-	width: 45vw;
-	padding: 0 1vw 0 3vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	padding: 60px;
 `
 
 const HeroImgCard = styled.div`	
-	width: 55vw;
-	justify-content: flex-start;
-	align-items: center;
-	margin-right: 0px;
+	display: flex;
+	min-width: 100%;
+	max-height: 500px;
+	overflow: hidden;
 `
 
 const ImageGalleryComponent = () => {
@@ -58,24 +48,23 @@ const ImageGalleryComponent = () => {
 	)
 }
 
-
 const HomeDesktop = () => {
 	return (
-		<Grid columns={2} >
-				<ColumnWrapper>			
+		<Grid container>
+				<Grid item xs={5}>			
 					<HeroTextCard>
-						<h3>AWARD WINNING FOOD</h3>
+						<h3 >AWARD WINNING FOOD</h3>
 						<h1>Lorem ipsum dolor sit, amet consectetur.</h1>
 						<p>Dolore, consectetur? Culpa obcaecati velit magnam esse quod aspernatur, eos ut id sunt dicta.</p>
 					</HeroTextCard>
-				</ColumnWrapper>
-				<ColumnWrapper>
+					</Grid>
+				<Grid item xs={7}>
 					<HeroImgCard >
 						<ImageGalleryComponent />
 					</HeroImgCard>
-				</ColumnWrapper>
-				<ColumnWrapper>
-				</ColumnWrapper>
+					</Grid>
+				<Grid item>
+				</Grid>
 		</Grid>
 	);
 }

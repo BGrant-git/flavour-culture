@@ -1,17 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import Grid from '@material-ui/core/Grid'
 
-import Grid from '../gridComponent'
 import thinFood from '../../images/food-images/thin-food.jpg'
-
-const ColumnWrapper = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 5px;
-	width: 100%;
-`
 
 const ContactContainer = styled.div`
 	display: flex;
@@ -76,18 +67,18 @@ const Submit = styled.button`
 
 const contactMobile = ({}) => {
 	return (
-		<Grid collums={1} style={{marginBottom:'795px'}}>
-			<ColumnWrapper>
+		<Grid container style={{marginBottom:'795px'}}>
+			<Grid xs={12}>
 				<ContactContainer>
 					<ContactImg src={thinFood} alt='' />
 					<ContactOverlay>
-						<Grid columns={2} style={{display:'flex',flexDirection:'column'}}>
-							<ColumnWrapper>
+						<Grid container item xs={12}>
+							<Grid item xs={12}>
 								<Title>
 									Contact us!
 								</Title>
-							</ColumnWrapper>
-							<ColumnWrapper>
+							</Grid>
+							<Grid item xs={12}>
 								<ContactForm
 									method="post"
 									netlify-honeypot="bot-field"
@@ -102,11 +93,11 @@ const contactMobile = ({}) => {
 									<InputMessage name="message" />
 									<Submit type='submit'>SUBMIT</Submit>
 								</ContactForm>
-							</ColumnWrapper>
+							</Grid>
 						</Grid>
 					</ContactOverlay>
 				</ContactContainer>
-			</ColumnWrapper>
+				</Grid>
 		</Grid>
 	)
 }
