@@ -65,7 +65,7 @@ const Submit = styled.button`
 	cursor: pointer;
 `
 
-const contactMobile = ({}) => {
+const contactMobile = () => {
 	return (
 		<Grid container style={{marginBottom:'795px'}}>
 			<Grid xs={12}>
