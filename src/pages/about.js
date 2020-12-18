@@ -47,7 +47,7 @@ const About = () => {
 				<Grid item xs={12} >
 					<StoryContainer>
 						<MainTitle>OUR STORY</MainTitle>
-						<img style={{width:200}}  src={divider} />
+						<img style={{width:200}} src={divider} alt='' />
 						<StoryText>
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis aperiam iure nisi aut, itaque esse consequatur sed dolore natus nihil nulla, quasi iusto, fugit cupiditate deserunt amet similique. Molestiae, praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 						</StoryText>
