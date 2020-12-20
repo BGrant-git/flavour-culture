@@ -7,12 +7,9 @@ const Locations = () => {
 	return (
 		<Layout>
 			<Grid container>
-				<Grid item xs={12}>1</Grid>
-				<Grid item xs={12}>1</Grid>
-				<Grid item xs={12}>1</Grid>
-				<Grid item xs={12}>1</Grid>
-				<Grid item xs={12}>1</Grid>
-				<Grid item xs={12}>1</Grid>
+				<Grid item xs={12}>location</Grid>
+				<Grid item xs={12}>location</Grid>
+				<Grid item xs={12}>location</Grid>
 			</Grid>
 		</Layout>
 	);
