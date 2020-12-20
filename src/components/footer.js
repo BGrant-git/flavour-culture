@@ -7,8 +7,6 @@ import InstagramIcon from "@material-ui/icons/Instagram"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import TwitterIcon from "@material-ui/icons/Twitter"
 
-import tweet from "../images/social-icons/twitter.png"
-
 const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -31,16 +29,16 @@ const Footer = () => {
       <Grid container direction="column" alignItems="center">
         <Grid item>
           <Links href="#">
-            <FacebookIcon fontSize="large" />
+            <FacebookIcon style={{height:35,width:35}} />
           </Links>
           <Links href="#">
-            <InstagramIcon fontSize="large" />
+            <InstagramIcon style={{height:35,width:35}} />
           </Links>
           <Links href="#">
-            <LinkedInIcon fontSize="large" />
+            <LinkedInIcon style={{height:35,width:35}} />
           </Links>
           <Links href="#">
-            <TwitterIcon fontSize="large" />
+            <TwitterIcon style={{height:35,width:35}} />
           </Links>
         </Grid>
         <Grid item>
