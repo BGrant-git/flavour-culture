@@ -11,11 +11,12 @@ import Layout from "../components/layout"
 const GalleryContainer = styled.div`
   width: 100%;
   margin: auto;
+  padding: 20px;
 `
 
 const Title = styled.h1`
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   font-size: 45px;
 `
 
