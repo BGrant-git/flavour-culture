@@ -5,24 +5,28 @@ module.exports = {
     author: `BenG`,
     titleLink: [
       {
-        name: 'FLAVOUR CULTURE',
-        link: ''
+        name: "FLAVOUR CULTURE",
+        link: "",
       },
     ],
-    menuLinks: [      
+    menuLinks: [
       {
-        name: 'Our Story',
-        link: '/about'
+        name: "Our Story",
+        link: "/about",
       },
       {
-        name: 'Contact',
-        link: '/contact'
+        name: "Contact",
+        link: "/contact",
       },
       {
-        name: 'Locations',
-        link: '/locations'
-      }
-    ]
+        name: "Locations",
+        link: "/locations",
+      },
+      {
+        name: "Gallery",
+        link: "/gallery",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-breakpoints`,
@@ -34,14 +38,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/content`,
       },
-    }, {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/images/carousel-images`,
-        name: "carousel",
-      }
-    }
+    },
   ],
 }
