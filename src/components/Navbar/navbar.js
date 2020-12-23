@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 
-import NavbarLinks from './navbarlinks'
+import NavbarLinks from "./navbarlinks"
 
 const Navigation = styled.nav`
   height: 7vh;
@@ -104,13 +104,16 @@ const Navbar = ({ menuLinks }) => {
   return (
     <Navigation>
       <Title>
-        <Link style={{
-          textDecoration:'none',
-          color:'black'}} 
-          to='/'>
+        <Link
+          style={{
+            textDecoration: "none",
+            color: "black",
+          }}
+          to="/"
+        >
           <h1>FLAVOUR CULTURE</h1>
         </Link>
-      </Title>            
+      </Title>
       <Toggle
         navbarOpen={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
@@ -119,15 +122,14 @@ const Navbar = ({ menuLinks }) => {
       </Toggle>
       {navbarOpen ? (
         <Navbox>
-          <NavbarLinks menuLinks={menuLinks} />                   
+          <NavbarLinks menuLinks={menuLinks} />
         </Navbox>
       ) : (
-        <Navbox open style={{marginRight:'60%'}}>          
-          <NavbarLinks menuLinks={menuLinks} />          
+        <Navbox open style={{ marginRight: "60%" }}>
+          <NavbarLinks menuLinks={menuLinks} />
         </Navbox>
       )}
-      
-    </Navigation>        
+    </Navigation>
   )
 }
 

@@ -40,7 +40,7 @@ const BioCards = () => {
         xs={12}
         md={10}
         alignItems="center"
-        style={{ border: "1px solid black", marginBottom: 10 }}
+        style={{ marginBottom: 10 }}
       >
         <Grid item xs={12}>
           <Title>Daniel</Title>
@@ -57,11 +57,6 @@ const BioCards = () => {
               vero? <br />
               Officia est hic aliquid, nihil voluptatem, voluptates fugit in
               eligendi tempora sapiente perspiciatis debitis a repellendus
-              aspernatur vero? Pariatur, fugit nostrum. Eum! Lorem ipsum dolor
-              sit amet, consectetur adipisicing elit. Officia vero? Pariatur,
-              fugit nostrum. Eum! <br />
-              Officia est hic aliquid, nihil voluptatem, voluptates fugit in
-              eligendi tempora sapiente perspiciatis debitis a repellendus
               aspernatur vero? Pariatur, fugit nostrum. Pariatur, fugit nostrum.
               Eum! Lorem ipsum dolor sit amet, consectetur adipisicing elit
             </BioText>
@@ -70,14 +65,7 @@ const BioCards = () => {
       </Grid>
       <Grid item xs={false} sm={1} />
       <Grid item xs={false} sm={1}></Grid>
-      <Grid
-        item
-        container
-        xs={12}
-        md={10}
-        alignItems="center"
-        style={{ border: "1px solid black" }}
-      >
+      <Grid item container xs={12} md={10} alignItems="center">
         <Grid item xs={12}>
           <Title>Johhny</Title>
         </Grid>
@@ -94,13 +82,6 @@ const BioCards = () => {
               Pariatur, fugit nostrum. Eum! Officia est hic aliquid, nihil
               voluptatem, voluptates fugit in eligendi tempora sapiente
               perspiciatis debitis a repellendus aspernatur vero?
-              <br />
-              Officia est hic aliquid, nihil voluptatem, voluptates fugit in
-              eligendi tempora sapiente perspiciatis debitis a repellendus
-              aspernatur vero? Pariatur, fugit nostrum. Eum! Officia est hic
-              aliquid, nihil voluptatem, voluptates fugit in eligendi tempora
-              sapiente perspiciatis debitis a repellendus aspernatur vero?
-              Pariatur, fugit nostrum. Eum!
             </BioText>
           </TextContainer>
         </Grid>
