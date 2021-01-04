@@ -16,4 +16,6 @@ body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch; /* https://medium.com/react-camp/how-to-fight-the-body-scroll-2b00267b37ac */
   font-family: "Lexend Deca", sans-serif;
+
+  background-color: #f3f3f3;
 }

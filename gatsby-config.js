@@ -15,16 +15,16 @@ module.exports = {
         link: "/about",
       },
       {
-        name: "Contact",
-        link: "/contact",
+        name: "Gallery",
+        link: "/gallery/",
       },
       {
         name: "Locations",
         link: "/locations",
       },
       {
-        name: "Gallery",
-        link: "/gallery",
+        name: "Contact",
+        link: "/contact",
       },
     ],
   },

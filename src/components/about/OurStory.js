@@ -43,15 +43,20 @@ const OurStory = () => {
         love the fast paced environment and challenges to face on a daily basis.
         In comparison to restaurants, chefs often are stuck behind the scenes
         and don’t get the fulfillment from seeing a customer smile after that
-        first bite. Our memories of home cooked food, travelling the world and
-        working in London food events forged our passion & appreciation for the
-        flavours of many great cuisines. We want to share these inspirations
-        with others through our food. As a business we aim to reduce our
-        environmental impact by eliminating single use plastics & sourcing local
-        produce, as well as introducing biodegradable packaging. The healthy
-        aspect of our food and the good energy we bring creates an atmosphere
-        that people want to be a part of. Our ultimate goal is for our guests to
-        be completely satisfied.
+        first bite.
+      </StoryText>
+      <StoryText>
+        Our memories of home cooked food, travelling the world and working in
+        London food events forged our passion & appreciation for the flavours of
+        many great cuisines. We want to share these inspirations with others
+        through our food.
+      </StoryText>
+      <StoryText>
+        As a business we aim to reduce our environmental impact by eliminating
+        single use plastics & sourcing local produce, as well as introducing
+        biodegradable packaging. The healthy aspect of our food and the good
+        energy we bring creates an atmosphere that people want to be a part of.
+        Our ultimate goal is for our guests to be completely satisfied.
       </StoryText>
     </StoryContainer>
   )
