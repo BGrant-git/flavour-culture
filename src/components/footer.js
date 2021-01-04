@@ -21,6 +21,11 @@ const FooterContainer = styled.div`
 
 const Links = styled.a`
   color: white;
+
+  &:hover {
+    color: #dcdcdc;
+    transition: 0.1s ease-in;
+  }
 `
 
 const Footer = () => {
@@ -29,16 +34,16 @@ const Footer = () => {
       <Grid container direction="column" alignItems="center">
         <Grid item>
           <Links href="#">
-            <FacebookIcon style={{height:35,width:35}} />
+            <FacebookIcon style={{ height: 35, width: 35 }} />
           </Links>
           <Links href="#">
-            <InstagramIcon style={{height:35,width:35}} />
+            <InstagramIcon style={{ height: 35, width: 35 }} />
           </Links>
           <Links href="#">
-            <LinkedInIcon style={{height:35,width:35}} />
+            <LinkedInIcon style={{ height: 35, width: 35 }} />
           </Links>
           <Links href="#">
-            <TwitterIcon style={{height:35,width:35}} />
+            <TwitterIcon style={{ height: 35, width: 35 }} />
           </Links>
         </Grid>
         <Grid item>

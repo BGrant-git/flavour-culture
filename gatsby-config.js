@@ -15,16 +15,16 @@ module.exports = {
         link: "/about",
       },
       {
-        name: "Contact",
-        link: "/contact",
+        name: "Gallery",
+        link: "/gallery/",
       },
       {
         name: "Locations",
         link: "/locations",
       },
       {
-        name: "Gallery",
-        link: "/gallery",
+        name: "Contact",
+        link: "/contact",
       },
     ],
   },
@@ -38,7 +38,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/content`,
+        path: `${__dirname}/content/gallery`,
       },
     },
   ],
