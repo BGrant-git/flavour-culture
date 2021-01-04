@@ -57,7 +57,7 @@ const CardTitle = styled.h1`
   display: flex;
   align-items: center;
   color: black;
-  padding-left: 10vw;
+  padding-left: 2vw;
 `
 
 const GalleryPage = () => {
