@@ -12,7 +12,6 @@ import naanImg from "../../../content/gallery/Indian/IMG_20201028_135555.jpg"
 
 const GalleryContainer = styled.div`
   width: 100%;
-  margin: auto;
   padding: 20px;
 `
 
@@ -93,6 +92,9 @@ const GalleryPage = () => {
           </GalleryContainer>
         </Grid>
         <Grid item sm={false} md={3} />
+        <Grid item sm={false} md={12}>
+          <div style={{ height: 200 }}></div>
+        </Grid>
       </Grid>
     </Layout>
   )

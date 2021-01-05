@@ -4,12 +4,13 @@ import { Link } from "gatsby"
 
 import NavbarLinks from "./navbarlinks"
 
+import Logo from "../../images/icon.png"
+
 const Navigation = styled.nav`
   height: 7vh;
   display: flex;
-  background-color: #fff;
+  background-color: #1d1d1b;
   position: relative;
-  justify-content: space-between;
   text-transform: uppercase;
   margin: 0 auto;
   padding: 0;
@@ -58,7 +59,7 @@ const Navbox = styled.div`
 `
 
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: white;
   width: 30px;
   height: 3px;
   transition: all 0.3s linear;
@@ -70,7 +71,7 @@ const Hamburger = styled.div`
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #111;
+    background-color: white;
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -92,10 +93,7 @@ const Hamburger = styled.div`
 const Title = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 10px;
-  text-decoration: none;
-  min-width: 380px;
-  font-size: 25px;
+  padding-left: 100px;
 `
 
 const Navbar = ({ menuLinks }) => {
@@ -104,14 +102,8 @@ const Navbar = ({ menuLinks }) => {
   return (
     <Navigation>
       <Title>
-        <Link
-          style={{
-            textDecoration: "none",
-            color: "black",
-          }}
-          to="/"
-        >
-          <h1>FLAVOUR CULTURE</h1>
+        <Link to="/">
+          <img style={{ height: 200, marginTop: 150 }} src={Logo} alt="" />
         </Link>
       </Title>
       <Toggle
@@ -125,7 +117,7 @@ const Navbar = ({ menuLinks }) => {
           <NavbarLinks menuLinks={menuLinks} />
         </Navbox>
       ) : (
-        <Navbox open style={{ marginRight: "60%" }}>
+        <Navbox open>
           <NavbarLinks menuLinks={menuLinks} />
         </Navbox>
       )}

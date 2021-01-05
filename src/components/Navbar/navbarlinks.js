@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const NavItem = styled.div`  
+const NavItem = styled.div`
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
@@ -17,13 +17,14 @@ const NavItem = styled.div`
     width: 0%;
     content: ".";
     color: transparent;
-    background: black;
+    background: white;
     height: 2px;
-    transition: all 0.3s ease-in;
+    transition: all 0.2s ease-in;
   }
 
   :hover {
-    color: black;
+    color: white;
+
     ::after {
       width: 100%;
     }
@@ -38,12 +39,17 @@ const NavItem = styled.div`
 
 const Links = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: white;
+  font-size: 20px;
+
+  @media (max-width: 768px) {
+    color: black;
+  }
 `
 
 const NavbarLinks = ({ menuLinks }) => {
   return (
-    <>    
+    <>
       {menuLinks.map((item, i) => (
         <NavItem key={i}>
           <Links to={item.link}>{item.name}</Links>
