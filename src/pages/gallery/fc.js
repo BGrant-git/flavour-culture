@@ -18,7 +18,19 @@ const TitleContainer = styled.div`
 const Title = styled.h1`
   font-size: 45px;
   margin: auto;
-  text-align: center;
+  margin-left: 15%;
+
+  @media (max-width: 768px) {
+    margin-left: auto;
+  }
+`
+
+const BackButton = styled.button`
+  margin: 20px 0 0 110px;
+
+  @media (max-width: 768px) {
+    margin: 50% 0 0 -50%;
+  }
 `
 
 const BTS = () => {
@@ -49,10 +61,10 @@ const BTS = () => {
             <Grid item xs={12} sm={8}>
               <div>
                 <TitleContainer>
-                  <Link style={{ marginTop: 20 }} to="/gallery">
-                    <button style={{ cursor: "pointer" }}>
+                  <Link to="/gallery">
+                    <BackButton style={{ cursor: "pointer" }}>
                       <ArrowBackIcon />
-                    </button>
+                    </BackButton>
                   </Link>
                   <Title>Behind The Scenes</Title>
                 </TitleContainer>

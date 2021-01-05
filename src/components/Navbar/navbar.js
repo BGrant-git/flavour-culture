@@ -65,6 +65,7 @@ const Hamburger = styled.div`
   transition: all 0.3s linear;
   align-self: center;
   position: relative;
+  margin-left: 65vw;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
 
   ::before,
@@ -94,6 +95,20 @@ const Title = styled.div`
   display: flex;
   align-items: center;
   padding-left: 100px;
+
+  @media (max-width: 768px) {
+    padding-left: 10px;
+  }
+`
+
+const LogoStyle = styled.img`
+  height: 200px;
+  margin-top: 140px;
+
+  @media (max-width: 768px) {
+    height: 80px;
+    margin-top: 0;
+  }
 `
 
 const Navbar = ({ menuLinks }) => {
@@ -103,7 +118,7 @@ const Navbar = ({ menuLinks }) => {
     <Navigation>
       <Title>
         <Link to="/">
-          <img style={{ height: 200, marginTop: 150 }} src={Logo} alt="" />
+          <LogoStyle src={Logo} alt="" />
         </Link>
       </Title>
       <Toggle
