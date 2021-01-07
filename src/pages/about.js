@@ -9,23 +9,28 @@ import bannerImg from "../images/about/storybanner.jpg"
 import instaPost from "../images/igpost.jpg"
 
 const BannerContainer = styled.div`
-  max-width: 650px;
-  height: 200px;
+  width: 650px;
+  max-height: 200px;
   overflow: hidden;
   margin: auto;
+
+  @media (max-width: 960px) {
+    width: 100vw;
+
+    margin: auto;
+  }
 `
 
-const IGpostContainer = styled(Grid)`
-  margin: 0;
+const BannerImg = styled.img`
   @media (max-width: 960px) {
-    margin: auto;
+    width: 100vw;
   }
 `
 
 const IGpost = styled.div`
   width: 354px;
-  height: 512px;
-  margin: 50px auto;
+  margin: auto;
+  padding: 20px 0;
 `
 
 const About = () => {
@@ -34,13 +39,13 @@ const About = () => {
       <Grid container>
         <Grid item xs={12}>
           <BannerContainer>
-            <img src={bannerImg} alt="" />
+            <BannerImg src={bannerImg} alt="" />
           </BannerContainer>
         </Grid>
         <Grid item xs={12}>
           <OurStory />
         </Grid>
-        <IGpostContainer container item xs={12}>
+        <Grid container item xs={12}>
           <Grid item sm={12} md={4}>
             <IGpost>
               <img src={instaPost} alt="" />
@@ -56,7 +61,7 @@ const About = () => {
               <img src={instaPost} alt="" />
             </IGpost>
           </Grid>
-        </IGpostContainer>
+        </Grid>
       </Grid>
     </Layout>
   )

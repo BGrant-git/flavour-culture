@@ -7,8 +7,6 @@ import StoryComponentRight from "./StoryComponentRight"
 
 import storyImg1 from "../../../content/gallery/Brathaus/4_5956130633137785202.jpg"
 import storyImg2 from "../../../content/gallery/Brathaus/Photo from Daniel(2).jpg"
-import storyImg3 from "../../../content/gallery/Indian/3.jpg"
-import storyImg4 from "../../../content/gallery/Brathaus/PXL_20201125_124046901.PORTRAIT~2.jpg"
 
 const StoryContainer = styled.div`
   display: flex;
@@ -22,14 +20,14 @@ const MainTitle = styled.div`
 `
 
 const OurStory = () => {
-  let content = [
+  const content = [
     [
       `We are two school friends with a passion for flavoursome food, we
       want to build a positive culture around authentic food cooked
       fresh to order with high quality ingredients.`,
     ],
     [
-      `      During the Covid-19 lockdown we watched restaurants close & large
+      `During the Covid-19 lockdown we watched restaurants close & large
       events cancelled but noticed some food truck vendors were still
       trading. We wanted to be a part of this trend as we see a
       revolution in catering towards street food & deliveries.`,
@@ -67,11 +65,14 @@ const OurStory = () => {
           <StoryComponentLeft
             text1={content[0]}
             text2={content[1]}
-            img={storyImg3}
+            img={storyImg1}
           />
-          <StoryComponentRight text1={content[2]} img={storyImg2} />
-          <StoryComponentLeft text1={content[3]} img={storyImg1} />
-          <StoryComponentRight text1={content[4]} img={storyImg4} />
+          <StoryComponentRight
+            text1={content[2]}
+            text2={content[3]}
+            text3={content[4]}
+            img={storyImg2}
+          />
         </StoryContainer>
       </Grid>
       <Grid item sm={false} md={1} />

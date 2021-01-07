@@ -4,7 +4,6 @@ import Grid from "@material-ui/core/Grid"
 
 const Container = styled.div`
   width: 100%;
-  background-color: white;
   margin: 20px 0;
 `
 
@@ -31,6 +30,10 @@ const StoryImage = styled.img`
   }
 `
 
+const Heading = styled.h1`
+  padding-bottom: 20px;
+`
+
 const TextContainer = styled(Grid)`
   display: flex;
   flex-direction: column;
@@ -38,7 +41,7 @@ const TextContainer = styled(Grid)`
   align-content: center;
   padding: 20px;
   margin: auto;
-  background-color: white;
+  font-size: 19px;
 
   @media (max-width: 960px) {
     text-align: center;
@@ -56,6 +59,7 @@ const StoryComponentLeft = props => {
           </ImageContainer>
         </Grid>
         <TextContainer item sm={12} md={8}>
+          <Heading>Heading</Heading>
           <p style={{ paddingBottom: 10 }}>{props.text1}</p>
           <p>{props.text2}</p>
         </TextContainer>
