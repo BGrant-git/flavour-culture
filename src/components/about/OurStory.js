@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 
-import divider from "../../images/divider.png"
-
 const StoryContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -11,7 +9,7 @@ const StoryContainer = styled.div`
 `
 
 const MainTitle = styled.div`
-  padding-top: 20px;
+  padding: 20px;
   font-size: 40px;
 `
 
@@ -28,7 +26,6 @@ const OurStory = () => {
       <Grid item sm={12} md={8}>
         <StoryContainer>
           <MainTitle>OUR STORY</MainTitle>
-          <img style={{ width: 200 }} src={divider} alt="" />
           <StoryText>
             We are two school friends with a passion for flavoursome food, we
             want to build a positive culture around authentic food cooked fresh

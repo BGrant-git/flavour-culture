@@ -42,19 +42,18 @@ const Toggle = styled.div`
 const Navbox = styled.div`
   display: flex;
   height: 100%;
-  justify-content: flex-end;
   align-items: center;
 
   @media (max-width: 768px) {
     flex-direction: column;
     position: fixed;
-    width: 100%;
+    width: 40%;
     justify-content: flex-start;
-    padding-top: 10vh;
+    padding-top: 5vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
     top: 8vh;
-    left: ${props => (props.open ? "-100%" : "0")};
+    right: ${props => (props.open ? "-100%" : "0")};
   }
 `
 
@@ -103,11 +102,11 @@ const Title = styled.div`
 
 const LogoStyle = styled.img`
   height: 200px;
-  margin-top: 140px;
+  margin-top: 130px;
 
   @media (max-width: 768px) {
-    height: 80px;
-    margin-top: 0;
+    height: 77px;
+    margin-top: 5px;
   }
 `
 
