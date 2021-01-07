@@ -6,9 +6,9 @@ import styled from "styled-components"
 
 import Layout from "../../components/layout"
 
-import brathausThumb from "../../../content/gallery/Brathaus/brat_thumb.jpg"
-import btsThumb from "../../../content/gallery/BTS/bts_thumb.jpg"
-import naanThumb from "../../../content/gallery/Indian/naan_thumb.jpg"
+import brathausThumb from "../../images/thumbnails/brat_thumb.jpg"
+import btsThumb from "../../images/thumbnails/bts_thumb.jpg"
+import naanThumb from "../../images/thumbnails/naan_thumb.jpg"
 
 const GalleryContainer = styled.div`
   width: 100%;

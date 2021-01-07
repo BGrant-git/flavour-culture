@@ -48,7 +48,7 @@ const Footer = () => {
         </Grid>
         <Grid item>
           <div>
-            © 2020 Flavour Culture | site made by{" "}
+            © {new Date().getFullYear()} Flavour Culture | site made by
             <strong>
               <Links
                 style={{ textDecoration: "none" }}
