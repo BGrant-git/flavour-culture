@@ -12,7 +12,7 @@ const FooterContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #202020;
+  background-color: #1d1d1b;
   height: 70px;
   color: white;
   width: 100%;

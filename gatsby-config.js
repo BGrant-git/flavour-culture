@@ -5,8 +5,8 @@ module.exports = {
     author: `BenG`,
     titleLink: [
       {
-        name: "FLAVOUR CULTURE",
-        link: "",
+        name: "Home",
+        link: "/",
       },
     ],
     menuLinks: [
@@ -39,6 +39,16 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/content/gallery`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Flavour Culture`,
+        short_name: `FlavourCulture`,
+        start_url: `/`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
       },
     },
   ],

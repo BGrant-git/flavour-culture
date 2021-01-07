@@ -6,13 +6,12 @@ import styled from "styled-components"
 
 import Layout from "../../components/layout"
 
-import brathausImg from "../../../content/gallery/Brathaus/Photo-from-Daniel.jpg"
-import flavourCultureImg from "../../../content/gallery/BTS/PXL_20201208_181631969.jpg"
-import naanImg from "../../../content/gallery/Indian/IMG_20201028_135555.jpg"
+import brathausThumb from "../../../content/gallery/Brathaus/brat_thumb.jpg"
+import btsThumb from "../../../content/gallery/BTS/bts_thumb.jpg"
+import naanThumb from "../../../content/gallery/Indian/naan_thumb.jpg"
 
 const GalleryContainer = styled.div`
   width: 100%;
-  margin: auto;
   padding: 20px;
 `
 
@@ -58,6 +57,10 @@ const CardTitle = styled.h1`
   align-items: center;
   color: black;
   padding-left: 2vw;
+
+  @media (max-width: 700px) {
+    font-size: 25px;
+  }
 `
 
 const GalleryPage = () => {
@@ -71,28 +74,29 @@ const GalleryPage = () => {
             <AlbumsContainer>
               <AlbumsLink to="brathaus">
                 <AlbumsCard>
-                  <img style={{ height: 355 }} src={brathausImg} alt="" />
+                  <img src={brathausThumb} alt="" />
                   <CardTitle>Brathaus</CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
               <AlbumsLink to="naanstop">
                 <AlbumsCard>
-                  <img style={{ width: 200 }} src={naanImg} alt="" />
+                  <img src={naanThumb} alt="" />
                   <CardTitle>Naan Stop</CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
               <AlbumsLink to="fc">
                 <AlbumsCard>
-                  <img src={flavourCultureImg} alt="" />
-                  <CardTitle style={{ fontSize: 30 }}>
-                    Behind The Scenes
-                  </CardTitle>
+                  <img src={btsThumb} alt="" />
+                  <CardTitle>Behind The Scenes</CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
             </AlbumsContainer>
           </GalleryContainer>
         </Grid>
         <Grid item sm={false} md={3} />
+        <Grid item sm={false} md={12}>
+          <div style={{ height: 200 }}></div>
+        </Grid>
       </Grid>
     </Layout>
   )

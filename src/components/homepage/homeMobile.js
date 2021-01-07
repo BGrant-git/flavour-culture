@@ -13,10 +13,6 @@ const ImgContainer = styled.div`
   justify-content: center;
 `
 
-const PlaceholdImg = styled.img`
-  width: 100%;
-`
-
 const ImageGalleryComponent = () => {
   const images = [
     {
