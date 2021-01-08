@@ -5,20 +5,15 @@ import Grid from "@material-ui/core/Grid"
 import Layout from "../components/layout"
 import OurStory from "../components/about/OurStory"
 
-import bannerImg from "../images/about/storybanner.jpg"
+import bannerImg from "../images/about/storybannerlarge.jpg"
 import instaPost from "../images/igpost.jpg"
 
 const BannerContainer = styled.div`
-  width: 650px;
-  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
   overflow: hidden;
   margin: auto;
-
-  @media (max-width: 960px) {
-    width: 100vw;
-
-    margin: auto;
-  }
 `
 
 const BannerImg = styled.img`

@@ -5,8 +5,9 @@ import Grid from "@material-ui/core/Grid"
 import StoryComponentLeft from "./StoryComponentLeft"
 import StoryComponentRight from "./StoryComponentRight"
 
-import storyImg1 from "../../../content/gallery/Brathaus/4_5956130633137785202.jpg"
-import storyImg2 from "../../../content/gallery/Brathaus/Photo from Daniel(2).jpg"
+import storyImg1 from "../../images/about/storydanny.jpg"
+import storyImg2 from "../../images/about/storyjohnny.jpg"
+import storyImg3 from "../../images/about/storyplate.jpg"
 
 const StoryContainer = styled.div`
   display: flex;
@@ -56,6 +57,12 @@ const OurStory = () => {
     ],
   ]
 
+  const Button = () => (
+    <div>
+      <button>button</button>
+    </div>
+  )
+
   return (
     <Grid container>
       <Grid item sm={false} md={1} />
@@ -63,15 +70,21 @@ const OurStory = () => {
         <StoryContainer>
           <MainTitle>OUR STORY</MainTitle>
           <StoryComponentLeft
+            heading={"Heading"}
             text1={content[0]}
-            text2={content[1]}
             img={storyImg1}
           />
           <StoryComponentRight
-            text1={content[2]}
-            text2={content[3]}
-            text3={content[4]}
+            heading={"Heading"}
+            text1={content[1]}
+            text2={content[2]}
             img={storyImg2}
+          />
+          <StoryComponentLeft
+            heading={"Heading"}
+            text1={content[3]}
+            img={storyImg3}
+            hasSocial={true}
           />
         </StoryContainer>
       </Grid>

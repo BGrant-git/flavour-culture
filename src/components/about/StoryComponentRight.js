@@ -34,7 +34,7 @@ const TextContainer = styled(Grid)`
   align-content: center;
   padding: 20px;
   margin: auto;
-  font-size: 19px;
+  font-size: 16px;
 
   @media (max-width: 960px) {
     text-align: center;
@@ -47,11 +47,11 @@ const Heading = styled.h1`
 `
 
 const Text = styled.p`
-  padding: 5px 0;
+  padding: 10px 0;
 `
 
 const Button = styled.button`
-  width: 300px;
+  width: 250px;
   padding: 15px;
   margin: 5px;
   align-self: center;
@@ -59,6 +59,7 @@ const Button = styled.button`
   cursor: pointer;
   color: white;
   background-image: linear-gradient(to bottom right, red, #8b0000);
+  border-radius: 5px;
 
   :hover {
     background-image: linear-gradient(to bottom right, #8b0000, red);
@@ -70,11 +71,11 @@ const StoryComponentRight = props => {
     <Container>
       <Grid container>
         <TextContainer item sm={12} md={8}>
-          <Heading>Heading</Heading>
+          <Heading>{props.heading}</Heading>
           <Text>{props.text1}</Text>
           <Text>{props.text2}</Text>
           <Text>{props.text3}</Text>
-          <Button>Make a booking now!</Button>
+          <Button>Make a booking</Button>
         </TextContainer>
         <Grid item sm={12} md={4}>
           <ImageContainer>
