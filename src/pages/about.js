@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid"
 
 import Layout from "../components/layout"
 import OurStory from "../components/about/OurStory"
+import ContactComponent from "../components/contactComponent"
 
 import bannerImg from "../images/about/storybannerlarge.jpg"
 import instaPost from "../images/igpost.jpg"
@@ -56,6 +57,9 @@ const About = () => {
               <img src={instaPost} alt="" />
             </IGpost>
           </Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <ContactComponent />
         </Grid>
       </Grid>
     </Layout>

@@ -67,10 +67,10 @@ const contactDesktop = () => {
             method="post"
             netlify-honeypot="bot-field"
             data-netlify="true"
-            name="contact"
+            name="contact-main"
           >
             <input type="hidden" name="form-name" value="contact" />
-            <ContactTitle>Contact Us!</ContactTitle>
+            <ContactTitle>Contact Us</ContactTitle>
             <p>Name:</p>
             <Input type="text" name="name" />
             <p>Email Address:</p>
