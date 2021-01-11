@@ -76,10 +76,10 @@ const Icon = styled.a`
   transition: 0.1s ease-in;
 
   :hover {
-    transform: translate(0, -10px);
-    -webkit-transform: translate(0, -10px); /** Chrome & Safari **/
-    -o-transform: translate(0, -10px); /** Opera **/
-    -moz-transform: translate(0, -10px); /** Firefox **/
+    transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px); /** Chrome & Safari **/
+    -o-transform: translate(0, -5px); /** Opera **/
+    -moz-transform: translate(0, -5px); /** Firefox **/
   }
 `
 

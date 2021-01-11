@@ -40,7 +40,7 @@ const About = () => {
         <Grid item xs={12}>
           <OurStory />
         </Grid>
-        <Grid container item xs={12}>
+        <Grid container item xs={12} justify="center">
           <Grid item sm={12} md={4}>
             <IGpost>
               <img src={instaPost} alt="" />

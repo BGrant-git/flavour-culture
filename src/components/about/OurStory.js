@@ -17,6 +17,7 @@ const StoryContainer = styled.div`
 
 const MainTitle = styled.div`
   padding: 20px;
+  padding-top: 35px;
   font-size: 40px;
 `
 
@@ -57,12 +58,6 @@ const OurStory = () => {
     ],
   ]
 
-  const Button = () => (
-    <div>
-      <button>button</button>
-    </div>
-  )
-
   return (
     <Grid container>
       <Grid item sm={false} md={1} />
@@ -72,11 +67,11 @@ const OurStory = () => {
           <StoryComponentLeft
             heading={"Heading"}
             text1={content[0]}
+            text2={content[1]}
             img={storyImg1}
           />
           <StoryComponentRight
             heading={"Heading"}
-            text1={content[1]}
             text2={content[2]}
             img={storyImg2}
           />
