@@ -38,7 +38,7 @@ const Brathaus = () => {
     <StaticQuery
       query={graphql`
         query ImagesForBratGallery {
-          allFile(filter: { relativeDirectory: { eq: "Brathaus" } }) {
+          allFile(filter: { relativeDirectory: { eq: "gallery/Brathaus" } }) {
             edges {
               node {
                 childImageSharp {

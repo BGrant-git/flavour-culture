@@ -106,7 +106,7 @@ const LogoStyle = styled.img`
 
   @media (max-width: 768px) {
     height: 77px;
-    margin-top: 5px;
+    margin-top: 3px;
   }
 `
 

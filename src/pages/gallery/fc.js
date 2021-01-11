@@ -38,7 +38,7 @@ const BTS = () => {
     <StaticQuery
       query={graphql`
         query ImagesForBTSGallery {
-          allFile(filter: { relativeDirectory: { eq: "BTS" } }) {
+          allFile(filter: { relativeDirectory: { eq: "gallery/BTS" } }) {
             edges {
               node {
                 childImageSharp {

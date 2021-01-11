@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 
-import backgroundImg from "../../images/food-images/white-plate.jpg"
-
 const Container = styled(Grid)`
   height: 600px;
   display: flex;
@@ -83,7 +81,7 @@ const contactDesktop = () => {
           </ContactForm>
         </Grid>
         <Grid item sm={6}>
-          <ContactImg src={backgroundImg} alt="" />
+          <ContactImg src="" alt="" />
         </Grid>
       </Container>
     </Grid>

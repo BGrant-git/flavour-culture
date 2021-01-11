@@ -38,7 +38,7 @@ const NaanStop = () => {
     <StaticQuery
       query={graphql`
         query ImagesForNaanGallery {
-          allFile(filter: { relativeDirectory: { eq: "Indian" } }) {
+          allFile(filter: { relativeDirectory: { eq: "gallery/Indian" } }) {
             edges {
               node {
                 childImageSharp {
