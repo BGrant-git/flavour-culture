@@ -14,9 +14,6 @@ const Home = () => {
       <Grid item xs={12}>
         {breakpoints.sm ? <HomeMobile /> : <HomeDesktop />}
       </Grid>
-      <Grid item xs={12}>
-        <ContactComponent />
-      </Grid>
     </Grid>
   )
 }
