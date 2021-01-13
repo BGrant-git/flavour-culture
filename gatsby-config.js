@@ -11,6 +11,14 @@ module.exports = {
     ],
     menuLinks: [
       {
+        name: "Locations",
+        link: "/locations",
+      },
+      {
+        name: "Vendors",
+        link: "/locations",
+      },
+      {
         name: "Our Story",
         link: "/about",
       },
@@ -18,10 +26,7 @@ module.exports = {
         name: "Gallery",
         link: "/gallery/",
       },
-      {
-        name: "Locations",
-        link: "/locations",
-      },
+
       {
         name: "Contact",
         link: "/contact",
