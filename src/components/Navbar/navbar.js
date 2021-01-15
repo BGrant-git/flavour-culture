@@ -7,7 +7,7 @@ import NavbarLinks from "./navbarlinks"
 import Logo from "../../images/icon.png"
 
 const Navigation = styled.nav`
-  height: 7vh;
+  height: 75px;
   display: flex;
   background-color: #1d1d1b;
   position: relative;
@@ -19,7 +19,6 @@ const Navigation = styled.nav`
 
   @media (max-width: 768px) {
     position: sticky;
-    height: 8vh;
     top: 0;
     left: 0;
     right: 0;
@@ -49,10 +48,10 @@ const Navbox = styled.div`
     position: fixed;
     width: 40%;
     justify-content: flex-start;
-    padding-top: 5vh;
+    padding-top: 4vw;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 8vh;
+    top: 75px;
     right: ${props => (props.open ? "-100%" : "0")};
   }
 `

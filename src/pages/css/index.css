@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Thunder";
+  src: local("A_Love_of_Thunder"),
+    url(../../fonts/LOT/A_Love_of_Thunder.ttf) format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Ash";
+  src: local("Ash"), url(../../fonts/Ash/DCC\ -\ Ash.otf) format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Merienda";
+  src: local("Merienda"),
+    url(../../fonts/Merienda/Merienda-0zWr.ttf) format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "BeautyMountains";
+  src: local("BeautyMountains"),
+    url(../../fonts/BeautyMountains/BeautyMountainsPersonalUse-od7z.ttf)
+      format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 
 @import "~react-image-gallery/styles/css/image-gallery.css";
@@ -15,6 +47,6 @@ body {
   border: 0;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch; /* https://medium.com/react-camp/how-to-fight-the-body-scroll-2b00267b37ac */
-  font-family: "Lexend Deca", sans-serif;
+  font-family: "Ariel", sans-serif;
   background-color: #f0ead6;
 }
