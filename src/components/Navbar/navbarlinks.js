@@ -41,6 +41,7 @@ const Links = styled(Link)`
   text-decoration: none;
   color: white;
   font-size: 20px;
+  font-family: "Thunder";
 
   @media (max-width: 768px) {
     color: black;

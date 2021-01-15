@@ -1,18 +1,72 @@
 import React from "react"
-import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import Grid from "@material-ui/core/Grid"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
+import styled from "styled-components"
 
-import HomeMobile from "./homeMobile"
-import HomeDesktop from "./homeDesktop"
-import ContactComponent from "../contactComponent"
+import GalleryComponentDesktop from "./galleryComponentDesktop"
+import GalleryComponentMobile from "./galleryComponentMobile"
+import TestimonialComponent from "./testimonialComponent"
+
+import MyDude from "../../images/home/iconfinder_batman_hero_avatar_comics_4043232.png"
+
+const GalleryContainerDesktop = styled.div`
+  background-color: #1d1d1b;
+`
 
 const Home = () => {
   const breakpoints = useBreakpoint()
 
+  const testimonials = [
+    [`Barney Gee (Monastery Productions)`],
+    [
+      `Catering was so good everyone fell asleep after lunch. Gohilton know whats up`,
+    ],
+    [`John Foodman`],
+    [
+      `These guys make good food. Best sausage that's been in me mouth in all of 2020`,
+    ],
+    [`Taylor Swift`],
+    [`Best curry outside of Hounslow mate was on the bog for a fornight`],
+  ]
+
   return (
     <Grid container>
       <Grid item xs={12}>
-        {breakpoints.sm ? <HomeMobile /> : <HomeDesktop />}
+        {breakpoints.sm ? (
+          <GalleryComponentMobile />
+        ) : (
+          <GalleryContainerDesktop>
+            <GalleryComponentDesktop />
+          </GalleryContainerDesktop>
+        )}
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TestimonialComponent
+          img={MyDude}
+          author={testimonials[0]}
+          text={testimonials[1]}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TestimonialComponent
+          img={MyDude}
+          author={testimonials[0]}
+          text={testimonials[1]}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TestimonialComponent
+          img={MyDude}
+          author={testimonials[0]}
+          text={testimonials[1]}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TestimonialComponent
+          img={MyDude}
+          author={testimonials[0]}
+          text={testimonials[1]}
+        />
       </Grid>
     </Grid>
   )
