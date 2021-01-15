@@ -9,7 +9,7 @@ import TestimonialComponent from "./testimonialComponent"
 
 import MyDude from "../../images/home/iconfinder_batman_hero_avatar_comics_4043232.png"
 
-const GalleryContainerDesktop = styled.div`
+const GalleryContainer = styled.div`
   background-color: #1d1d1b;
 `
 
@@ -35,9 +35,9 @@ const Home = () => {
         {breakpoints.sm ? (
           <GalleryComponentMobile />
         ) : (
-          <GalleryContainerDesktop>
+          <GalleryContainer>
             <GalleryComponentDesktop />
-          </GalleryContainerDesktop>
+          </GalleryContainer>
         )}
       </Grid>
       <Grid item xs={12} sm={6}>
