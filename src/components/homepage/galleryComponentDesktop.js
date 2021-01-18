@@ -1,7 +1,7 @@
 import React from "react"
 import ImageGallery from "react-image-gallery"
 
-const GalleryComponentDesktop = () => {
+const ImageGalleryComponent = () => {
   const images = [
     {
       original: require("../../../content/gallery/Indian/3.jpg"),
@@ -30,4 +30,4 @@ const GalleryComponentDesktop = () => {
   )
 }
 
-export default GalleryComponentDesktop
+export default ImageGalleryComponent
