@@ -8,15 +8,15 @@ import image3 from "../../../content/gallery/Brathaus/PXL_20201125_124046901.POR
 const GalleryComponentDesktop = () => {
   const images = [
     {
-      original: `${image1}`,
+      original: require("../../../content/gallery/Indian/3.jpg"),
       thumbnail: "",
     },
     {
-      original: `${image2}`,
+      original: require("../../../content/gallery/Indian/4.jpg"),
       thumbnail: "",
     },
     {
-      original: `${image3}`,
+      original: require("../../../content/gallery/Brathaus/PXL_20201125_124046901.PORTRAIT~2.jpg"),
       thumbnail: "",
     },
   ]
