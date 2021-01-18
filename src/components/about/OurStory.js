@@ -19,6 +19,7 @@ const MainTitle = styled.div`
   padding: 20px;
   padding-top: 35px;
   font-size: 40px;
+  font-family: "Thunder";
 `
 
 const OurStory = () => {

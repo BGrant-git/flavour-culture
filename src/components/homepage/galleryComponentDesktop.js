@@ -29,6 +29,7 @@ const GalleryComponentDesktop = () => {
       autoPlay={true}
       showPlayButton={false}
       showNav={false}
+      slideInterval="5000"
     />
   )
 }

@@ -40,7 +40,7 @@ const NavItem = styled.div`
 const Links = styled(Link)`
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Thunder";
 
   @media (max-width: 960px) {
