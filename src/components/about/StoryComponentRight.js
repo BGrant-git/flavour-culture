@@ -45,11 +45,11 @@ const TextContainer = styled(Grid)`
 `
 
 const Heading = styled.h1`
-  padding-bottom: 30px;
+  padding-top: 10p;
 `
 
 const Text = styled.p`
-  padding: 20px 0;
+  padding-bottom: 20px;
 `
 
 const Button = styled.button`
