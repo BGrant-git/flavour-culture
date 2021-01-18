@@ -17,7 +17,7 @@ const Navigation = styled.nav`
   z-index: 2;
   align-self: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     position: sticky;
     top: 0;
     left: 0;
@@ -33,7 +33,7 @@ const Toggle = styled.div`
   padding: 0 10vw;
   margin-left: -20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     display: flex;
   }
 `
@@ -43,7 +43,7 @@ const Navbox = styled.div`
   height: 100%;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     flex-direction: column;
     position: fixed;
     width: 40%;
@@ -94,7 +94,7 @@ const Title = styled.div`
   align-items: center;
   padding-left: 100px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     padding-left: 10px;
   }
 `
@@ -103,7 +103,7 @@ const LogoStyle = styled.img`
   height: 200px;
   margin-top: 130px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     height: 77px;
     margin-top: 3px;
   }
@@ -116,7 +116,7 @@ const Navbar = ({ menuLinks }) => {
     <Navigation>
       <Title>
         <Link to="/">
-          <LogoStyle src={Logo} alt="" />
+          <LogoStyle src={require("../../images/icon.png")} alt="" />
         </Link>
       </Title>
       <Toggle

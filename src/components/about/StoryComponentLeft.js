@@ -24,8 +24,9 @@ const ImageContainer = styled.div`
 
 const StoryImage = styled.img`
   height: auto;
-  min-width: 400px;
+  width: 400px;
   overflow: hidden;
+  border-radius: 60px;
 
   @media (max-width: 960px) {
     width: 90%;
@@ -34,7 +35,7 @@ const StoryImage = styled.img`
 `
 
 const Heading = styled.h1`
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 `
 
 const TextContainer = styled(Grid)`
@@ -44,7 +45,8 @@ const TextContainer = styled(Grid)`
   align-content: center;
   padding: 20px;
   margin: auto;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: Revans;
 
   @media (max-width: 960px) {
     text-align: center;

@@ -2,8 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 
+const ContainerGrid = styled(Grid)`
+  padding: 20px 0;
+  background-color: white;
+  height: 100%;
+`
+
 const Image = styled.img`
-  padding-left: 3vw;
+  padding: 0 3vw 0 5px;
+  align-self: right;
 `
 const Text = styled.p`
   padding: 20px 10px 10px;
@@ -18,19 +25,19 @@ const Author = styled.p`
 
 const TestimonialComponent = props => {
   return (
-    <Grid container style={{ padding: "20px 0" }}>
+    <ContainerGrid container>
       <Grid item xs={4}>
         <Image src={props.img} />
       </Grid>
-      <Grid container item xs={8}>
-        <Grid style={{ fontSize: 100 }} item>
+      <Grid container item xs={8} style={{ backgroundColor: "white" }}>
+        <Grid item>
           <Text>"{props.text}"</Text>
         </Grid>
         <Grid item>
           <Author>- {props.author}</Author>
         </Grid>
       </Grid>
-    </Grid>
+    </ContainerGrid>
   )
 }
 

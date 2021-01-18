@@ -9,6 +9,7 @@ import Layout from "../../components/layout"
 import brathausThumb from "../../images/thumbnails/brat_thumb.jpg"
 import btsThumb from "../../images/thumbnails/bts_thumb.jpg"
 import naanThumb from "../../images/thumbnails/naan_thumb.jpg"
+import StockImg from "../../images/thumbnails/naan-stock-img.jpg"
 
 const GalleryContainer = styled.div`
   width: 100%;
@@ -19,6 +20,7 @@ const Title = styled.h1`
   text-align: center;
   padding: 10px;
   font-size: 45px;
+  font-family: "Thunder";
 `
 
 const AlbumsContainer = styled.div`
@@ -71,23 +73,44 @@ const GalleryPage = () => {
         <Grid item xs={12} sm={12} md={6}>
           <GalleryContainer>
             <Title>Gallery</Title>
-            <AlbumsContainer>
+            <AlbumsContainer style={{ borderTopLeftRadius: "25px" }}>
               <AlbumsLink to="brathaus">
                 <AlbumsCard>
                   <img src={brathausThumb} alt="" />
-                  <CardTitle>Brathaus</CardTitle>
+                  <CardTitle style={{ fontFamily: "Sonder" }}>
+                    BRATHAUS
+                  </CardTitle>
+                </AlbumsCard>
+              </AlbumsLink>
+              <AlbumsLink to="/">
+                <AlbumsCard>
+                  <img
+                    style={{ height: "150px", width: "150px" }}
+                    src={StockImg}
+                    alt=""
+                  />
+
+                  <CardTitle
+                    style={{ fontFamily: "TAKOYAKI", fontSize: "60px" }}
+                  >
+                    Naan Stop
+                  </CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
               <AlbumsLink to="naanstop">
                 <AlbumsCard>
                   <img src={naanThumb} alt="" />
-                  <CardTitle>Naan Stop</CardTitle>
+                  <CardTitle style={{ fontFamily: "Montserrat" }}>
+                    Flavour Culture Catering
+                  </CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
               <AlbumsLink to="fc">
                 <AlbumsCard>
                   <img src={btsThumb} alt="" />
-                  <CardTitle>Behind The Scenes</CardTitle>
+                  <CardTitle style={{ fontFamily: "Revans" }}>
+                    Behind The Scenes
+                  </CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
             </AlbumsContainer>

@@ -5,7 +5,7 @@ import image1 from "../../images/carousel-images/image1.jpg"
 import image2 from "../../images/carousel-images/image2.jpg"
 import image3 from "../../images/carousel-images/image3.jpg"
 
-const ImageGalleryComponent = () => {
+const GalleryComponentMobile = () => {
   const images = [
     {
       original: `${image1}`,
@@ -29,8 +29,9 @@ const ImageGalleryComponent = () => {
       autoPlay={true}
       showPlayButton={false}
       showNav={false}
+      slideInterval="5000"
     />
   )
 }
 
-export default ImageGalleryComponent
+export default GalleryComponentMobile
