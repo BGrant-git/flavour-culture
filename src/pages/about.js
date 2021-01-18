@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid"
 
 import Layout from "../components/layout"
 import OurStory from "../components/about/OurStory"
-import ContactBar from "../components/contactBar"
+import ContactBar from "../components/contact/contactBar"
 
 import bannerImg from "../images/about/storybannerlarge.jpg"
 import instaPost from "../images/igpost.jpg"

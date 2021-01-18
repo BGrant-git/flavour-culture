@@ -50,6 +50,12 @@ const InputMessage = styled.textarea`
   padding: 5px;
 `
 
+const Submit = styled.button`
+  margin: 5px 5px 5px 0;
+  padding: 10px;
+  font-family: inherit;
+`
+
 const ContactComponent = () => {
   return (
     <Form
@@ -80,6 +86,8 @@ const ContactComponent = () => {
           <Input type="text" name="guest-number" />
           <Label>Message:</Label>
           <InputMessage name="message" />
+          <br />
+          <Submit type="submit">SUBMIT</Submit>
         </GridSection>
         <Grid item xs={false} sm={1} />
       </Grid>

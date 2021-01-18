@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import ContactComponent from "../components/contact/contactComponent"
-import ContactBar from "../components/contactBar"
+import ContactBar from "../components/contact/contactBar"
 
 const Contact = () => {
   return (

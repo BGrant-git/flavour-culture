@@ -44,6 +44,7 @@ const Header = styled.p`
 const Submit = styled.button`
   margin: 5px 5px 5px 0;
   padding: 10px;
+  font-family: inherit;
 `
 
 const ContactBar = () => {
@@ -61,13 +62,13 @@ const ContactBar = () => {
         <GridSection item xs={12} sm={5}>
           <Title>Contact Us</Title>
           <Header>Name:</Header>
-          <Input type="text" name="name" />
+          <Input type="text" name="name" required />
           <Header>Email Address:</Header>
-          <Input type="email" name="email" />
+          <Input type="email" name="email" required />
         </GridSection>
         <GridSection item xs={12} sm={5}>
           <Header style={{ marginTop: 18 }}>Message:</Header>
-          <InputMessage name="message" />
+          <InputMessage name="message" required />
           <br />
           <Submit type="submit">SUBMIT</Submit>
         </GridSection>

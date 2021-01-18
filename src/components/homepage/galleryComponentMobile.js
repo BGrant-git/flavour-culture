@@ -29,6 +29,7 @@ const GalleryComponentMobile = () => {
       autoPlay={true}
       showPlayButton={false}
       showNav={false}
+      slideInterval="5000"
     />
   )
 }
