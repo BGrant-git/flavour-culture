@@ -24,7 +24,7 @@ const ImageContainer = styled.div`
 
 const StoryImage = styled.img`
   height: auto;
-  min-width: 400px;
+  width: 400px;
   overflow: hidden;
   border-radius: 60px;
 

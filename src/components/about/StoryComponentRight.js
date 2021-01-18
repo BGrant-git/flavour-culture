@@ -18,7 +18,7 @@ const ImageContainer = styled.div`
 
 const StoryImage = styled.img`
   height: auto;
-  min-width: 400px;
+  width: 400px;
   transition: 1s ease-in;
   border-radius: 60px;
 
