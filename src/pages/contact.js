@@ -1,27 +1,16 @@
-import React from 'react'
-import { useBreakpoint } from 'gatsby-plugin-breakpoints'
+import React from "react"
 
-import Layout from '../components/layout'
-import ContactMobile from '../components/contact/contactMobile'
-import ContactDesktop from '../components/contact/contactDesktop'
+import Layout from "../components/layout"
+import ContactComponent from "../components/contact/contactComponent"
+import ContactBar from "../components/contactBar"
 
 const Contact = () => {
-
-	const breakpoints = useBreakpoint()
-
-	const handleSubmit = event => {
-
-	}
-
-	return ( 
-		<Layout>
-			{breakpoints.sm ? // is mobile?
-				<ContactMobile handleSubmit={handleSubmit} />
-				:
-				<ContactDesktop handleSubmit={handleSubmit} />
-			}
-		</Layout>
-	)
+  return (
+    <Layout>
+      <ContactComponent />
+      <ContactBar />
+    </Layout>
+  )
 }
- 
-export default Contact;
+
+export default Contact

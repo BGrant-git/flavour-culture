@@ -40,33 +40,39 @@ const Home = () => {
           </GalleryContainer>
         )}
       </Grid>
-      <Grid item xs={12} sm={6}>
-        <TestimonialComponent
-          img={MyDude}
-          author={testimonials[0]}
-          text={testimonials[1]}
-        />
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <TestimonialComponent
-          img={MyDude}
-          author={testimonials[0]}
-          text={testimonials[1]}
-        />
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <TestimonialComponent
-          img={MyDude}
-          author={testimonials[0]}
-          text={testimonials[1]}
-        />
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <TestimonialComponent
-          img={MyDude}
-          author={testimonials[0]}
-          text={testimonials[1]}
-        />
+      <Grid container item>
+        <Grid item xs={false} sm={1} />
+        <Grid item xs={12} sm={5}>
+          <TestimonialComponent
+            img={MyDude}
+            author={testimonials[0]}
+            text={testimonials[1]}
+          />
+        </Grid>
+        <Grid item xs={12} sm={5}>
+          <TestimonialComponent
+            img={MyDude}
+            author={testimonials[2]}
+            text={testimonials[3]}
+          />
+        </Grid>
+        <Grid item xs={false} sm={1} />
+        <Grid item xs={false} sm={1} />
+        <Grid item xs={12} sm={5}>
+          <TestimonialComponent
+            img={MyDude}
+            author={testimonials[4]}
+            text={testimonials[5]}
+          />
+        </Grid>
+        <Grid item xs={12} sm={5}>
+          <TestimonialComponent
+            img={MyDude}
+            author={testimonials[0]}
+            text={testimonials[1]}
+          />
+        </Grid>
+        <Grid item xs={false} sm={1} />
       </Grid>
     </Grid>
   )

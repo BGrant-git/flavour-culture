@@ -30,7 +30,7 @@ const NavItem = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     padding: 20px 0;
     font-size: 1.5rem;
     z-index: 6;
@@ -43,7 +43,7 @@ const Links = styled(Link)`
   font-size: 20px;
   font-family: "Thunder";
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     color: black;
   }
 `

@@ -1,15 +1,15 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
-import { navigate } from "gatsby"
 
 const ContactForm = styled.form`
   width: 100%;
   margin: 30px 0;
-  display: flex;
-  align-items: center;
+  margin: 10px auto;
+
   color: white;
   font-family: inherit;
+  max-width: 1300px;
 `
 
 const GridSection = styled(Grid)`
@@ -34,6 +34,7 @@ const InputMessage = styled.textarea`
   width: 100%;
   padding: 5px;
   font-family: inherit;
+  resize: none;
 `
 
 const Header = styled.p`
@@ -45,46 +46,14 @@ const Submit = styled.button`
   padding: 10px;
 `
 
-// This function encodes the captured form data in the format that Netlify's backend requires
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
-
-const ContactComponent = props => {
-  const [name, setName] = useState("")
-
-  const handleChange = e => {
-    setName({ ...name, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = event => {
-    // Prevent the default onSubmit behavior
-    event.preventDefault()
-    // POST the encoded form with the content-type header that's required for a text submission
-    // Note that the header will be different for POSTing a file
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": event.target.getAttribute("name"),
-        ...name,
-      }),
-    })
-      // On success, redirect to the custom success page using Gatsby's `navigate` helper function
-      .then(() => navigate("/"))
-      // On error, show the error in an alert
-      .catch(error => alert(error))
-  }
-
+const ContactBar = () => {
   return (
     <ContactForm
-      method="post"
+      method="POST"
       netlify-honeypot="bot-field"
       data-netlify="true"
       name="contact-box"
-      onSubmit={handleSubmit}
+      action="/"
     >
       <input type="hidden" name="form-name" value="contact" />
       <Grid container>
@@ -92,7 +61,7 @@ const ContactComponent = props => {
         <GridSection item xs={12} sm={5}>
           <Title>Contact Us</Title>
           <Header>Name:</Header>
-          <Input type="text" name="name" onChange={handleChange} />
+          <Input type="text" name="name" />
           <Header>Email Address:</Header>
           <Input type="email" name="email" />
         </GridSection>
@@ -108,4 +77,4 @@ const ContactComponent = props => {
   )
 }
 
-export default ContactComponent
+export default ContactBar
