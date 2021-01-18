@@ -54,10 +54,11 @@ const Text = styled.p`
 
 const Button = styled.button`
   width: 250px;
-  padding: 15px;
+  padding: 10px;
   margin: 5px;
   align-self: center;
-  font-size: 16px;
+  font-size: 22px;
+  font-family: inherit;
   cursor: pointer;
   color: white;
   background-image: linear-gradient(to bottom right, red, #8b0000);
