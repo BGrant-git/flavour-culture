@@ -4,17 +4,29 @@ import Grid from "@material-ui/core/Grid"
 
 import Layout from "../components/layout"
 import OurStory from "../components/about/OurStory"
-import BioCards from "../components/about/BioCards"
+import ContactBar from "../components/contact/contactBar"
 
-import bannerImg from "../images/story-images/banner1.jpg"
+import bannerImg from "../images/about/storybannerlarge.jpg"
+import instaPost from "../images/igpost.jpg"
 
 const BannerContainer = styled.div`
-  height: 200px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
   overflow: hidden;
+  margin: auto;
 `
 
-const Img = styled.img`
-  width: 100vw;
+const BannerImg = styled.img`
+  @media (max-width: 960px) {
+    width: 100vw;
+  }
+`
+
+const IGpost = styled.div`
+  width: 354px;
+  margin: auto;
+  padding: 20px 0;
 `
 
 const About = () => {
@@ -23,14 +35,31 @@ const About = () => {
       <Grid container>
         <Grid item xs={12}>
           <BannerContainer>
-            <Img src={bannerImg} alt="" />
+            <BannerImg src={bannerImg} alt="" />
           </BannerContainer>
         </Grid>
         <Grid item xs={12}>
           <OurStory />
         </Grid>
+        <Grid container item xs={12} justify="center">
+          <Grid item sm={12} md={4}>
+            <IGpost>
+              <img src={instaPost} alt="" />
+            </IGpost>
+          </Grid>
+          <Grid item sm={12} md={4}>
+            <IGpost>
+              <img src={instaPost} alt="" />
+            </IGpost>
+          </Grid>
+          <Grid item sm={12} md={4}>
+            <IGpost>
+              <img src={instaPost} alt="" />
+            </IGpost>
+          </Grid>
+        </Grid>
         <Grid item xs={12}>
-          <BioCards />
+          <ContactBar />
         </Grid>
       </Grid>
     </Layout>

@@ -6,13 +6,13 @@ import styled from "styled-components"
 
 import Layout from "../../components/layout"
 
-import brathausImg from "../../../content/gallery/Brathaus/Photo-from-Daniel.jpg"
-import flavourCultureImg from "../../../content/gallery/BTS/PXL_20201208_181631969.jpg"
-import naanImg from "../../../content/gallery/Indian/IMG_20201028_135555.jpg"
+import brathausThumb from "../../images/thumbnails/brat_thumb.jpg"
+import btsThumb from "../../images/thumbnails/bts_thumb.jpg"
+import naanThumb from "../../images/thumbnails/naan_thumb.jpg"
+import StockImg from "../../images/thumbnails/naan-stock-img.jpg"
 
 const GalleryContainer = styled.div`
   width: 100%;
-  margin: auto;
   padding: 20px;
 `
 
@@ -20,6 +20,7 @@ const Title = styled.h1`
   text-align: center;
   padding: 10px;
   font-size: 45px;
+  font-family: "Thunder";
 `
 
 const AlbumsContainer = styled.div`
@@ -58,6 +59,10 @@ const CardTitle = styled.h1`
   align-items: center;
   color: black;
   padding-left: 2vw;
+
+  @media (max-width: 700px) {
+    font-size: 25px;
+  }
 `
 
 const GalleryPage = () => {
@@ -68,23 +73,42 @@ const GalleryPage = () => {
         <Grid item xs={12} sm={12} md={6}>
           <GalleryContainer>
             <Title>Gallery</Title>
-            <AlbumsContainer>
+            <AlbumsContainer style={{ borderTopLeftRadius: "25px" }}>
               <AlbumsLink to="brathaus">
                 <AlbumsCard>
-                  <img style={{ height: 355 }} src={brathausImg} alt="" />
-                  <CardTitle>Brathaus</CardTitle>
+                  <img src={brathausThumb} alt="" />
+                  <CardTitle style={{ fontFamily: "Sonder" }}>
+                    BRATHAUS
+                  </CardTitle>
+                </AlbumsCard>
+              </AlbumsLink>
+              <AlbumsLink to="/">
+                <AlbumsCard>
+                  <img
+                    style={{ height: "150px", width: "150px" }}
+                    src={StockImg}
+                    alt=""
+                  />
+
+                  <CardTitle
+                    style={{ fontFamily: "TAKOYAKI", fontSize: "60px" }}
+                  >
+                    Naan Stop
+                  </CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
               <AlbumsLink to="naanstop">
                 <AlbumsCard>
-                  <img style={{ width: 200 }} src={naanImg} alt="" />
-                  <CardTitle>Naan Stop</CardTitle>
+                  <img src={naanThumb} alt="" />
+                  <CardTitle style={{ fontFamily: "Montserrat" }}>
+                    Flavour Culture Catering
+                  </CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
               <AlbumsLink to="fc">
                 <AlbumsCard>
-                  <img src={flavourCultureImg} alt="" />
-                  <CardTitle style={{ fontSize: 30 }}>
+                  <img src={btsThumb} alt="" />
+                  <CardTitle style={{ fontFamily: "Revans" }}>
                     Behind The Scenes
                   </CardTitle>
                 </AlbumsCard>
@@ -93,6 +117,9 @@ const GalleryPage = () => {
           </GalleryContainer>
         </Grid>
         <Grid item sm={false} md={3} />
+        <Grid item sm={false} md={12}>
+          <div style={{ height: 200 }}></div>
+        </Grid>
       </Grid>
     </Layout>
   )

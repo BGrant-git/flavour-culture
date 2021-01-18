@@ -5,11 +5,19 @@ module.exports = {
     author: `BenG`,
     titleLink: [
       {
-        name: "FLAVOUR CULTURE",
-        link: "",
+        name: "Home",
+        link: "/",
       },
     ],
     menuLinks: [
+      {
+        name: "Locations",
+        link: "/locations",
+      },
+      {
+        name: "Vendors",
+        link: "/locations",
+      },
       {
         name: "Our Story",
         link: "/about",
@@ -18,10 +26,7 @@ module.exports = {
         name: "Gallery",
         link: "/gallery/",
       },
-      {
-        name: "Locations",
-        link: "/locations",
-      },
+
       {
         name: "Contact",
         link: "/contact",
@@ -38,7 +43,17 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/content/gallery`,
+        path: `${__dirname}/content/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Flavour Culture`,
+        short_name: `FlavourCulture`,
+        start_url: `/`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
       },
     },
   ],

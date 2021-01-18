@@ -4,21 +4,21 @@ import { Link } from "gatsby"
 
 import NavbarLinks from "./navbarlinks"
 
+import Logo from "../../images/icon.png"
+
 const Navigation = styled.nav`
-  height: 7vh;
+  height: 75px;
   display: flex;
-  background-color: #fff;
+  background-color: #1d1d1b;
   position: relative;
-  justify-content: space-between;
   text-transform: uppercase;
   margin: 0 auto;
   padding: 0;
   z-index: 2;
   align-self: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     position: sticky;
-    height: 8vh;
     top: 0;
     left: 0;
     right: 0;
@@ -33,7 +33,7 @@ const Toggle = styled.div`
   padding: 0 10vw;
   margin-left: -20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     display: flex;
   }
 `
@@ -41,36 +41,36 @@ const Toggle = styled.div`
 const Navbox = styled.div`
   display: flex;
   height: 100%;
-  justify-content: flex-end;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     flex-direction: column;
     position: fixed;
-    width: 100%;
+    width: 40%;
     justify-content: flex-start;
-    padding-top: 10vh;
+    padding-top: 4vw;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 8vh;
-    left: ${props => (props.open ? "-100%" : "0")};
+    top: 75px;
+    right: ${props => (props.open ? "-100%" : "0")};
   }
 `
 
 const Hamburger = styled.div`
-  background-color: #111;
+  background-color: white;
   width: 30px;
   height: 3px;
   transition: all 0.3s linear;
   align-self: center;
   position: relative;
+  margin-left: 65vw;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
 
   ::before,
   ::after {
     width: 30px;
     height: 3px;
-    background-color: #111;
+    background-color: white;
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -92,10 +92,21 @@ const Hamburger = styled.div`
 const Title = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 10px;
-  text-decoration: none;
-  min-width: 380px;
-  font-size: 25px;
+  padding-left: 100px;
+
+  @media (max-width: 960px) {
+    padding-left: 10px;
+  }
+`
+
+const LogoStyle = styled.img`
+  height: 200px;
+  margin-top: 130px;
+
+  @media (max-width: 960px) {
+    height: 77px;
+    margin-top: 3px;
+  }
 `
 
 const Navbar = ({ menuLinks }) => {
@@ -104,14 +115,8 @@ const Navbar = ({ menuLinks }) => {
   return (
     <Navigation>
       <Title>
-        <Link
-          style={{
-            textDecoration: "none",
-            color: "black",
-          }}
-          to="/"
-        >
-          <h1>FLAVOUR CULTURE</h1>
+        <Link to="/">
+          <LogoStyle src={require("../../images/icon.png")} alt="" />
         </Link>
       </Title>
       <Toggle
@@ -125,7 +130,7 @@ const Navbar = ({ menuLinks }) => {
           <NavbarLinks menuLinks={menuLinks} />
         </Navbox>
       ) : (
-        <Navbox open style={{ marginRight: "60%" }}>
+        <Navbox open>
           <NavbarLinks menuLinks={menuLinks} />
         </Navbox>
       )}
