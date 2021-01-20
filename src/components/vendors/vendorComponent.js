@@ -60,7 +60,7 @@ const VendorComponentRight = props => {
   const breakpoints = useBreakpoint()
 
   return (
-    <SectionContainer style={{ backgroundColor: "white" }}>
+    <SectionContainer style={props.background}>
       <Grid container>
         <Grid item sm={12} md={8}>
           <SectionTextContainer>
@@ -108,6 +108,12 @@ const VendorComponent = () => {
   const breakpoints = useBreakpoint()
 
   const img1 = require("../../../content/gallery/Brathaus/PXL_20201125_124046901.PORTRAIT~2.jpg")
+
+  const sectionContainerStyleFluid = breakpoints.md
+    ? { backgroundColor: "#1d1d1b", color: "white" }
+    : { backgroundColor: "white" }
+
+  const sectionContainerStyle = { backgroundColor: "white" }
 
   const vendorInfo = [
     {
@@ -169,6 +175,7 @@ const VendorComponent = () => {
         subheading={vendorInfo[0].subheading}
         text={vendorInfo[0].text}
         img={img1}
+        background={sectionContainerStyle}
       />
       {breakpoints.md ? (
         <>
@@ -177,6 +184,7 @@ const VendorComponent = () => {
             subheading={vendorInfo[1].subheading}
             text={vendorInfo[1].text}
             img={img1}
+            background={sectionContainerStyleFluid}
           />
         </>
       ) : (
@@ -195,6 +203,7 @@ const VendorComponent = () => {
         subheading={vendorInfo[2].subheading}
         text={vendorInfo[2].text}
         img={img1}
+        background={sectionContainerStyle}
       />
     </>
   )
