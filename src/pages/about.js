@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 
 import Layout from "../components/layout"
-import OurStory from "../components/about/OurStory"
+import OurStoryComponent from "../components/about/OurStoryComponent"
 import ContactBar from "../components/contact/contactBar"
 
 import bannerImg from "../images/about/storybannerlarge.jpg"
@@ -39,7 +39,7 @@ const About = () => {
           </BannerContainer>
         </Grid>
         <Grid item xs={12}>
-          <OurStory />
+          <OurStoryComponent />
         </Grid>
         <Grid container item xs={12} justify="center">
           <Grid item sm={12} md={4}>
