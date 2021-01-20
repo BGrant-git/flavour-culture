@@ -37,15 +37,19 @@ const TextContainer = styled(Grid)`
   margin: auto;
   font-size: 20px;
   font-family: "Revans";
+  text-align: justify;
 
   @media (max-width: 960px) {
-    text-align: center;
     padding-top: 20px;
   }
 `
 
 const Heading = styled.h1`
   padding-top: 10p;
+
+  @media (max-width: 960px) {
+    text-align: center;
+  }
 `
 
 const Text = styled.p`

@@ -75,7 +75,7 @@ const GalleryPage = () => {
             <Title>Gallery</Title>
             <AlbumsContainer style={{ borderTopLeftRadius: "25px" }}>
               <AlbumsLink to="brathaus">
-                <AlbumsCard>
+                <AlbumsCard style={{ borderRadius: "20px 20px 0 0" }}>
                   <img src={brathausThumb} alt="" />
                   <CardTitle style={{ fontFamily: "Sonder" }}>
                     BRATHAUS
@@ -106,7 +106,7 @@ const GalleryPage = () => {
                 </AlbumsCard>
               </AlbumsLink>
               <AlbumsLink to="fc">
-                <AlbumsCard>
+                <AlbumsCard style={{ borderRadius: "0 0 20px 20px" }}>
                   <img src={btsThumb} alt="" />
                   <CardTitle style={{ fontFamily: "Revans" }}>
                     Behind The Scenes

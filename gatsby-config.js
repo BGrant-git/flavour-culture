@@ -16,7 +16,7 @@ module.exports = {
       },
       {
         name: "Vendors",
-        link: "/locations",
+        link: "/vendors",
       },
       {
         name: "Our Story",

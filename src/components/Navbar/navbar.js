@@ -4,8 +4,6 @@ import { Link } from "gatsby"
 
 import NavbarLinks from "./navbarlinks"
 
-import Logo from "../../images/icon.png"
-
 const Navigation = styled.nav`
   height: 75px;
   display: flex;

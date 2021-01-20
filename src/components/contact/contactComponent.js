@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 
@@ -70,11 +70,11 @@ const ContactComponent = () => {
         <Grid item xs={false} sm={1} />
         <GridSection item xs={12} sm={5}>
           <Title>Make a Booking</Title>
-          <Label>Name:</Label>
+          <Label>*Name:</Label>
           <Input type="text" name="name" required />
-          <Label>Email:</Label>
+          <Label>*Email:</Label>
           <Input type="email" name="email" required />
-          <Label>Phone Number:</Label>
+          <Label>*Phone Number:</Label>
           <Input type="tel" name="phone" required />
         </GridSection>
         <GridSection item xs={12} sm={5}>

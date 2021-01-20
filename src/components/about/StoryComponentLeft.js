@@ -67,7 +67,7 @@ const SocialTitle = styled.h2`
   font-size: 19px;
 `
 
-const IcontContainer = styled.div`
+const IconContainer = styled.div`
   display: inherit;
   flex-direction: row;
 `
@@ -88,14 +88,14 @@ const Icon = styled.a`
 const SocialComponent = () => (
   <SocialContanier>
     <SocialTitle>Check out our social media</SocialTitle>
-    <IcontContainer>
+    <IconContainer>
       <Icon href="">
         <FacebookIcon style={{ height: "50px", width: "50px" }} />
       </Icon>
       <Icon href="">
         <InstagramIcon style={{ height: "50px", width: "50px" }} />
       </Icon>
-    </IcontContainer>
+    </IconContainer>
   </SocialContanier>
 )
 
