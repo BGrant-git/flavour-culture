@@ -18,9 +18,7 @@ const BannerContainer = styled.div`
 `
 
 const BannerImg = styled.img`
-  @media (max-width: 960px) {
-    width: 100vw;
-  }
+  width: 100vw;
 `
 
 const IGpost = styled.div`
