@@ -57,8 +57,6 @@ const SectionText = styled.p`
 `
 
 const VendorComponentRight = props => {
-  const breakpoints = useBreakpoint()
-
   return (
     <SectionContainer style={props.background}>
       <Grid container>
