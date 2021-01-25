@@ -66,6 +66,10 @@ const CardTitle = styled.h1`
 `
 
 const GalleryPage = () => {
+  useEffect(() => {
+    navigate("/coming-soon")
+  }, [])
+
   return (
     <Layout>
       <Grid container>
@@ -73,9 +77,9 @@ const GalleryPage = () => {
         <Grid item xs={12} sm={12} md={6}>
           <GalleryContainer>
             <Title>Gallery</Title>
-            <AlbumsContainer style={{ borderTopLeftRadius: "25px" }}>
+            <AlbumsContainer>
               <AlbumsLink to="brathaus">
-                <AlbumsCard style={{ borderRadius: "20px 20px 0 0" }}>
+                <AlbumsCard>
                   <img src={brathausThumb} alt="" />
                   <CardTitle style={{ fontFamily: "Sonder" }}>
                     BRATHAUS
@@ -106,7 +110,7 @@ const GalleryPage = () => {
                 </AlbumsCard>
               </AlbumsLink>
               <AlbumsLink to="fc">
-                <AlbumsCard style={{ borderRadius: "0 0 20px 20px" }}>
+                <AlbumsCard>
                   <img src={btsThumb} alt="" />
                   <CardTitle style={{ fontFamily: "Revans" }}>
                     Behind The Scenes

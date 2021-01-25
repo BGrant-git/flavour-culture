@@ -62,5 +62,5 @@ body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch; /* https://medium.com/react-camp/how-to-fight-the-body-scroll-2b00267b37ac */
   font-family: "Revans", "Ariel", sans-serif;
-  background-color: #f0ead6;
+  background-color: white;
 }

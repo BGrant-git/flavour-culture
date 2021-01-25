@@ -5,6 +5,9 @@ import ContactComponent from "../components/contact/contactComponent"
 import ContactBar from "../components/contact/contactBar"
 
 const Contact = () => {
+  useEffect(() => {
+    navigate("/coming-soon")
+  }, [])
   return (
     <Layout>
       <ContactComponent />
