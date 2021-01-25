@@ -11,10 +11,6 @@ module.exports = {
     ],
     menuLinks: [
       {
-        name: "Locations",
-        link: "/locations",
-      },
-      {
         name: "Vendors",
         link: "/vendors",
       },

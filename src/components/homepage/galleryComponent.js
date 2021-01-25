@@ -138,7 +138,7 @@ const GalleryComponent = () => {
       autoPlay={true}
       showPlayButton={false}
       showNav={false}
-      slideInterval="6000"
+      slideInterval="5000"
       slideDuration="450"
       className="image-gallery-description"
     />
