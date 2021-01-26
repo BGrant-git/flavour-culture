@@ -6,6 +6,7 @@ import styled from "styled-components"
 const Caption = styled.p`
   font-size: 25px;
   text-align: right;
+  border-radius: 0 25px 25px 0;
 `
 
 const GalleryComponent = () => {
@@ -16,6 +17,7 @@ const GalleryComponent = () => {
       <img
         className="image-gallery-image"
         src={require("../../images/carousel-images/image1.jpg")}
+        alt=""
       />
       <Caption className="image-gallery-description">
         "Catering was so good everyone fell asleep after lunch. Gohilton know
@@ -30,6 +32,7 @@ const GalleryComponent = () => {
       <img
         className="image-gallery-image"
         src={require("../../images/carousel-images/image2.jpg")}
+        alt=""
       />
       <Caption className="image-gallery-description">
         "These guys make good food. Best sausage that's been in me mouth in all
@@ -44,6 +47,7 @@ const GalleryComponent = () => {
       <img
         className="image-gallery-image"
         src={require("../../images/carousel-images/image3.jpg")}
+        alt=""
       />
       <Caption className="image-gallery-description">
         "Best curry outside of Hounslow mate was on the bog for a fornight"
@@ -57,6 +61,7 @@ const GalleryComponent = () => {
       <img
         className="image-gallery-image"
         src={require("../../images/carousel-images/test.jpg")}
+        alt=""
       />
       <Caption className="image-gallery-description">
         "Catering was so good everyone fell asleep after lunch. Gohilton know
@@ -70,6 +75,7 @@ const GalleryComponent = () => {
       <img
         className="image-gallery-image"
         src={require("../../images/carousel-images/test2.jpg")}
+        alt=""
       />
       <Caption className="image-gallery-description">
         "These guys make good food. Best sausage that's been in me mouth in all
@@ -84,6 +90,7 @@ const GalleryComponent = () => {
       <img
         className="image-gallery-image"
         src={require("../../images/carousel-images/test3.jpg")}
+        alt=""
       />
       <Caption className="image-gallery-description">
         "Best curry outside of Hounslow mate was on the bog for a fornight"
@@ -130,9 +137,12 @@ const GalleryComponent = () => {
           },
         ]
 
+  const randomIndex = Math.floor(Math.random() * 3)
+
   return (
     <ImageGallery
       items={images()}
+      startIndex={randomIndex}
       showThumbnails={false}
       showFullscreenButton={false}
       autoPlay={true}

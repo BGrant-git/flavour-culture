@@ -25,6 +25,8 @@ const MainTitle = styled.div`
 const SectionContainer = styled.div`
   width: 100%;
   margin: 10px auto;
+  padding: 20px;
+  border-radius: 50px;
 `
 
 const ImageContainer = styled.div`
@@ -63,7 +65,6 @@ const TextContainer = styled(Grid)`
   padding: 20px;
   margin: auto;
   font-size: 20px;
-  font-family: Revans;
 
   @media (max-width: 960px) {
     text-align: center;
@@ -138,7 +139,7 @@ const SocialComponent = () => (
 
 const SectionLeft = props => (
   <SectionContainer>
-    <Grid container>
+    <Grid container style={props.background}>
       <Grid item sm={12} md={4}>
         <ImageContainer>
           <StoryImage src={props.img} alt="" />
@@ -156,7 +157,7 @@ const SectionLeft = props => (
 )
 
 const SectionRight = props => (
-  <SectionContainer>
+  <SectionContainer style={props.background}>
     <Grid container>
       <TextContainer item sm={12} md={8}>
         <Heading>{props.heading}</Heading>
@@ -176,6 +177,8 @@ const SectionRight = props => (
 
 const OurStoryComponent = () => {
   const breakpoints = useBreakpoint()
+
+  const storyBackground = { backgroundColor: "#1d1d1b", color: "white" }
 
   const content = [
     `We are two school friends with a passion for flavoursome food, we
@@ -221,6 +224,7 @@ const OurStoryComponent = () => {
               text2={content[2]}
               img={storyImg2}
               hasButton={true}
+              background={storyBackground}
             />
           ) : (
             <SectionRight
@@ -228,6 +232,7 @@ const OurStoryComponent = () => {
               text2={content[2]}
               img={storyImg2}
               hasButton
+              background={storyBackground}
             />
           )}
           <SectionLeft heading={"Heading"} text2={content[2]} img={storyImg2} />
@@ -236,6 +241,7 @@ const OurStoryComponent = () => {
               heading={"Heading"}
               text2={content[3]}
               img={storyImg3}
+              background={storyBackground}
             />
           ) : (
             <SectionRight
@@ -243,6 +249,7 @@ const OurStoryComponent = () => {
               text2={content[4]}
               img={storyImg3}
               hasSocial
+              background={storyBackground}
             />
           )}
         </StoryContainer>

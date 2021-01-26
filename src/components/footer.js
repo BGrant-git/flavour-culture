@@ -54,7 +54,11 @@ const Footer = () => {
                 Ben G{" "}
               </Links>
             </strong>{" "}
-            | <Links href="https://www.google.com"> privacy policy</Links>
+            |{" "}
+            <Links href="https://www.termsfeed.com/live/2fcfa9e4-943c-42d5-949c-8cbcb57136da">
+              {" "}
+              privacy policy
+            </Links>
           </div>
         </Grid>
       </Grid>

@@ -3,20 +3,24 @@ import Grid from "@material-ui/core/Grid"
 import styled from "styled-components"
 
 import GalleryComponent from "./galleryComponent"
-
-// import MyDude from "../../images/home/iconfinder_batman_hero_avatar_comics_4043232.png"
-
-const GalleryContainer = styled.div`
-  margin-bottom: 20px;
-`
+import LocationsComponent from "./locationsComponent"
+import VendorInfo from "./vendorInfo"
 
 const Home = () => {
   return (
     <Grid container justify="center">
       <Grid item>
-        <GalleryContainer>
-          <GalleryComponent />
-        </GalleryContainer>
+        <GalleryComponent />
+      </Grid>
+      <Grid item container style={{ margin: "60px 0 30px" }}>
+        <Grid item xs={false} md={1} />
+        <Grid item xs={12} md={5}>
+          <LocationsComponent />
+        </Grid>
+        <Grid item xs={12} md={5}>
+          <VendorInfo />
+        </Grid>
+        <Grid item xs={false} md={1} />
       </Grid>
     </Grid>
   )
