@@ -13,9 +13,6 @@ const Title = styled.h1`
 `
 
 const Vendors = () => {
-  useEffect(() => {
-    navigate("/coming-soon")
-  }, [])
   return (
     <Layout>
       <Title>VENDORS</Title>

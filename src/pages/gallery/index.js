@@ -38,7 +38,7 @@ const AlbumsCard = styled.div`
   display: flex;
   justify-content: flex-start;
   height: 150px;
-  background-color: white;
+  background-color: #1d1d1b;
   width: 100%;
   margin-top: 15px;
   cursor: pointer;
@@ -57,7 +57,7 @@ const AlbumsCard = styled.div`
 const CardTitle = styled.h1`
   display: flex;
   align-items: center;
-  color: black;
+  color: white;
   padding-left: 2vw;
 
   @media (max-width: 700px) {
@@ -66,10 +66,6 @@ const CardTitle = styled.h1`
 `
 
 const GalleryPage = () => {
-  useEffect(() => {
-    navigate("/coming-soon")
-  }, [])
-
   return (
     <Layout>
       <Grid container>
@@ -79,7 +75,7 @@ const GalleryPage = () => {
             <Title>Gallery</Title>
             <AlbumsContainer>
               <AlbumsLink to="brathaus">
-                <AlbumsCard>
+                <AlbumsCard style={{ borderRadius: "10px 10px 0 0" }}>
                   <img src={brathausThumb} alt="" />
                   <CardTitle style={{ fontFamily: "Sonder" }}>
                     BRATHAUS
@@ -110,7 +106,7 @@ const GalleryPage = () => {
                 </AlbumsCard>
               </AlbumsLink>
               <AlbumsLink to="fc">
-                <AlbumsCard>
+                <AlbumsCard style={{ borderRadius: "0 0 10px 10px" }}>
                   <img src={btsThumb} alt="" />
                   <CardTitle style={{ fontFamily: "Revans" }}>
                     Behind The Scenes

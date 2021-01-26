@@ -28,10 +28,6 @@ const IGpost = styled.div`
 `
 
 const About = () => {
-  useEffect(() => {
-    navigate("/coming-soon")
-  }, [])
-
   return (
     <Layout>
       <Grid container>

@@ -6,6 +6,7 @@ import { useBreakpoint } from "gatsby-plugin-breakpoints"
 const SectionContainer = styled.div`
   width: 95%;
   margin: 10px auto;
+  border-radius: 50px;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -24,6 +25,7 @@ const SectionImage = styled.img`
   width: 400px;
   overflow: hidden;
   padding: 1vw;
+  border-radius: 60px;
 
   @media (max-width: 960px) {
     width: 90%;
@@ -36,6 +38,7 @@ const SectionTextContainer = styled.div`
 `
 
 const SectionHeading = styled.h1`
+  font-size: 40px;
   padding-bottom: 10px;
 
   @media (max-width: 768px) {
@@ -43,7 +46,7 @@ const SectionHeading = styled.h1`
   }
 `
 
-const SectionSubheading = styled.h3`
+const SectionSubheading = styled.h2`
   padding: 5px 0;
 
   @media (max-width: 768px) {
@@ -52,8 +55,9 @@ const SectionSubheading = styled.h3`
 `
 
 const SectionText = styled.p`
-  padding: 5px 0;
+  padding: 10px 0;
   text-align: justify;
+  font-size: 20px;
 `
 
 const VendorComponentRight = props => {
