@@ -11,7 +11,6 @@ const Container = styled.div`
 
 const Link = styled.p`
   padding: 10px;
-  cursor: pointer;
   color: blue;
 `
 

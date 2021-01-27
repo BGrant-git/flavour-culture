@@ -5,6 +5,9 @@ import Grid from "@material-ui/core/Grid"
 import Layout from "../components/layout"
 import VendorComponent from "../components/vendors/vendorComponent"
 
+const BannerImg = styled.img`
+  width: 100%;
+`
 const Title = styled.h1`
   padding: 30px;
   text-align: center;
@@ -15,6 +18,7 @@ const Title = styled.h1`
 const Vendors = () => {
   return (
     <Layout>
+      <BannerImg src={require("../images/vendors/vendor-banner.jpg")} />
       <Title>VENDORS</Title>
       <Grid container>
         <Grid item md={false} lg={1} />

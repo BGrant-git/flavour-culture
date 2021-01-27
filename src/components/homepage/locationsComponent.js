@@ -11,6 +11,7 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   margin-right: 20px;
+  margin-bottom: 72px;
   background-color: #f0ead6;
   border-radius: 25px 25px 0 0;
 
@@ -30,6 +31,11 @@ const Header = styled.div`
   font-family: "thunder";
 `
 
+const MarketIcon = styled.img`
+  height: 70px;
+  margin-top: -70px;
+`
+
 const Times = styled.p`
   font-size: 18px;
 `
@@ -41,7 +47,9 @@ const VendorName = styled.h1`
 
 const InfoText = styled.div`
   width: 100%;
+  padding-top: 5px;
   font-size: 22px;
+  text-align: right;
 `
 
 const LocationsComponent = () => {
@@ -60,56 +68,59 @@ const LocationsComponent = () => {
     lng: -0.17036255857814045,
   }
   return (
-    <Container>
-      <Header>
-        <h1>LOCATIONS</h1>
-      </Header>
-      <div style={{ width: "100%" }}>
-        <Grid container style={{ padding: "10px" }}>
-          <Grid item xs={12} md={6}>
-            <VendorName>BRATHAUS</VendorName>
-            <Times>Every Saturday</Times>
-            <Times>10.00 - 17000</Times>
+    <>
+      <Container>
+        <MarketIcon src={require("../../images/home/marketicon.png")} alt="" />
+        <Header>
+          <h1>LOCATIONS</h1>
+        </Header>
+        <div style={{ width: "100%" }}>
+          <Grid container style={{ padding: "10px" }}>
+            <Grid item xs={12} md={6}>
+              <VendorName>BRATHAUS</VendorName>
+              <Times>Every Saturday</Times>
+              <Times>10.00 - 17.00</Times>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <InfoText>
+                <p>
+                  <strong>Acton Market</strong>
+                  <br />
+                  The Mount/King Street
+                  <br />
+                  Acton W3 9NW
+                </p>
+              </InfoText>
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <InfoText>
-              <p>
-                <strong>Acton Market</strong>
-                <br />
-                The Mount/King Street
-                <br />
-                Acton W3 9NW
-              </p>
-            </InfoText>
-          </Grid>
-        </Grid>
 
-        <MapComponent mapStyles={mapStyles} center={bratLocation} />
-      </div>
+          <MapComponent mapStyles={mapStyles} center={bratLocation} />
+        </div>
 
-      <div style={{ width: "100%" }}>
-        <Grid container style={{ padding: "10px" }}>
-          <Grid item xs={12} md={6}>
-            <VendorName>BRATHAUS</VendorName>
-            <Times>Every Saturday</Times>
-            <Times>10.00 - 17000</Times>
+        <div style={{ width: "100%" }}>
+          <Grid container style={{ padding: "10px" }}>
+            <Grid item xs={12} md={6}>
+              <VendorName>Naan Stop</VendorName>
+              <Times>Monday - Friday</Times>
+              <Times>10.00 - 17.00</Times>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <InfoText>
+                <p>
+                  <strong>Acton Market</strong>
+                  <br />
+                  The Mount/King Street
+                  <br />
+                  Acton W3 9NW
+                </p>
+              </InfoText>
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <InfoText>
-              <p>
-                <strong>Acton Market</strong>
-                <br />
-                The Mount/King Street
-                <br />
-                Acton W3 9NW
-              </p>
-            </InfoText>
-          </Grid>
-        </Grid>
 
-        <MapComponent mapStyles={mapStyles} center={otherLocation} />
-      </div>
-    </Container>
+          <MapComponent mapStyles={mapStyles} center={otherLocation} />
+        </div>
+      </Container>
+    </>
   )
 }
 

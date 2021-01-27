@@ -67,7 +67,6 @@ const TextContainer = styled(Grid)`
   font-size: 20px;
 
   @media (max-width: 960px) {
-    text-align: center;
     padding-top: 20px;
   }
 `
@@ -82,9 +81,8 @@ const Button = styled.button`
   margin: 5px;
   align-self: center;
   font-size: 16px;
-  cursor: pointer;
   color: white;
-  background-image: linear-gradient(to bottom right, red, #8b0000);
+  background-color: #1d1d1b;
   border-radius: 5px;
 
   :hover {
@@ -105,14 +103,14 @@ const SocialTitle = styled.h2`
   font-size: 19px;
 `
 
-const IcontContainer = styled.div`
+const IconContainer = styled.div`
   display: inherit;
   flex-direction: row;
 `
 
 const Icon = styled.a`
   margin: 5px;
-  color: #1d1d1b;
+  color: white;
   transition: 0.1s ease-in;
 
   :hover {
@@ -126,14 +124,14 @@ const Icon = styled.a`
 const SocialComponent = () => (
   <SocialContanier>
     <SocialTitle>Check out our social media</SocialTitle>
-    <IcontContainer>
+    <IconContainer>
       <Icon href="">
         <FacebookIcon style={{ height: "50px", width: "50px" }} />
       </Icon>
-      <Icon href="">
+      <Icon href="https://www.instagram.com/flavour_culture">
         <InstagramIcon style={{ height: "50px", width: "50px" }} />
       </Icon>
-    </IcontContainer>
+    </IconContainer>
   </SocialContanier>
 )
 

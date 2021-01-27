@@ -1,11 +1,9 @@
 import React from "react"
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
 
-const API_KEY = process.env.API_KEY
-
 const MapComponent = props => {
   return (
-    <LoadScript googleMapsApiKey={API_KEY}>
+    <LoadScript googleMapsApiKey={process.env.GATSBY_GOOGLE_API_KEY}>
       <GoogleMap
         mapContainerStyle={props.mapStyles}
         zoom={16}

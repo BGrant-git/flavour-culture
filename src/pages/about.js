@@ -6,19 +6,10 @@ import Layout from "../components/layout"
 import OurStoryComponent from "../components/about/OurStoryComponent"
 import ContactBar from "../components/contact/contactBar"
 
-import bannerImg from "../images/about/storybannerlarge.jpg"
 import instaPost from "../images/igpost.jpg"
 
-const BannerContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  overflow: hidden;
-  margin: auto;
-`
-
 const BannerImg = styled.img`
-  width: 100vw;
+  width: 100%;
 `
 
 const IGpost = styled.div`
@@ -31,11 +22,7 @@ const About = () => {
   return (
     <Layout>
       <Grid container>
-        <Grid item xs={12}>
-          <BannerContainer>
-            <BannerImg src={bannerImg} alt="" />
-          </BannerContainer>
-        </Grid>
+        <BannerImg src={require("../images/about/storybanner.jpg")} alt="" />
         <Grid item xs={12}>
           <OurStoryComponent />
         </Grid>
