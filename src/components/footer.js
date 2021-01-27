@@ -35,7 +35,7 @@ const Footer = () => {
           <Links href="#">
             <FacebookIcon style={{ height: 35, width: 35 }} />
           </Links>
-          <Links href="#">
+          <Links href="https://www.instagram.com/flavour_culture">
             <InstagramIcon style={{ height: 35, width: 35 }} />
           </Links>
           <Links href="#">

@@ -128,7 +128,7 @@ const SocialComponent = () => (
       <Icon href="">
         <FacebookIcon style={{ height: "50px", width: "50px" }} />
       </Icon>
-      <Icon href="">
+      <Icon href="https://www.instagram.com/flavour_culture">
         <InstagramIcon style={{ height: "50px", width: "50px" }} />
       </Icon>
     </IconContainer>
