@@ -27,7 +27,6 @@ const Navigation = styled.nav`
 const Toggle = styled.div`
   display: none;
   height: 100%;
-  cursor: pointer;
   padding: 0 10vw;
   margin-left: -20px;
 

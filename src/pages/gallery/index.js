@@ -41,10 +41,10 @@ const AlbumsCard = styled.div`
   background-color: #1d1d1b;
   width: 100%;
   margin-top: 15px;
-  cursor: pointer;
   transition: all 0.1s ease-out;
   -moz-transition: -moz-transform all 0.1s ease-out;
   overflow: hidden;
+  text-align: left;
 
   :hover {
     transform: scale(1.1);
@@ -58,7 +58,7 @@ const CardTitle = styled.h1`
   display: flex;
   align-items: center;
   color: white;
-  padding-left: 2vw;
+  padding: 2vw;
 
   @media (max-width: 700px) {
     font-size: 25px;

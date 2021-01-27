@@ -63,7 +63,6 @@ const Button = styled.button`
   align-self: center;
   font-size: 22px;
   font-family: inherit;
-  cursor: pointer;
   color: white;
   background-image: linear-gradient(to bottom right, red, #8b0000);
   border-radius: 5px;
