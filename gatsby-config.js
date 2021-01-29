@@ -7,7 +7,7 @@ module.exports = {
     titleLink: [
       {
         name: "Home",
-        link: "/",
+        link: "/home",
       },
     ],
     menuLinks: [

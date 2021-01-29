@@ -1,17 +1,26 @@
 import React from "react"
+import styled from "styled-components"
+
 import "./css/index.css"
 
-import Layout from "../components/layout"
-import Home from "../components/homepage/home"
-import SEO from "../components/seo"
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
-const Index = () => {
+const Logo = styled.img`
+  height: 300px;
+  margin: 20px;
+`
+
+const ComingSoon = () => {
   return (
-    <Layout>
-      <SEO />
-      <Home />
-    </Layout>
+    <Container>
+      <Logo src={require("../images/icon.png")} alt="" />
+      <h2>Flavourculture.co.uk coming soon!</h2>
+    </Container>
   )
 }
 
-export default Index
+export default ComingSoon
