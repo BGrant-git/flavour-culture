@@ -42,7 +42,7 @@ const Times = styled.p`
 
 const VendorName = styled.h1`
   width: 100%;
-  font-size: 38px;
+  font-size: 28px;
 `
 
 const InfoText = styled.div`
@@ -58,14 +58,14 @@ const LocationsComponent = () => {
     height: "200px",
   }
 
+  const northLocation = {
+    lat: 51.48258,
+    lng: -0.20022,
+  }
+
   const bratLocation = {
     lat: 51.50799771795835,
     lng: -0.27228767069153964,
-  }
-
-  const otherLocation = {
-    lat: 51.50449154072763,
-    lng: -0.17036255857814045,
   }
   return (
     <>
@@ -75,34 +75,39 @@ const LocationsComponent = () => {
           <h1>LOCATIONS</h1>
         </Header>
         <div style={{ width: "100%" }}>
-          <Grid container style={{ padding: "10px" }}>
+          <Grid container style={{ padding: "20px" }}>
             <Grid item xs={12} md={6}>
               <VendorName>BRATHAUS</VendorName>
-              <Times>Every Saturday</Times>
-              <Times>10.00 - 17.00</Times>
+              <Times>Monday - Saturday</Times>
+              <Times>09.00 - 18.00</Times>
             </Grid>
             <Grid item xs={12} md={6}>
               <InfoText>
                 <p>
-                  <strong>Acton Market</strong>
+                  <strong>North End Rd. Market</strong>
                   <br />
-                  The Mount/King Street
+                  North End Road
                   <br />
-                  Acton W3 9NW
+                  Fulham SW6 1NS
                 </p>
               </InfoText>
             </Grid>
           </Grid>
 
-          <MapComponent mapStyles={mapStyles} center={bratLocation} />
+          <MapComponent
+            mapStyles={mapStyles}
+            center={northLocation}
+            zoom={13}
+            brat={bratLocation}
+          />
         </div>
 
         <div style={{ width: "100%" }}>
-          <Grid container style={{ padding: "10px" }}>
+          <Grid container style={{ padding: "20px" }}>
             <Grid item xs={12} md={6}>
-              <VendorName>Naan Stop</VendorName>
-              <Times>Monday - Friday</Times>
-              <Times>10.00 - 17.00</Times>
+              <VendorName>BRATHAUS</VendorName>
+              <Times>Every Saturday</Times>
+              <Times>10.00 - 16.00</Times>
             </Grid>
             <Grid item xs={12} md={6}>
               <InfoText>
@@ -117,7 +122,7 @@ const LocationsComponent = () => {
             </Grid>
           </Grid>
 
-          <MapComponent mapStyles={mapStyles} center={otherLocation} />
+          <MapComponent mapStyles={mapStyles} center={bratLocation} zoom={16} />
         </div>
       </Container>
     </>

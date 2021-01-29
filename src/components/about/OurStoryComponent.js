@@ -43,7 +43,7 @@ const ImageContainer = styled.div`
 
 const StoryImage = styled.img`
   height: auto;
-  width: 400px;
+  width: 350px;
   overflow: hidden;
   border-radius: 60px;
 
@@ -51,10 +51,6 @@ const StoryImage = styled.img`
     width: 90%;
     height: auto;
   }
-`
-
-const Heading = styled.h1`
-  padding-bottom: 30px;
 `
 
 const TextContainer = styled(Grid)`
@@ -82,12 +78,8 @@ const Button = styled.button`
   align-self: center;
   font-size: 16px;
   color: white;
-  background-color: #1d1d1b;
   border-radius: 5px;
-
-  :hover {
-    background-image: linear-gradient(to bottom right, #8b0000, red);
-  }
+  background-image: linear-gradient(to bottom right, #8b0000, red);
 `
 
 const SocialContanier = styled.div`
@@ -136,15 +128,14 @@ const SocialComponent = () => (
 )
 
 const SectionLeft = props => (
-  <SectionContainer>
-    <Grid container style={props.background}>
+  <SectionContainer style={props.background}>
+    <Grid container>
       <Grid item sm={12} md={4}>
         <ImageContainer>
           <StoryImage src={props.img} alt="" />
         </ImageContainer>
       </Grid>
       <TextContainer item sm={12} md={8}>
-        <Heading>{props.heading}</Heading>
         <Text style={{ paddingBottom: 15 }}>{props.text1}</Text>
         <Text>{props.text2}</Text>
         {props.hasSocial ? <SocialComponent /> : null}
@@ -158,7 +149,6 @@ const SectionRight = props => (
   <SectionContainer style={props.background}>
     <Grid container>
       <TextContainer item sm={12} md={8}>
-        <Heading>{props.heading}</Heading>
         <p style={{ paddingBottom: 15 }}>{props.text1}</p>
         <p>{props.text2}</p>
         {props.hasSocial ? <SocialComponent /> : null}
@@ -179,29 +169,13 @@ const OurStoryComponent = () => {
   const storyBackground = { backgroundColor: "#1d1d1b", color: "white" }
 
   const content = [
-    `We are two school friends with a passion for flavoursome food, we
-      want to build a positive culture around authentic food cooked
-      fresh to order with high quality ingredients.`,
-    `During the Covid-19 lockdown we watched restaurants close & large
-      events cancelled but noticed some food truck vendors were still
-      trading. We wanted to be a part of this trend as we see a
-      revolution in catering towards street food & deliveries.`,
-    `The beauty of mobile catering is that we are able to interact with
-      guests on a personal level and express our passion for food to
-      them. We love the fast paced environment and challenges to face on
-      a daily basis. In comparison to restaurants, chefs often are stuck
-      behind the scenes and don’t get the fulfillment from seeing a
-      customer smile after that first bite.`,
-    `Our memories of home cooked food, travelling the world and working
-      in London food events forged our passion & appreciation for the
-      flavours of many great cuisines. We want to share these
-      inspirations with others through our food.`,
-    `As a business we aim to reduce our environmental impact by
-      eliminating single use plastics & sourcing local produce, as well
-      as introducing biodegradable packaging. The healthy aspect of our
-      food and the good energy we bring creates an atmosphere that
-      people want to be a part of. Our ultimate goal is for our guests
-      to be completely satisfied.`,
+    `THE STORY of Flavour Culture began during lockdown 1.0 in March 2020 with two school friends on a hot summer's day cycling along the London river Thames (we rode it so many times we renamed it “The Nile”) & the beautiful fields along the path. `,
+    `After a scenic ride we decided to leave the gates to explore the local area for lunch. Obviously, most food outlets were shut. However, the only options we could find were fast food takeaways or a burger van. We saw a return to the streets in this market and wanted to be a part of it.`,
+    `POST LOCKDOWN 2.0 and many months of planning, our catering venture began, “Flavour Culture Catering”. We started cooking from home to deliver breakfasts, lunches & dinners to the film & music industry. Many of our friends and family have told us the food is delicious but after some happy clients caught a buzz off our food it certified our mission.`,
+    `
+    SHORTLY AFTER, our first pop up ‘BRATHAUS’ was established, selling authentic German sausages, we handled the pressure of a christmas market & ultimately brought a Christmas spirit to the locals.
+     `,
+    `THE BEAUTY of mobile catering is that we are able to interact with guests on a personal level and express our passion for food to them. Although we have a combined experience of 15 years within the hospitality industry, as owners things feel a bit different. We love the challenges to face on a daily basis. Chefs often are stuck behind the scenes and don’t get the fulfillment from seeing a customer smile after that first bite. We came up with a plan to use our newly gained catering experience and our first pop up as a gateway to our main project, ‘Naan Stop’.    `,
   ]
 
   return (
@@ -219,7 +193,7 @@ const OurStoryComponent = () => {
           {breakpoints.md ? (
             <SectionLeft
               heading={"Heading"}
-              text2={content[2]}
+              text1={content[2]}
               img={storyImg2}
               hasButton={true}
               background={storyBackground}
@@ -227,24 +201,24 @@ const OurStoryComponent = () => {
           ) : (
             <SectionRight
               heading={"Heading"}
-              text2={content[2]}
+              text1={content[2]}
               img={storyImg2}
               hasButton
               background={storyBackground}
             />
           )}
-          <SectionLeft heading={"Heading"} text2={content[2]} img={storyImg2} />
+          <SectionLeft heading={"Heading"} text1={content[3]} img={storyImg2} />
           {breakpoints.md ? (
             <SectionLeft
               heading={"Heading"}
-              text2={content[3]}
+              text1={content[4]}
               img={storyImg3}
               background={storyBackground}
             />
           ) : (
             <SectionRight
               heading={"Heading"}
-              text2={content[4]}
+              text1={content[4]}
               img={storyImg3}
               hasSocial
               background={storyBackground}

@@ -6,7 +6,7 @@ const MapComponent = props => {
     <LoadScript googleMapsApiKey={process.env.GATSBY_GOOGLE_API_KEY}>
       <GoogleMap
         mapContainerStyle={props.mapStyles}
-        zoom={16}
+        zoom={props.zoom}
         center={props.center}
       >
         <Marker position={props.center} />
