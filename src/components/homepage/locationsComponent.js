@@ -15,6 +15,8 @@ const Container = styled.div`
   background-color: #f0ead6;
   border-radius: 25px 25px 0 0;
 
+  font-size: 22px;
+
   @media (max-width: 960px) {
     margin-right: 0;
   }
@@ -36,37 +38,57 @@ const MarketIcon = styled.img`
   margin-top: -70px;
 `
 
+const VendorContainer = styled.div`
+  width: 100%;
+  padding: 20px;
+
+  @media (max-width: 600px) {
+    text-align: center;
+  }
+`
+
+const InfoContainerGrid = styled(Grid)`
+  padding: 5px 0;
+`
+
 const Times = styled.p`
   font-size: 18px;
 `
 
 const VendorName = styled.h1`
   width: 100%;
-  font-size: 28px;
+  font-size: 32px;
+  margin-bottom: 10px;
 `
 
-const InfoText = styled.div`
+const MapMarker = styled.img`
+  height: 70px;
+  margin-left: -5px;
+
+  @media (max-width: 600px) {
+  }
+`
+
+const Address = styled.div`
   width: 100%;
-  padding-top: 5px;
-  font-size: 22px;
   text-align: right;
+
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 `
 
 const LocationsComponent = () => {
   const mapStyles = {
     width: "100%",
-    height: "200px",
-  }
-
-  const northLocation = {
-    lat: 51.48258,
-    lng: -0.20022,
+    height: "300px",
   }
 
   const bratLocation = {
-    lat: 51.50799771795835,
-    lng: -0.27228767069153964,
+    lat: 51.49868110373929,
+    lng: -0.23894967099745187,
   }
+
   return (
     <>
       <Container>
@@ -74,56 +96,62 @@ const LocationsComponent = () => {
         <Header>
           <h1>LOCATIONS</h1>
         </Header>
-        <div style={{ width: "100%" }}>
-          <Grid container style={{ padding: "20px" }}>
-            <Grid item xs={12} md={6}>
-              <VendorName>BRATHAUS</VendorName>
+        <VendorContainer>
+          <VendorName>BRATHAUS</VendorName>
+          <InfoContainerGrid container>
+            <Grid item xs={12} sm={1}>
+              <MapMarker
+                src={require("../../images/home/map_marker_A.png")}
+                alt=""
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <strong>North End Rd. Market</strong>
+              <br />
               <Times>Monday - Saturday</Times>
               <Times>09.00 - 18.00</Times>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <InfoText>
+            <Grid item xs={12} sm={5}>
+              <Address>
                 <p>
-                  <strong>North End Rd. Market</strong>
-                  <br />
                   North End Road
                   <br />
                   Fulham SW6 1NS
                 </p>
-              </InfoText>
+              </Address>
             </Grid>
-          </Grid>
-
-          <MapComponent
-            mapStyles={mapStyles}
-            center={northLocation}
-            zoom={13}
-            brat={bratLocation}
-          />
-        </div>
-
-        <div style={{ width: "100%" }}>
-          <Grid container style={{ padding: "20px" }}>
-            <Grid item xs={12} md={6}>
-              <VendorName>BRATHAUS</VendorName>
+          </InfoContainerGrid>
+          <InfoContainerGrid container>
+            <Grid item xs={12} sm={1}>
+              <MapMarker
+                src={require("../../images/home/map_marker_B.png")}
+                alt=""
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <strong>Acton Market</strong>
+              <br />
               <Times>Every Saturday</Times>
               <Times>10.00 - 16.00</Times>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <InfoText>
+            <Grid item xs={12} sm={5}>
+              <Address>
                 <p>
-                  <strong>Acton Market</strong>
+                  The Mouny/King Street
                   <br />
-                  The Mount/King Street
-                  <br />
-                  Acton W3 9NW
+                  Acton, W3 1NS
                 </p>
-              </InfoText>
+              </Address>
             </Grid>
-          </Grid>
+          </InfoContainerGrid>
 
-          <MapComponent mapStyles={mapStyles} center={bratLocation} zoom={16} />
-        </div>
+          <MapComponent
+            mapStyles={mapStyles}
+            center={bratLocation}
+            zoom={12}
+            brat={bratLocation}
+          />
+        </VendorContainer>
       </Container>
     </>
   )
