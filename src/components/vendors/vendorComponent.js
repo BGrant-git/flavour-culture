@@ -85,7 +85,9 @@ const VendorComponentRight = props => {
 
 const VendorComponentLeft = props => {
   return (
-    <SectionContainer style={{ backgroundColor: "#1d1d1b", color: "white" }}>
+    <SectionContainer
+      style={{ backgroundColor: " var(--main-color)", color: "white" }}
+    >
       <Grid container>
         <Grid item sm={12} md={4}>
           <SectionImageContainer>
@@ -112,7 +114,7 @@ const VendorComponent = () => {
   const img1 = require("../../../content/gallery/Brathaus/PXL_20201125_124046901.PORTRAIT~2.jpg")
 
   const sectionContainerStyleFluid = breakpoints.md
-    ? { backgroundColor: "#1d1d1b", color: "white" }
+    ? { backgroundColor: " var(--main-color)", color: "white" }
     : { backgroundColor: "white" }
 
   const sectionContainerStyle = { backgroundColor: "white" }
@@ -173,15 +175,17 @@ const VendorComponent = () => {
 
   return (
     <>
-      <VendorComponentRight
-        heading={vendorInfo[0].name}
-        subheading={vendorInfo[0].subheading}
-        text={vendorInfo[0].text}
-        img={img1}
-        background={sectionContainerStyle}
-      />
+      <div id="BRATHAUS">
+        <VendorComponentRight
+          heading={vendorInfo[0].name}
+          subheading={vendorInfo[0].subheading}
+          text={vendorInfo[0].text}
+          img={img1}
+          background={sectionContainerStyle}
+        />
+      </div>
       {breakpoints.md ? (
-        <>
+        <div id="NaanStop">
           <VendorComponentRight
             heading={vendorInfo[1].name}
             subheading={vendorInfo[1].subheading}
@@ -189,25 +193,26 @@ const VendorComponent = () => {
             img={img1}
             background={sectionContainerStyleFluid}
           />
-        </>
+        </div>
       ) : (
-        <>
+        <div id="NaanStop">
           <VendorComponentLeft
             heading={vendorInfo[1].name}
             subheading={vendorInfo[1].subheading}
             text={vendorInfo[1].text}
             img={img1}
           />
-        </>
+        </div>
       )}
-
-      <VendorComponentRight
-        heading={vendorInfo[2].name}
-        subheading={vendorInfo[2].subheading}
-        text={vendorInfo[2].text}
-        img={img1}
-        background={sectionContainerStyle}
-      />
+      <div id="FCC">
+        <VendorComponentRight
+          heading={vendorInfo[2].name}
+          subheading={vendorInfo[2].subheading}
+          text={vendorInfo[2].text}
+          img={img1}
+          background={sectionContainerStyle}
+        />
+      </div>
     </>
   )
 }

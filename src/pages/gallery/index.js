@@ -38,7 +38,7 @@ const AlbumsCard = styled.div`
   display: flex;
   justify-content: flex-start;
   height: 150px;
-  background-color: #1d1d1b;
+  background-color: var(--main-color);
   width: 100%;
   margin-top: 15px;
   transition: all 0.1s ease-out;

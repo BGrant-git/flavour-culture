@@ -24,7 +24,7 @@ const Container = styled.div`
 
 const Header = styled.div`
   border-radius: 25px 25px 0 0;
-  background-color: #1d1d1b;
+  background-color: var(--main-color);
   width: 100%;
   color: white;
   text-align: center;
@@ -57,7 +57,7 @@ const Times = styled.p`
 
 const VendorName = styled.h1`
   width: 100%;
-  font-size: 32px;
+  font-size: 42px;
   margin-bottom: 10px;
 `
 

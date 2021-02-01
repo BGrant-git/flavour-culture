@@ -19,7 +19,7 @@ const Container = styled.div`
 `
 
 const Header = styled.div`
-  background-color: #1d1d1b;
+  background-color: var(--main-color);
   width: 100%;
   color: white;
   text-align: center;
@@ -44,12 +44,12 @@ const Button = styled.button`
   font-size: 22px;
   padding: 12px;
   margin: auto;
-  background-color: #1d1d1b;
+  background-color: var(--main-color);
   font-family: "Thunder";
   color: white;
   border-radius: 16px;
   :hover {
-    color: #1d1d1b;
+    color: var(--main-color);
     background-color: white;
   }
 `

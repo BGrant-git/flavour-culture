@@ -31,7 +31,7 @@ const Label = styled.p`
 `
 
 const Input = styled.input`
-  border: 1px solid #1d1d1b;
+  border: 1px solid var(--main-color);
   height: 30px;
   width: 100%;
   height: 30px;
@@ -42,7 +42,7 @@ const Input = styled.input`
 
 const InputMessage = styled.textarea`
   resize: none;
-  border: 1px solid #1d1d1b;
+  border: 1px solid var(--main-color);
   width: 100%;
   height: 150px;
   font-family: inherit;

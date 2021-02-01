@@ -7,7 +7,7 @@ import NavbarLinks from "./navbarlinks"
 const Navigation = styled.nav`
   height: 75px;
   display: flex;
-  background-color: #1d1d1b;
+  background-color: var(--main-color);
   position: relative;
   text-transform: uppercase;
   margin: 0 auto;
