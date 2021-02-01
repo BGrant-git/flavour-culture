@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import storyImg1 from "../../images/about/storydanny.jpg"
 import storyImg2 from "../../images/about/storyjohnny.jpg"
@@ -53,7 +54,7 @@ const StoryImage = styled.img`
   }
 `
 
-const TextContainer = styled(Grid)`
+const TextContainerGrid = styled(Grid)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,6 +81,30 @@ const Button = styled.button`
   color: white;
   border-radius: 5px;
   background-image: linear-gradient(to bottom right, #8b0000, red);
+`
+
+const VendorButtonsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+`
+
+const VendorButton = styled.button`
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  font-size: 22px;
+  margin: 3px;
+  border-radius: 11px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    height: undefined;
+    text-align: center;
+  }
 `
 
 const SocialContanier = styled.div`
@@ -135,12 +160,28 @@ const SectionLeft = props => (
           <StoryImage src={props.img} alt="" />
         </ImageContainer>
       </Grid>
-      <TextContainer item sm={12} md={8}>
+      <TextContainerGrid contianer item sm={12} md={8}>
         <Text style={{ paddingBottom: 15 }}>{props.text1}</Text>
         <Text>{props.text2}</Text>
         {props.hasSocial ? <SocialComponent /> : null}
         {props.hasButton ? <Button>Make a booking</Button> : null}
-      </TextContainer>
+        {props.hasVendorButtons ? (
+          <>
+            <h3 style={{ textAlign: "center" }}>Check Out Our Vendors:</h3>
+            <VendorButtonsContainer>
+              <AnchorLink to="/vendors#FCC">
+                <VendorButton>Flavour Culture Catering</VendorButton>
+              </AnchorLink>
+              <AnchorLink to="/vendors#BRATHAUS">
+                <VendorButton>BRATHAUSE</VendorButton>
+              </AnchorLink>
+              <AnchorLink to="/vendors#NaanStop">
+                <VendorButton>Naan Stop</VendorButton>
+              </AnchorLink>
+            </VendorButtonsContainer>
+          </>
+        ) : null}
+      </TextContainerGrid>
     </Grid>
   </SectionContainer>
 )
@@ -148,12 +189,12 @@ const SectionLeft = props => (
 const SectionRight = props => (
   <SectionContainer style={props.background}>
     <Grid container>
-      <TextContainer item sm={12} md={8}>
+      <TextContainerGrid item sm={12} md={8}>
         <p style={{ paddingBottom: 15 }}>{props.text1}</p>
         <p>{props.text2}</p>
         {props.hasSocial ? <SocialComponent /> : null}
         {props.hasButton ? <Button>Make a booking</Button> : null}
-      </TextContainer>
+      </TextContainerGrid>
       <Grid item sm={12} md={4}>
         <ImageContainer>
           <StoryImage src={props.img} alt="" />
@@ -166,7 +207,10 @@ const SectionRight = props => (
 const OurStoryComponent = () => {
   const breakpoints = useBreakpoint()
 
-  const storyBackground = { backgroundColor: "#1d1d1b", color: "white" }
+  const storyBackground = {
+    backgroundColor: " var(--main-color)",
+    color: "white",
+  }
 
   const content = [
     `THE STORY of Flavour Culture began during lockdown 1.0 in March 2020 with two school friends on a hot summer's day cycling along the London river Thames (we rode it so many times we renamed it “The Nile”) & the beautiful fields along the path. `,
@@ -195,7 +239,7 @@ const OurStoryComponent = () => {
               heading={"Heading"}
               text1={content[2]}
               img={storyImg2}
-              hasButton={true}
+              hasButton
               background={storyBackground}
             />
           ) : (
@@ -207,7 +251,12 @@ const OurStoryComponent = () => {
               background={storyBackground}
             />
           )}
-          <SectionLeft heading={"Heading"} text1={content[3]} img={storyImg2} />
+          <SectionLeft
+            heading={"Heading"}
+            text1={content[3]}
+            img={storyImg2}
+            hasVendorButtons
+          />
           {breakpoints.md ? (
             <SectionLeft
               heading={"Heading"}

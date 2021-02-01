@@ -9,7 +9,6 @@ const MapComponent = props => {
         lng: -0.27228767069153964,
         loc: "B",
       },
-
       {
         lat: 51.48258,
         lng: -0.20022,

@@ -13,7 +13,7 @@ const ContactForm = styled.form`
 `
 
 const GridSection = styled(Grid)`
-  background-color: #1d1d1b;
+  background-color: var(--main-color);
   padding: 20px 35px 35px;
 `
 

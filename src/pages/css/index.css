@@ -48,10 +48,17 @@
 
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
+:root {
+  --main-color: #1d1d1b;
+}
+
 * {
   margin: 0;
   border: 0;
   box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
 }
 html,
 body {
@@ -59,14 +66,14 @@ body {
   height: 100%;
   margin: 0;
   border: 0;
-  overflow-x: hidden;
   -webkit-overflow-scrolling: touch; /* https://medium.com/react-camp/how-to-fight-the-body-scroll-2b00267b37ac */
   font-family: "Revans", "Ariel", sans-serif;
-  color: #1d1d1b;
+  color: var(--main-color);
   background-color: white;
   text-align: justify;
 }
 
 button {
   cursor: pointer;
+  font-family: inherit;
 }
