@@ -36,6 +36,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-anchor-links`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -59,12 +60,6 @@ module.exports = {
         start_url: `/`,
         display: `standalone`,
         icon: `src/images/icon.png`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -100,
       },
     },
   ],

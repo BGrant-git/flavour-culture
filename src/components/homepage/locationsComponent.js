@@ -109,7 +109,8 @@ const LocationsComponent = () => {
               <strong>North End Rd. Market</strong>
               <br />
               <Times>Monday - Saturday</Times>
-              <Times>09.00 - 18.00</Times>
+              <Times>10.00 - 16.00</Times>
+              <Times>Launched 1st Feb 2021</Times>
             </Grid>
             <Grid item xs={12} sm={5}>
               <Address>
@@ -133,11 +134,12 @@ const LocationsComponent = () => {
               <br />
               <Times>Every Saturday</Times>
               <Times>10.00 - 16.00</Times>
+              <Times style={{ color: "red" }}>Temporarily closed</Times>
             </Grid>
             <Grid item xs={12} sm={5}>
               <Address>
                 <p>
-                  The Mouny/King Street
+                  The Mount/King Street
                   <br />
                   Acton, W3 1NS
                 </p>

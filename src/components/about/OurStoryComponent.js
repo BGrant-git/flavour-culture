@@ -3,12 +3,12 @@ import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-
-import storyImg1 from "../../images/about/storydanny.jpg"
-import storyImg2 from "../../images/about/storyjohnny.jpg"
-import storyImg3 from "../../images/about/storyplate.jpg"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
+const storyImg1 = require("../../images/about/storydanny.jpg")
+const storyImg2 = require("../../images/about/storyjohnny.jpg")
+const storyImg3 = require("../../images/about/storyplate.jpg")
+const rosemary = require("../../images/rose.png")
 
 const StoryContainer = styled.div`
   display: flex;
@@ -23,6 +23,18 @@ const MainTitle = styled.div`
   font-family: "Thunder";
 `
 
+const TopHenna = styled.img`
+  height: 200px;
+  width: auto;
+  margin: -20px 0 -40px;
+
+  @media (max-width: 960px) {
+    margin: 0;
+  }
+`
+
+const BottomHenna = styled.img``
+
 const SectionContainer = styled.div`
   width: 100%;
   margin: 10px auto;
@@ -35,7 +47,6 @@ const ImageContainer = styled.div`
   height: 100%;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
 
   @media (max-width: 960px) {
     justify-content: center;
@@ -138,6 +149,28 @@ const Icon = styled.a`
   }
 `
 
+const RoseLeft = styled.img`
+  height: 600px;
+  margin-left: -150px;
+  margin-right: -100px;
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+`
+
+const RoseRight = styled.img`
+  height: 600px;
+  margin-left: -100px;
+  margin-right: -150px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+`
+
 const SocialComponent = () => (
   <SocialContanier>
     <SocialTitle>Check out our social media</SocialTitle>
@@ -155,12 +188,19 @@ const SocialComponent = () => (
 const SectionLeft = props => (
   <SectionContainer style={props.background}>
     <Grid container>
+      <RoseLeft src={rosemary} alt="" />
       <Grid item sm={12} md={4}>
         <ImageContainer>
           <StoryImage src={props.img} alt="" />
         </ImageContainer>
       </Grid>
-      <TextContainerGrid contianer item sm={12} md={8}>
+      <TextContainerGrid
+        contianer
+        item
+        sm={12}
+        md={8}
+        style={{ paddingRight: "50px" }}
+      >
         <Text style={{ paddingBottom: 15 }}>{props.text1}</Text>
         <Text>{props.text2}</Text>
         {props.hasSocial ? <SocialComponent /> : null}
@@ -173,7 +213,7 @@ const SectionLeft = props => (
                 <VendorButton>Flavour Culture Catering</VendorButton>
               </AnchorLink>
               <AnchorLink to="/vendors#BRATHAUS">
-                <VendorButton>BRATHAUSE</VendorButton>
+                <VendorButton>BRATHAUS</VendorButton>
               </AnchorLink>
               <AnchorLink to="/vendors#NaanStop">
                 <VendorButton>Naan Stop</VendorButton>
@@ -182,6 +222,7 @@ const SectionLeft = props => (
           </>
         ) : null}
       </TextContainerGrid>
+      <RoseRight src={rosemary} alt="" />
     </Grid>
   </SectionContainer>
 )
@@ -224,10 +265,11 @@ const OurStoryComponent = () => {
 
   return (
     <Grid container>
-      <Grid item sm={false} md={1} />
+      <Grid item xs={false} md={1}></Grid>
       <Grid item sm={12} md={10}>
         <StoryContainer>
           <MainTitle>OUR STORY</MainTitle>
+          <TopHenna src={require("../../images/henna/henna1.png")} alt="" />
           <SectionLeft
             heading={"Heading"}
             text1={content[0]}
@@ -273,6 +315,7 @@ const OurStoryComponent = () => {
               background={storyBackground}
             />
           )}
+          <BottomHenna src={require("../../images/henna/henna3.png")} alt="" />
         </StoryContainer>
       </Grid>
       <Grid item sm={false} md={1} />
