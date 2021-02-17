@@ -60,7 +60,7 @@ const Hamburger = styled.div`
   transition: all 0.3s linear;
   align-self: center;
   position: relative;
-  margin-left: 65vw;
+  margin-left: 55vw;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
 
   ::before,

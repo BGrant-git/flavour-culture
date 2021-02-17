@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-
 import "./css/index.css"
+
+import SEO from "../components/seo"
 
 const Container = styled.div`
   display: flex;
@@ -17,6 +18,7 @@ const Logo = styled.img`
 const ComingSoon = () => {
   return (
     <Container>
+      <SEO />
       <Logo src={require("../images/icon.png")} alt="" />
       <h2>Flavourculture.co.uk coming soon!</h2>
     </Container>

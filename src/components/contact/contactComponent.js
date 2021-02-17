@@ -13,16 +13,18 @@ const Form = styled.form`
 `
 
 const GridSection = styled(Grid)`
-  padding: 30px;
+  padding: 0 30px;
   background-color: white;
 `
 
 const Title = styled.h1`
   padding-bottom: 20px;
   font-size: 45px;
+  text-align: left;
 
   @media (max-width: 600px) {
     font-size: 35px;
+    text-align: center;
   }
 `
 
@@ -56,6 +58,20 @@ const Submit = styled.button`
   font-family: inherit;
 `
 
+const CheckboxItemContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  padding: 2px 0;
+`
+
+const CheckBox = styled.input`
+  transform: scale(1.2);
+`
+
+const CheckboxLabel = styled.label`
+  padding-left: 10px;
+`
+
 const ContactComponent = () => {
   return (
     <Form
@@ -76,6 +92,44 @@ const ContactComponent = () => {
           <Input type="email" name="email" required />
           <Label>*Phone Number:</Label>
           <Input type="tel" name="phone" required />
+          <h2 style={{ paddingTop: "5px" }}>Select Vendor:</h2>
+          <CheckboxItemContainer>
+            <CheckBox type="checkbox" id="fcc" name="vendor" value="fcc" />
+            <CheckboxLabel for="fcc">Flavour Culture Catering</CheckboxLabel>
+          </CheckboxItemContainer>
+          <CheckboxItemContainer>
+            <CheckBox type="checkbox" id="brat" name="vendor" value="brat" />
+            <CheckboxLabel for="brat">Brathaus</CheckboxLabel>
+          </CheckboxItemContainer>{" "}
+          <CheckboxItemContainer>
+            <CheckBox type="checkbox" id="naan" name="vendor" value="naan" />
+            <CheckboxLabel for="naan">Naan Stop</CheckboxLabel>
+          </CheckboxItemContainer>
+          <h2>Select Style of Service</h2>
+          <CheckboxItemContainer>
+            <CheckBox type="checkbox" id="plate" name="service" value="plate" />
+            <CheckboxLabel for="plate">Pre-plated drop off</CheckboxLabel>
+          </CheckboxItemContainer>
+          <CheckboxItemContainer>
+            <CheckBox
+              type="checkbox"
+              id="street"
+              name="service"
+              value="street"
+            />
+            <CheckboxLabel for="street">
+              Street style (marquee/van)
+            </CheckboxLabel>
+          </CheckboxItemContainer>{" "}
+          <CheckboxItemContainer>
+            <CheckBox
+              type="checkbox"
+              id="canteen"
+              name="vendor"
+              value="canteen"
+            />
+            <CheckboxLabel for="canteen">Banqueting </CheckboxLabel>
+          </CheckboxItemContainer>
         </GridSection>
         <GridSection item xs={12} sm={5}>
           <Label>Event Date</Label>
@@ -84,7 +138,9 @@ const ContactComponent = () => {
           <Input type="text" name="location" />
           <Label>Number of Guests:</Label>
           <Input type="text" name="guest-number" />
-          <Label>Message:</Label>
+          <Label>Dietary requirements:</Label>
+          <Input type="text" name="diet" />
+          <Label>Additonal Information:</Label>
           <InputMessage name="message" />
           <br />
           <Submit type="submit">SUBMIT</Submit>
