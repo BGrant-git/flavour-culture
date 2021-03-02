@@ -4,8 +4,6 @@ import { Link } from "gatsby"
 import Grid from "@material-ui/core/Grid"
 import styled from "styled-components"
 
-import Layout from "../../components/layout"
-
 import brathausThumb from "../../images/thumbnails/brat_thumb.jpg"
 import btsThumb from "../../images/thumbnails/bts_thumb.jpg"
 import naanThumb from "../../images/thumbnails/naan_thumb.jpg"
@@ -67,7 +65,7 @@ const CardTitle = styled.h1`
 
 const GalleryPage = () => {
   return (
-    <Layout>
+    <>
       <Grid container>
         <Grid item sm={false} md={3} />
         <Grid item xs={12} sm={12} md={6}>
@@ -121,7 +119,7 @@ const GalleryPage = () => {
           <div style={{ height: 200 }}></div>
         </Grid>
       </Grid>
-    </Layout>
+    </>
   )
 }
 

@@ -3,6 +3,15 @@ import ImageGallery from "react-image-gallery"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import styled from "styled-components"
 
+const Container = styled.div`
+  max-height: 500px;
+  overflow: hidden;
+
+  @media (max-width: 720px) {
+    height: 400px;
+  }
+`
+
 const Caption = styled.p`
   font-size: 25px;
   text-align: right;
@@ -140,18 +149,20 @@ const GalleryComponent = () => {
   const randomIndex = Math.floor(Math.random() * 3)
 
   return (
-    <ImageGallery
-      items={images()}
-      startIndex={randomIndex}
-      showThumbnails={false}
-      showFullscreenButton={false}
-      autoPlay={true}
-      showPlayButton={false}
-      showNav={false}
-      slideInterval={5000}
-      slideDuration={450}
-      className="image-gallery-description"
-    />
+    <Container>
+      <ImageGallery
+        items={images()}
+        startIndex={randomIndex}
+        showThumbnails={false}
+        showFullscreenButton={false}
+        autoPlay={true}
+        showPlayButton={false}
+        showNav={false}
+        slideInterval={5000}
+        slideDuration={450}
+        className="image-gallery-description"
+      />
+    </Container>
   )
 }
 

@@ -134,7 +134,7 @@ const LocationsComponent = () => {
               <br />
               <Times>Every Saturday</Times>
               <Times>10.00 - 16.00</Times>
-              <Times style={{ color: "red" }}>Temporarily closed</Times>
+              <Times style={{ color: "red" }}>Closed</Times>
             </Grid>
             <Grid item xs={12} sm={5}>
               <Address>

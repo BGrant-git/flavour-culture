@@ -1,20 +1,28 @@
 import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
+import { useTheme } from "@material-ui/core/styles"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 const Form = styled.form`
   width: 100%;
-  margin: 130px auto 20px;
+  color: white;
+  margin: 0 auto 20px;
+  padding: 150px 0 50px;
   max-width: 1300px;
+  background-image: url(${require("../../images/about/desk-bg.jpg")});
+  background-size: 100%;
+  background-repeat: no-repeat;
 
-  @media (max-width: 960px) {
-    margin-top: 20px;
+  @media (max-width: 1055px) {
+    background-image: url(${require("../../images/contact/mob-bg.png")});
+    padding-top: 100px;
   }
 `
 
 const GridSection = styled(Grid)`
-  padding: 0 30px;
-  background-color: white;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
 `
 
 const Title = styled.h1`
@@ -40,6 +48,11 @@ const Input = styled.input`
   font-family: inherit;
   font-size: 18px;
   padding: 5px;
+
+  @media (max-width: 1000px) {
+    height: 40px;
+    font-size: 22px;
+  }
 `
 
 const InputMessage = styled.textarea`
@@ -66,13 +79,24 @@ const CheckboxItemContainer = styled.div`
 
 const CheckBox = styled.input`
   transform: scale(1.2);
+
+  @media (max-width: 1000px) {
+    transform: scale(1.7);
+  }
 `
 
 const CheckboxLabel = styled.label`
   padding-left: 10px;
+
+  @media (max-width: 1000px) {
+    font-size: 22px;
+  }
 `
 
 const ContactComponent = () => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up("md"))
+
   return (
     <Form
       method="POST"
@@ -83,8 +107,15 @@ const ContactComponent = () => {
     >
       <input type="hidden" name="form-name" value="contact" />
       <Grid container>
-        <Grid item xs={false} sm={1} />
-        <GridSection item xs={12} sm={5}>
+        <Grid item xs={false} md={1} />
+        <GridSection
+          item
+          xs={12}
+          md={5}
+          style={{
+            borderRadius: matches ? "20px 0 0 20px " : "20px 20px 0 0",
+          }}
+        >
           <Title>Make a Booking</Title>
           <Label>*Name:</Label>
           <Input type="text" name="name" required />
@@ -131,7 +162,14 @@ const ContactComponent = () => {
             <CheckboxLabel for="canteen">Banqueting </CheckboxLabel>
           </CheckboxItemContainer>
         </GridSection>
-        <GridSection item xs={12} sm={5}>
+        <GridSection
+          item
+          xs={12}
+          md={5}
+          style={{
+            borderRadius: matches ? "0 20px 20px 0" : "0 0 20px 20px",
+          }}
+        >
           <Label>Event Date</Label>
           <Input type="date" name="date" />
           <Label>Event Location:</Label>
@@ -145,7 +183,7 @@ const ContactComponent = () => {
           <br />
           <Submit type="submit">SUBMIT</Submit>
         </GridSection>
-        <Grid item xs={false} sm={1} />
+        <Grid item xs={false} md={1} />
       </Grid>
     </Form>
   )
