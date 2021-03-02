@@ -27,8 +27,8 @@ const Navigation = styled.nav`
 const Toggle = styled.div`
   display: none;
   height: 100%;
-  padding: 0 10vw;
-  margin-left: -20px;
+  margin-left: 70%;
+  overflow-x: hidden;
 
   @media (max-width: 960px) {
     display: flex;
@@ -60,7 +60,6 @@ const Hamburger = styled.div`
   transition: all 0.3s linear;
   align-self: center;
   position: relative;
-  margin-left: 55vw;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
 
   ::before,

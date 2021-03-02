@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 
-import Layout from "../components/layout"
 import VendorComponent from "../components/vendors/vendorComponent"
 
 const BannerImg = styled.img`
@@ -17,7 +16,7 @@ const Title = styled.h1`
 
 const Vendors = () => {
   return (
-    <Layout>
+    <>
       <BannerImg src={require("../images/vendors/vendor-banner.jpg")} />
       <Title>VENDORS</Title>
       <Grid container>
@@ -27,7 +26,7 @@ const Vendors = () => {
         </Grid>
         <Grid item md={false} lg={1} />
       </Grid>
-    </Layout>
+    </>
   )
 }
 

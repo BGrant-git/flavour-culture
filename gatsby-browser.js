@@ -1,8 +1,3 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import wrapWithProvider from "./wrap-with-provider"
 
-// You can delete this file if you're not using it
-require("typeface-rubik");
+export const wrapPageElement = wrapWithProvider

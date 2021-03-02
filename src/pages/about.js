@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 
-import Layout from "../components/layout"
 import OurStoryComponent from "../components/about/OurStoryComponent"
 import ContactBar from "../components/contact/contactBar"
 
@@ -20,7 +19,7 @@ const IGpost = styled.div`
 
 const About = () => {
   return (
-    <Layout>
+    <>
       <Grid container>
         <BannerImg src={require("../images/about/storybanner.jpg")} alt="" />
         <Grid item xs={12}>
@@ -47,7 +46,7 @@ const About = () => {
           <ContactBar />
         </Grid>
       </Grid>
-    </Layout>
+    </>
   )
 }
 
