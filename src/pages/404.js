@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { navigate } from "gatsby"
 
+import Layout from "../components/layout"
+
 const Container = styled.div`
   padding: 20px;
   text-align: center;
@@ -14,7 +16,7 @@ const Link = styled.p`
 
 const NotFound = () => {
   return (
-    <>
+    <Layout>
       <Container>
         <h1 style={{ padding: "10px" }}>Page not found</h1>
         <p style={{ padding: "10px" }}>
@@ -28,7 +30,7 @@ const NotFound = () => {
           Go Back
         </Link>
       </Container>
-    </>
+    </Layout>
   )
 }
 

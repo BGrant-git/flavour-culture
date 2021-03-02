@@ -1,12 +1,12 @@
-import React from "react"
+// import React from "react"
 
-import StoreContextProvider from "./src/store/context"
-import Layout from "./src/components/layout"
+// import StoreContextProvider from "./src/store/context"
+// import Layout from "./src/components/layout"
 
-export default ({ element }) => {
-  return (
-    <StoreContextProvider>
-      <Layout>{element}</Layout>
-    </StoreContextProvider>
-  )
-}
+// export default ({ element }) => {
+//   return (
+//     <StoreContextProvider>
+//       <Layout>{element}</Layout>
+//     </StoreContextProvider>
+//   )
+// }
