@@ -70,7 +70,6 @@ const RoseRight = styled.img`
   z-index: -1;
 
   @media (max-width: 960px) {
-    display: none;
     margin: auto;
   }
 `

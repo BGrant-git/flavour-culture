@@ -6,8 +6,6 @@ import Layout from "../components/layout"
 import OurStoryComponent from "../components/about/OurStoryComponent"
 import ContactBar from "../components/contact/contactBar"
 
-import instaPost from "../images/igpost.jpg"
-
 const BannerImg = styled.img`
   width: 100%;
 `
@@ -25,23 +23,6 @@ const About = () => {
         <BannerImg src={require("../images/about/storybanner.jpg")} alt="" />
         <Grid item xs={12}>
           <OurStoryComponent />
-        </Grid>
-        <Grid container item xs={12} justify="center">
-          <Grid item sm={12} md={4}>
-            <IGpost>
-              <img src={instaPost} alt="" />
-            </IGpost>
-          </Grid>
-          <Grid item sm={12} md={4}>
-            <IGpost>
-              <img src={instaPost} alt="" />
-            </IGpost>
-          </Grid>
-          <Grid item sm={12} md={4}>
-            <IGpost>
-              <img src={instaPost} alt="" />
-            </IGpost>
-          </Grid>
         </Grid>
         <Grid item xs={12}>
           <ContactBar />

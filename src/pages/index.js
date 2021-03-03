@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import "./css/index.css"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const Container = styled.div`
