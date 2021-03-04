@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
-import { useBreakpoint } from "gatsby-plugin-breakpoints"
+import { useMediaQuery } from "@material-ui/core"
 
 const SectionContainer = styled.div`
   width: 95%;
@@ -109,11 +109,11 @@ const VendorComponentLeft = props => {
 }
 
 const VendorComponent = () => {
-  const breakpoints = useBreakpoint()
+  const matches = useMediaQuery("(max-width: 960px)")
 
   const img1 = require("../../../content/gallery/Brathaus/PXL_20201125_124046901.PORTRAIT~2.jpg")
 
-  const sectionContainerStyleFluid = breakpoints.md
+  const sectionContainerStyleFluid = matches
     ? { backgroundColor: " var(--main-color)", color: "white" }
     : { backgroundColor: "white" }
 
@@ -184,7 +184,7 @@ const VendorComponent = () => {
           background={sectionContainerStyle}
         />
       </div>
-      {breakpoints.md ? (
+      {matches ? (
         <div id="NaanStop">
           <VendorComponentRight
             heading={vendorInfo[1].name}

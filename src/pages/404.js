@@ -12,6 +12,7 @@ const Container = styled.div`
 const Link = styled.p`
   padding: 10px;
   color: blue;
+  cursor: pointer;
 `
 
 const NotFound = () => {
@@ -24,7 +25,7 @@ const NotFound = () => {
         </p>
         <Link
           onClick={() => {
-            navigate("-1")
+            navigate(-1)
           }}
         >
           Go Back

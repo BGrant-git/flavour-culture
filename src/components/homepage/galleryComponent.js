@@ -1,7 +1,7 @@
 import React from "react"
 import ImageGallery from "react-image-gallery"
-import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import styled from "styled-components"
+import { useMediaQuery } from "@material-ui/core"
 
 const Container = styled.div`
   max-height: 500px;
@@ -19,7 +19,7 @@ const Caption = styled.p`
 `
 
 const GalleryComponent = () => {
-  const breakpoints = useBreakpoint()
+  const matches = useMediaQuery("(max-width: 600px)")
 
   const Image0 = () => (
     <div>
@@ -110,7 +110,7 @@ const GalleryComponent = () => {
   )
 
   const images = () =>
-    breakpoints.sm
+    matches
       ? [
           {
             original: "",

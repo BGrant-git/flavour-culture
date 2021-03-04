@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Grid, useMediaQuery } from "@material-ui/core/"
-import { useTheme } from "@material-ui/core/styles"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import SocialComponent from "./SocialComponent"
@@ -120,8 +119,7 @@ const RoseRightMob = styled.img`
 `
 
 const SectionLeft = props => {
-  const theme = useTheme()
-  const screenMd = useMediaQuery(theme.breakpoints.up("md"))
+  const matches = useMediaQuery("(max-width: 960px")
 
   return (
     <SectionContainer style={props.background}>
@@ -137,7 +135,7 @@ const SectionLeft = props => {
           item
           sm={12}
           md={8}
-          style={props.breakpoints.md ? null : { paddingRight: "50px" }}
+          style={matches ? null : { paddingRight: "50px" }}
         >
           <Text style={{ paddingBottom: 15 }}>{props.text1}</Text>
           <Text>{props.text2}</Text>
