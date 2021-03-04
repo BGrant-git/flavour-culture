@@ -18,10 +18,10 @@ const StoryContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hiddene;
+  overlfow: undefined;
 
   @media (max-width: 960px) {
-    overflow: undefined;
+    overflow: hidden;
   }
 `
 
@@ -30,8 +30,11 @@ const MainTitle = styled.div`
   padding-top: 35px;
   font-size: 45px;
   font-family: "Thunder";
-
   margin-bottom: -120px;
+
+  @media (max-width: 960px) {
+    margin-bottom: 0;
+  }
 `
 
 const TopHenna = styled.img`
@@ -40,7 +43,9 @@ const TopHenna = styled.img`
   margin-top: 20px;
 `
 
-const BottomHenna = styled.img``
+const BottomHenna = styled.img`
+  padding-bottom: 10px;
+`
 
 const Divider = styled.img`
   margin: -100px 0;
