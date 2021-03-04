@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
-import { useTheme } from "@material-ui/core/styles"
-import useMediaQuery from "@material-ui/core/useMediaQuery"
+import { Grid, useMediaQuery } from "@material-ui/core/"
 
 const Form = styled.form`
   width: 100%;
@@ -94,8 +92,7 @@ const CheckboxLabel = styled.label`
 `
 
 const ContactComponent = () => {
-  const theme = useTheme()
-  const matches = useMediaQuery(theme.breakpoints.up("md"))
+  const matches = useMediaQuery("(max-width: 960px")
 
   return (
     <Form

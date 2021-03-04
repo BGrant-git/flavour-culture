@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Grid, useMediaQuery } from "@material-ui/core/"
-import { useTheme } from "@material-ui/core/styles"
-import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
 import SectionRight from "./SectionRight"
 import SectionLeft from "./SectionLeft"
@@ -57,9 +55,7 @@ const Divider = styled.img`
 `
 
 const OurStoryComponent = () => {
-  const breakpoints = useBreakpoint()
-  const theme = useTheme()
-  const screenMd = useMediaQuery(theme.breakpoints.up("md"))
+  const matches = useMediaQuery("(max-width: 960px)")
 
   const storyBackground = {
     color: "black",
@@ -88,18 +84,16 @@ const OurStoryComponent = () => {
             text1={content[0]}
             text2={content[1]}
             img={storyImg1}
-            breakpoints={breakpoints}
             hasRosemary
           />
           <Divider src={divider} alt="" />
-          {breakpoints.md ? (
+          {matches ? (
             <SectionLeft
               heading={"Heading"}
               text1={content[2]}
               img={storyImg2}
               hasButton
               background={storyBackground}
-              breakpoints={breakpoints}
               mobRoseRight
             />
           ) : (
@@ -114,28 +108,26 @@ const OurStoryComponent = () => {
           <Divider
             src={divider}
             alt=""
-            style={screenMd ? { marginBottom: "-20px" } : null}
+            style={matches ? { marginBottom: "-20px" } : null}
           />
           <SectionLeft
             heading={"Heading"}
             text1={content[3]}
             img={storyImg2}
             hasVendorButtons
-            breakpoints={breakpoints}
             hasRosemary
           />
           <Divider
             src={divider}
             alt=""
-            style={screenMd ? { marginTop: "-70px" } : null}
+            style={matches ? { marginTop: "-70px" } : null}
           />
-          {breakpoints.md ? (
+          {matches ? (
             <SectionLeft
               heading={"Heading"}
               text1={content[4]}
               img={storyImg3}
               background={storyBackground}
-              breakpoints={breakpoints}
             />
           ) : (
             <SectionRight
