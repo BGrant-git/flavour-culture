@@ -1,12 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
+import { Grid, useMediaQuery } from "@material-ui/core"
 
 const ContactForm = styled.form`
   width: 100%;
   margin: 30px 0;
   margin: 10px auto;
-
   color: white;
   font-family: inherit;
   max-width: 1300px;
@@ -48,6 +47,8 @@ const Submit = styled.button`
 `
 
 const ContactBar = () => {
+  const matches = useMediaQuery("(max-width: 960px")
+
   return (
     <ContactForm
       method="POST"
@@ -58,21 +59,39 @@ const ContactBar = () => {
     >
       <input type="hidden" name="form-name" value="contact" />
       <Grid container>
-        <Grid item xs={false} sm={1} />
-        <GridSection item xs={12} sm={5}>
+        <Grid item xs={false} md={1} />
+        <GridSection
+          item
+          xs={12}
+          md={5}
+          style={
+            matches
+              ? { borderRadius: "15px 15px 0 0" }
+              : { borderRadius: "15px 0 0 15px" }
+          }
+        >
           <Title>Contact Us</Title>
           <Header>Name:</Header>
           <Input type="text" name="name" required />
           <Header>Email Address:</Header>
           <Input type="email" name="email" required />
         </GridSection>
-        <GridSection item xs={12} sm={5}>
+        <GridSection
+          item
+          xs={12}
+          md={5}
+          style={
+            matches
+              ? { borderRadius: "0 0 15px 15px" }
+              : { borderRadius: "0 15px 15px 0" }
+          }
+        >
           <Header style={{ marginTop: 18 }}>Message:</Header>
           <InputMessage name="message" required />
           <br />
           <Submit type="submit">SUBMIT</Submit>
         </GridSection>
-        <Grid item xs={false} sm={1} />
+        <Grid item xs={false} md={1} />
       </Grid>
     </ContactForm>
   )
