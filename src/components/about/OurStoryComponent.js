@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
+import { Grid, useMediaQuery } from "@material-ui/core/"
+import { useTheme } from "@material-ui/core/styles"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
 import SectionRight from "./SectionRight"
@@ -11,11 +12,17 @@ const storyImg2 = require("../../images/about/storyjohnny.jpg")
 const storyImg3 = require("../../images/about/storyplate.jpg")
 const topHennna = require("../../images/henna/henna1.png")
 const bottomHenna = require("../../images/henna/henna3.png")
+const divider = require("../../images/henna/divider.png")
 
 const StoryContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overlfow: undefined;
+
+  @media (max-width: 960px) {
+    overflow: hidden;
+  }
 `
 
 const MainTitle = styled.div`
@@ -23,22 +30,36 @@ const MainTitle = styled.div`
   padding-top: 35px;
   font-size: 45px;
   font-family: "Thunder";
+  margin-bottom: -120px;
+
+  @media (max-width: 960px) {
+    margin-bottom: 0;
+  }
 `
 
 const TopHenna = styled.img`
   height: 200px;
   width: auto;
-  margin: -20px 0 -40px;
+  margin-top: 20px;
+`
+
+const BottomHenna = styled.img`
+  padding-bottom: 10px;
+`
+
+const Divider = styled.img`
+  margin: -100px 0;
 
   @media (max-width: 960px) {
+    width: 100%;
     margin: 0;
   }
 `
 
-const BottomHenna = styled.img``
-
 const OurStoryComponent = () => {
   const breakpoints = useBreakpoint()
+  const theme = useTheme()
+  const screenMd = useMediaQuery(theme.breakpoints.up("md"))
 
   const storyBackground = {
     color: "black",
@@ -59,8 +80,9 @@ const OurStoryComponent = () => {
       <Grid item xs={false} md={1}></Grid>
       <Grid item sm={12} md={10}>
         <StoryContainer>
-          <MainTitle>OUR STORY</MainTitle>
           <TopHenna src={topHennna} alt="" />
+          <MainTitle>OUR STORY</MainTitle>
+
           <SectionLeft
             heading={"Heading"}
             text1={content[0]}
@@ -69,6 +91,7 @@ const OurStoryComponent = () => {
             breakpoints={breakpoints}
             hasRosemary
           />
+          <Divider src={divider} alt="" />
           {breakpoints.md ? (
             <SectionLeft
               heading={"Heading"}
@@ -77,6 +100,7 @@ const OurStoryComponent = () => {
               hasButton
               background={storyBackground}
               breakpoints={breakpoints}
+              mobRoseRight
             />
           ) : (
             <SectionRight
@@ -87,6 +111,11 @@ const OurStoryComponent = () => {
               background={storyBackground}
             />
           )}
+          <Divider
+            src={divider}
+            alt=""
+            style={screenMd ? { marginBottom: "-20px" } : null}
+          />
           <SectionLeft
             heading={"Heading"}
             text1={content[3]}
@@ -94,6 +123,11 @@ const OurStoryComponent = () => {
             hasVendorButtons
             breakpoints={breakpoints}
             hasRosemary
+          />
+          <Divider
+            src={divider}
+            alt=""
+            style={screenMd ? { marginTop: "-70px" } : null}
           />
           {breakpoints.md ? (
             <SectionLeft

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
+import { Grid, useMediaQuery } from "@material-ui/core/"
+import { useTheme } from "@material-ui/core/styles"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import SocialComponent from "./SocialComponent"
@@ -76,7 +77,7 @@ const VendorButtonsContainer = styled.div`
 `
 
 const VendorButton = styled.button`
-  background-color: var(--main-color);
+  background-image: linear-gradient(to bottom right, #8b0000, red);
   color: white;
   padding: 10px;
   font-size: 22px;
@@ -100,45 +101,73 @@ const RoseLeft = styled.img`
   }
 `
 
-const SectionLeft = props => (
-  <SectionContainer style={props.background}>
-    <Grid container>
-      {props.hasRosemary ? <RoseLeft src={rosemary} alt="" /> : null}
-      <Grid item sm={12} md={4}>
-        <ImageContainer>
-          <StoryImage src={props.img} alt="" />
-        </ImageContainer>
+const RoseRight = styled.img`
+  height: 300px;
+  margin-top: 150px;
+  margin-left: -20px;
+  margin-right: -120px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+  @media (max-width: 960px) {
+    margin: -650px 0 0 -60px;
+  }
+`
+
+const RoseRightMob = styled.img`
+  height: 300px;
+  margin: -650px 0 0 85%;
+`
+
+const SectionLeft = props => {
+  const theme = useTheme()
+  const screenMd = useMediaQuery(theme.breakpoints.up("md"))
+
+  return (
+    <SectionContainer style={props.background}>
+      <Grid container>
+        {props.hasRosemary ? <RoseLeft src={rosemary} alt="" /> : null}
+        <Grid item sm={12} md={4}>
+          <ImageContainer>
+            <StoryImage src={props.img} alt="" />
+          </ImageContainer>
+        </Grid>
+        <TextContainerGrid
+          contianer
+          item
+          sm={12}
+          md={8}
+          style={props.breakpoints.md ? null : { paddingRight: "50px" }}
+        >
+          <Text style={{ paddingBottom: 15 }}>{props.text1}</Text>
+          <Text>{props.text2}</Text>
+          {props.hasSocial ? <SocialComponent /> : null}
+          {props.hasButton ? <Button>Make a booking</Button> : null}
+          {props.hasVendorButtons ? (
+            <>
+              <h3 style={{ textAlign: "center" }}>Check Out Our Vendors:</h3>
+              <VendorButtonsContainer>
+                <AnchorLink to="/vendors#FCC">
+                  <VendorButton>Flavour Culture Catering</VendorButton>
+                </AnchorLink>
+                <AnchorLink to="/vendors#BRATHAUS">
+                  <VendorButton>BRATHAUS</VendorButton>
+                </AnchorLink>
+                <AnchorLink to="/vendors#NaanStop">
+                  <VendorButton>Naan Stop</VendorButton>
+                </AnchorLink>
+              </VendorButtonsContainer>
+            </>
+          ) : null}
+        </TextContainerGrid>
+        {props.mobRoseRight ? (
+          <RoseRightMob src={rosemary} alt="" />
+        ) : (
+          <RoseRight src={rosemary} alt="" />
+        )}
       </Grid>
-      <TextContainerGrid
-        contianer
-        item
-        sm={12}
-        md={8}
-        style={props.breakpoints.md ? null : { paddingRight: "50px" }}
-      >
-        <Text style={{ paddingBottom: 15 }}>{props.text1}</Text>
-        <Text>{props.text2}</Text>
-        {props.hasSocial ? <SocialComponent /> : null}
-        {props.hasButton ? <Button>Make a booking</Button> : null}
-        {props.hasVendorButtons ? (
-          <>
-            <h3 style={{ textAlign: "center" }}>Check Out Our Vendors:</h3>
-            <VendorButtonsContainer>
-              <AnchorLink to="/vendors#FCC">
-                <VendorButton>Flavour Culture Catering</VendorButton>
-              </AnchorLink>
-              <AnchorLink to="/vendors#BRATHAUS">
-                <VendorButton>BRATHAUS</VendorButton>
-              </AnchorLink>
-              <AnchorLink to="/vendors#NaanStop">
-                <VendorButton>Naan Stop</VendorButton>
-              </AnchorLink>
-            </VendorButtonsContainer>
-          </>
-        ) : null}
-      </TextContainerGrid>
-    </Grid>
-  </SectionContainer>
-)
+    </SectionContainer>
+  )
+}
 
 export default SectionLeft

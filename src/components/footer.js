@@ -6,6 +6,8 @@ import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 
+const googleIcon = require("../images/google-footer.png")
+
 const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,16 +24,32 @@ const Links = styled.a`
   color: white;
 
   &:hover {
-    color: #dcdcdc;
     transition: 0.1s ease-in;
   }
+`
+
+const GoogleIcon = styled.div`
+  background-color: white;
+  height: 27px;
+  width: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin: -3px 0 0 3px;
 `
 
 const Footer = () => {
   return (
     <FooterContainer>
       <Grid container direction="column" alignItems="center">
-        <Grid item>
+        <Grid
+          item
+          container
+          direction="row"
+          alignItems="center"
+          justify="center"
+        >
           <Links href="#">
             <FacebookIcon style={{ height: 35, width: 35 }} />
           </Links>
@@ -40,6 +58,15 @@ const Footer = () => {
           </Links>
           <Links href="#">
             <LinkedInIcon style={{ height: 35, width: 35 }} />
+          </Links>
+          <Links href="https://maps.app.goo.gl/zAfMGh18ESzfFq4NA">
+            <GoogleIcon>
+              <img
+                src={googleIcon}
+                alt=""
+                style={{ height: "75%", width: "75%" }}
+              />
+            </GoogleIcon>
           </Links>
         </Grid>
         <Grid item>

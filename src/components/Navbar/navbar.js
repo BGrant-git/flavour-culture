@@ -47,7 +47,7 @@ const Navbox = styled.div`
     justify-content: flex-start;
     padding-top: 4vw;
     background-color: #fff;
-    transition: all 0.3s ease-in;
+    transition: all 0.2s ease-in;
     top: 75px;
     right: ${props => (props.open ? "-100%" : "0")};
   }
@@ -57,7 +57,7 @@ const Hamburger = styled.div`
   background-color: white;
   width: 30px;
   height: 3px;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
   align-self: center;
   position: relative;
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
@@ -69,7 +69,7 @@ const Hamburger = styled.div`
     background-color: white;
     content: "";
     position: absolute;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
   }
 
   ::before {
