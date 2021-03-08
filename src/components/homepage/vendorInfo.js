@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const dinnerplateImg = require("../../../content/gallery/Indian/7.jpg")
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -56,11 +54,6 @@ const Button = styled.button`
   }
 `
 
-const DinnerPlate = styled.img`
-  margin-top: 10px;
-  width: 100%;
-`
-
 const VendorInfo = () => {
   return (
     <Container>
@@ -80,7 +73,6 @@ const VendorInfo = () => {
       <Link to="/contact">
         <Button>MAKE A BOOKING</Button>
       </Link>
-      <DinnerPlate src={dinnerplateImg} alt="" />
     </Container>
   )
 }

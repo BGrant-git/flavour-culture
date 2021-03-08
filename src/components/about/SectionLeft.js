@@ -122,7 +122,7 @@ const SectionLeft = props => {
   const matches = useMediaQuery("(max-width: 960px")
 
   return (
-    <SectionContainer style={props.background}>
+    <SectionContainer>
       <Grid container>
         {props.hasRosemary ? <RoseLeft src={rosemary} alt="" /> : null}
         <Grid item sm={12} md={4}>
