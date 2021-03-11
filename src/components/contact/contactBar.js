@@ -70,7 +70,7 @@ const ContactBar = () => {
               : { borderRadius: "15px 0 0 15px" }
           }
         >
-          <Title>Contact Us</Title>
+          <Title>Send us a message</Title>
           <Header>Name:</Header>
           <Input type="text" name="name" required />
           <Header>Email Address:</Header>

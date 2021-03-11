@@ -4,9 +4,9 @@ import Grid from "@material-ui/core/Grid"
 
 import Layout from "../components/layout"
 import OurStoryComponent from "../components/about/OurStoryComponent"
-import ContactBar from "../components/contact/contactBar"
 
 const henna1 = require("../images/henna/henna1.png")
+const henna2 = require("../images/henna/henna3.png")
 
 const BannerImg = styled.img`
   width: 100%;
@@ -15,7 +15,11 @@ const BannerImg = styled.img`
 const TopHenna = styled.img`
   height: 200px;
   display: block;
-  margin: auto;
+  margin: 20px auto 0;
+`
+
+const BottomHenna = styled.img`
+  margin: -40px 0 20px;
 `
 
 const About = () => {
@@ -27,9 +31,7 @@ const About = () => {
         <Grid item xs={12}>
           <OurStoryComponent />
         </Grid>
-        <Grid item xs={12}>
-          <ContactBar />
-        </Grid>
+        <BottomHenna src={henna2} alt="" />
       </Grid>
     </Layout>
   )

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
+import { Grid, useMediaQuery } from "@material-ui/core/"
 
 import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
@@ -40,6 +40,7 @@ const GoogleIcon = styled.div`
 `
 
 const Footer = () => {
+  const matches = useMediaQuery("(max-width: 960px)")
   return (
     <FooterContainer>
       <Grid container direction="column" alignItems="center">
@@ -51,16 +52,34 @@ const Footer = () => {
           justify="center"
         >
           <Links href="#">
-            <FacebookIcon style={{ height: 35, width: 35 }} />
+            <FacebookIcon
+              style={
+                matches ? { height: 50, width: 50 } : { height: 35, width: 35 }
+              }
+            />
           </Links>
           <Links href="https://www.instagram.com/flavour_culture">
-            <InstagramIcon style={{ height: 35, width: 35 }} />
+            <InstagramIcon
+              style={
+                matches ? { height: 50, width: 50 } : { height: 35, width: 35 }
+              }
+            />
           </Links>
           <Links href="#">
-            <LinkedInIcon style={{ height: 35, width: 35 }} />
+            <LinkedInIcon
+              style={
+                matches ? { height: 50, width: 50 } : { height: 35, width: 35 }
+              }
+            />
           </Links>
           <Links href="https://maps.app.goo.gl/zAfMGh18ESzfFq4NA">
-            <GoogleIcon>
+            <GoogleIcon
+              style={
+                matches
+                  ? { height: "39px", width: "35px" }
+                  : { height: "27px", width: "27px" }
+              }
+            >
               <img
                 src={googleIcon}
                 alt=""
@@ -78,7 +97,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/ben-grant-397bbb1b6/"
               >
                 {" "}
-                Ben G{" "}
+                Ben Ga{" "}
               </Links>
             </strong>{" "}
             |{" "}
