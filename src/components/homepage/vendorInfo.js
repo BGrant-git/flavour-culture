@@ -2,21 +2,21 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const dinnerplateImg = require("../../../content/gallery/Indian/7.jpg")
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 600px;
+  height: 90.2%;
   margin-left: 20px;
   margin-bottom: 20px;
-  background-color: #f0ead6;
+  background-color: ;
   border-radius: 25px 25px 0 0;
+  background-color: var(--eggshell);
 
   @media (max-width: 960px) {
     margin-left: 0;
+    height: auto;
   }
 `
 
@@ -56,11 +56,6 @@ const Button = styled.button`
   }
 `
 
-const DinnerPlate = styled.img`
-  margin-top: 10px;
-  width: 100%;
-`
-
 const VendorInfo = () => {
   return (
     <Container>
@@ -80,7 +75,6 @@ const VendorInfo = () => {
       <Link to="/contact">
         <Button>MAKE A BOOKING</Button>
       </Link>
-      <DinnerPlate src={dinnerplateImg} alt="" />
     </Container>
   )
 }

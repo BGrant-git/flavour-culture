@@ -120,9 +120,10 @@ const RoseRightMob = styled.img`
 
 const SectionLeft = props => {
   const matches = useMediaQuery("(max-width: 960px")
+  const matchesSmall = useMediaQuery("(max-width: 675px")
 
   return (
-    <SectionContainer style={props.background}>
+    <SectionContainer>
       <Grid container>
         {props.hasRosemary ? <RoseLeft src={rosemary} alt="" /> : null}
         <Grid item sm={12} md={4}>
@@ -158,7 +159,7 @@ const SectionLeft = props => {
             </>
           ) : null}
         </TextContainerGrid>
-        {props.mobRoseRight ? (
+        {props.mobRoseRight && matchesSmall ? (
           <RoseRightMob src={rosemary} alt="" />
         ) : (
           <RoseRight src={rosemary} alt="" />

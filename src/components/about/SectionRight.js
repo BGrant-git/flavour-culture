@@ -75,7 +75,7 @@ const RoseRight = styled.img`
 `
 
 const SectionRight = props => (
-  <SectionContainer style={props.background}>
+  <SectionContainer>
     <Grid container>
       <TextContainerGrid item sm={12} md={8}>
         <p style={{ paddingBottom: 15 }}>{props.text1}</p>

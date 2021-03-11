@@ -12,9 +12,8 @@ const Container = styled.div`
   width: 100%;
   margin-right: 20px;
   margin-bottom: 72px;
-  background-color: #f0ead6;
+  background-color: var(--eggshell);
   border-radius: 25px 25px 0 0;
-
   font-size: 22px;
 
   @media (max-width: 960px) {
@@ -40,11 +39,10 @@ const MarketIcon = styled.img`
 
 const VendorContainer = styled.div`
   width: 100%;
-  padding: 20px;
+`
 
-  @media (max-width: 600px) {
-    text-align: center;
-  }
+const InfoContainer = styled.div`
+  padding: 20px;
 `
 
 const InfoContainerGrid = styled(Grid)`
@@ -59,23 +57,21 @@ const VendorName = styled.h1`
   width: 100%;
   font-size: 42px;
   margin-bottom: 10px;
+  text-align: center;
 `
 
 const MapMarker = styled.img`
   height: 70px;
   margin-left: -5px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
+    margin-left: -40%;
   }
 `
 
 const Address = styled.div`
   width: 100%;
   text-align: right;
-
-  @media (max-width: 600px) {
-    text-align: center;
-  }
 `
 
 const LocationsComponent = () => {
@@ -90,29 +86,29 @@ const LocationsComponent = () => {
   }
 
   return (
-    <>
-      <Container>
-        <MarketIcon src={require("../../images/home/marketicon.png")} alt="" />
-        <Header>
-          <h1>LOCATIONS</h1>
-        </Header>
-        <VendorContainer>
+    <Container>
+      <MarketIcon src={require("../../images/home/marketicon.png")} alt="" />
+      <Header>
+        <h1>LOCATIONS</h1>
+      </Header>
+      <VendorContainer>
+        <InfoContainer>
           <VendorName>BRATHAUS</VendorName>
           <InfoContainerGrid container>
-            <Grid item xs={12} sm={1}>
+            <Grid item xs={1}>
               <MapMarker
                 src={require("../../images/home/map_marker_A.png")}
                 alt=""
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={6} style={{ textAlign: "left" }}>
               <strong>North End Rd. Market</strong>
               <br />
               <Times>Monday - Saturday</Times>
               <Times>10.00 - 16.00</Times>
               <Times>Launched 1st Feb 2021</Times>
             </Grid>
-            <Grid item xs={12} sm={5}>
+            <Grid item xs={5}>
               <Address>
                 <p>
                   North End Road
@@ -123,20 +119,20 @@ const LocationsComponent = () => {
             </Grid>
           </InfoContainerGrid>
           <InfoContainerGrid container>
-            <Grid item xs={12} sm={1}>
+            <Grid item xs={1}>
               <MapMarker
                 src={require("../../images/home/map_marker_B.png")}
                 alt=""
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={6}>
               <strong>Acton Market</strong>
               <br />
               <Times>Every Saturday</Times>
               <Times>10.00 - 16.00</Times>
               <Times style={{ color: "red" }}>Closed</Times>
             </Grid>
-            <Grid item xs={12} sm={5}>
+            <Grid item xs={5}>
               <Address>
                 <p>
                   The Mount/King Street
@@ -146,16 +142,16 @@ const LocationsComponent = () => {
               </Address>
             </Grid>
           </InfoContainerGrid>
+        </InfoContainer>
 
-          <MapComponent
-            mapStyles={mapStyles}
-            center={bratLocation}
-            zoom={12}
-            brat={bratLocation}
-          />
-        </VendorContainer>
-      </Container>
-    </>
+        <MapComponent
+          mapStyles={mapStyles}
+          center={bratLocation}
+          zoom={12}
+          brat={bratLocation}
+        />
+      </VendorContainer>
+    </Container>
   )
 }
 

@@ -1,123 +1,33 @@
 import React from "react"
-import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
 import { useMediaQuery } from "@material-ui/core"
+import styled from "styled-components"
 
-const SectionContainer = styled.div`
-  width: 95%;
-  margin: 10px auto;
-  border-radius: 50px;
+import VendorComponentRight from "./VendorComponentRight"
+import VendorComponentLeft from "./VendorComponentLeft"
 
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+const divider = require("../../images/henna/divider.png")
+
+const Title = styled.h1`
+  padding: 30px;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Thunder";
 `
 
-const SectionImageContainer = styled.div`
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-`
-
-const SectionImage = styled.img`
-  height: auto;
-  width: 400px;
-  overflow: hidden;
-  padding: 1vw;
-  border-radius: 60px;
+const Divider = styled.img`
+  display: block;
+  margin: auto;
 
   @media (max-width: 960px) {
-    width: 90%;
-    height: auto;
+    width: 100%;
+    margin: 0;
   }
 `
-
-const SectionTextContainer = styled.div`
-  padding: 20px;
-`
-
-const SectionHeading = styled.h1`
-  font-size: 40px;
-  padding-bottom: 10px;
-
-  @media (max-width: 768px) {
-    text-align: center;
-  }
-`
-
-const SectionSubheading = styled.h2`
-  padding: 5px 0;
-
-  @media (max-width: 768px) {
-    text-align: center;
-  }
-`
-
-const SectionText = styled.p`
-  padding: 10px 0;
-  text-align: justify;
-  font-size: 20px;
-`
-
-const VendorComponentRight = props => {
-  return (
-    <SectionContainer style={props.background}>
-      <Grid container>
-        <Grid item sm={12} md={8}>
-          <SectionTextContainer>
-            <SectionHeading>{props.heading}</SectionHeading>
-            <SectionSubheading>{props.subheading}</SectionSubheading>
-            {props.text.map((item, i) => (
-              <SectionText index={i}>{item}</SectionText>
-            ))}
-          </SectionTextContainer>
-        </Grid>
-        <Grid item sm={12} md={4}>
-          <SectionImageContainer>
-            <SectionImage src={props.img} alt="" />
-          </SectionImageContainer>
-        </Grid>
-      </Grid>
-    </SectionContainer>
-  )
-}
-
-const VendorComponentLeft = props => {
-  return (
-    <SectionContainer
-      style={{ backgroundColor: " var(--main-color)", color: "white" }}
-    >
-      <Grid container>
-        <Grid item sm={12} md={4}>
-          <SectionImageContainer>
-            <SectionImage src={props.img} alt="" />
-          </SectionImageContainer>
-        </Grid>
-        <Grid item sm={12} md={8}>
-          <SectionTextContainer>
-            <SectionHeading>{props.heading}</SectionHeading>
-            <SectionSubheading>{props.subheading}</SectionSubheading>
-            {props.text.map((item, i) => (
-              <SectionText index={i}>{item}</SectionText>
-            ))}
-          </SectionTextContainer>
-        </Grid>
-      </Grid>
-    </SectionContainer>
-  )
-}
 
 const VendorComponent = () => {
   const matches = useMediaQuery("(max-width: 960px)")
 
   const img1 = require("../../../content/gallery/Brathaus/PXL_20201125_124046901.PORTRAIT~2.jpg")
-
-  const sectionContainerStyleFluid = matches
-    ? { backgroundColor: " var(--main-color)", color: "white" }
-    : { backgroundColor: "white" }
-
-  const sectionContainerStyle = { backgroundColor: "white" }
 
   const vendorInfo = [
     {
@@ -175,15 +85,20 @@ const VendorComponent = () => {
 
   return (
     <>
+      <Title>VENDORS</Title>
       <div id="BRATHAUS">
         <VendorComponentRight
           heading={vendorInfo[0].name}
           subheading={vendorInfo[0].subheading}
           text={vendorInfo[0].text}
           img={img1}
-          background={sectionContainerStyle}
         />
       </div>
+      <Divider
+        src={divider}
+        alt=""
+        style={!matches ? { marginTop: "-60px" } : null}
+      />
       {matches ? (
         <div id="NaanStop">
           <VendorComponentRight
@@ -191,7 +106,6 @@ const VendorComponent = () => {
             subheading={vendorInfo[1].subheading}
             text={vendorInfo[1].text}
             img={img1}
-            background={sectionContainerStyleFluid}
           />
         </div>
       ) : (
@@ -204,13 +118,13 @@ const VendorComponent = () => {
           />
         </div>
       )}
+      <Divider src={divider} alt="" />
       <div id="FCC">
         <VendorComponentRight
           heading={vendorInfo[2].name}
           subheading={vendorInfo[2].subheading}
           text={vendorInfo[2].text}
           img={img1}
-          background={sectionContainerStyle}
         />
       </div>
     </>

@@ -6,14 +6,16 @@ import Layout from "../components/layout"
 import OurStoryComponent from "../components/about/OurStoryComponent"
 import ContactBar from "../components/contact/contactBar"
 
+const henna1 = require("../images/henna/henna1.png")
+
 const BannerImg = styled.img`
   width: 100%;
 `
 
-const IGpost = styled.div`
-  width: 354px;
+const TopHenna = styled.img`
+  height: 200px;
+  display: block;
   margin: auto;
-  padding: 20px 0;
 `
 
 const About = () => {
@@ -21,6 +23,7 @@ const About = () => {
     <Layout>
       <Grid container>
         <BannerImg src={require("../images/about/storybanner.jpg")} alt="" />
+        <TopHenna src={henna1} atl="" />
         <Grid item xs={12}>
           <OurStoryComponent />
         </Grid>

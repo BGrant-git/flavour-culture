@@ -8,7 +8,6 @@ import SectionLeft from "./SectionLeft"
 const storyImg1 = require("../../images/about/storydanny.jpg")
 const storyImg2 = require("../../images/about/storyjohnny.jpg")
 const storyImg3 = require("../../images/about/storyplate.jpg")
-const topHennna = require("../../images/henna/henna1.png")
 const bottomHenna = require("../../images/henna/henna3.png")
 const divider = require("../../images/henna/divider.png")
 
@@ -35,12 +34,6 @@ const MainTitle = styled.div`
   }
 `
 
-const TopHenna = styled.img`
-  height: 200px;
-  width: auto;
-  margin-top: 20px;
-`
-
 const BottomHenna = styled.img`
   padding-bottom: 10px;
 `
@@ -57,10 +50,6 @@ const Divider = styled.img`
 const OurStoryComponent = () => {
   const matches = useMediaQuery("(max-width: 960px)")
 
-  const storyBackground = {
-    color: "black",
-  }
-
   const content = [
     `THE STORY of Flavour Culture began during lockdown 1.0 in March 2020 with two school friends on a hot summer's day cycling along the London river Thames (we rode it so many times we renamed it “The Nile”) & the beautiful fields along the path. `,
     `After a scenic ride we decided to leave the gates to explore the local area for lunch. Obviously, most food outlets were shut. However, the only options we could find were fast food takeaways or a burger van. We saw a return to the streets in this market and wanted to be a part of it.`,
@@ -76,7 +65,6 @@ const OurStoryComponent = () => {
       <Grid item xs={false} md={1}></Grid>
       <Grid item sm={12} md={10}>
         <StoryContainer>
-          <TopHenna src={topHennna} alt="" />
           <MainTitle>OUR STORY</MainTitle>
 
           <SectionLeft
@@ -93,7 +81,6 @@ const OurStoryComponent = () => {
               text1={content[2]}
               img={storyImg2}
               hasButton
-              background={storyBackground}
               mobRoseRight
             />
           ) : (
@@ -102,7 +89,6 @@ const OurStoryComponent = () => {
               text1={content[2]}
               img={storyImg2}
               hasButton
-              background={storyBackground}
             />
           )}
           <Divider
@@ -120,14 +106,14 @@ const OurStoryComponent = () => {
           <Divider
             src={divider}
             alt=""
-            style={matches ? { marginTop: "-70px" } : null}
+            style={matches ? { marginTop: "-30px" } : null}
           />
           {matches ? (
             <SectionLeft
               heading={"Heading"}
               text1={content[4]}
               img={storyImg3}
-              background={storyBackground}
+              mobRoseRight
             />
           ) : (
             <SectionRight
@@ -135,7 +121,6 @@ const OurStoryComponent = () => {
               text1={content[4]}
               img={storyImg3}
               hasSocial
-              background={storyBackground}
             />
           )}
           <BottomHenna src={bottomHenna} alt="" />
