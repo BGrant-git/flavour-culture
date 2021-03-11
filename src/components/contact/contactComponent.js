@@ -7,13 +7,12 @@ const Form = styled.form`
   color: white;
   margin: 0 auto 20px;
   padding: 150px 0 50px;
-  max-width: 1300px;
-  background-image: url(${require("../../images/about/desk-bg.jpg")});
+  background-image: url(${require("../../images/contact/contact-desktop-bg.jpg")});
   background-size: 100%;
   background-repeat: no-repeat;
 
-  @media (max-width: 1055px) {
-    background-image: url(${require("../../images/contact/mob-bg.png")});
+  @media (max-width: 1330px) {
+    background-image: url(${require("../../images/contact/mob-bg.jpg")});
     padding-top: 100px;
   }
 `
@@ -29,13 +28,17 @@ const Title = styled.h1`
   text-align: left;
 
   @media (max-width: 600px) {
-    font-size: 35px;
+    font-size: 45px;
     text-align: center;
   }
 `
 
 const Label = styled.p`
   padding: 5px 0px;
+
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
 `
 
 const Input = styled.input`
@@ -49,7 +52,7 @@ const Input = styled.input`
 
   @media (max-width: 1000px) {
     height: 40px;
-    font-size: 22px;
+    font-size: 24px;
   }
 `
 
@@ -67,12 +70,20 @@ const Submit = styled.button`
   margin: 5px 5px 5px 0;
   padding: 10px;
   font-family: inherit;
+
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
 `
 
 const CheckboxItemContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   padding: 2px 0;
+
+  @media (max-width: 600px) {
+    padding: 5px 0;
+  }
 `
 
 const CheckBox = styled.input`
@@ -110,7 +121,7 @@ const ContactComponent = () => {
           xs={12}
           md={5}
           style={{
-            borderRadius: matches ? "20px 0 0 20px " : "20px 20px 0 0",
+            borderRadius: matches ? "20px 20px 0 0" : "20px 0 0 20px",
           }}
         >
           <Title>Make a Booking</Title>
@@ -164,7 +175,7 @@ const ContactComponent = () => {
           xs={12}
           md={5}
           style={{
-            borderRadius: matches ? "0 20px 20px 0" : "0 0 20px 20px",
+            borderRadius: matches ? "0 0 20px 20px" : "0 20px 20px 0",
           }}
         >
           <Label>Event Date</Label>

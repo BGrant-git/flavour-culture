@@ -107,9 +107,11 @@ const RoseRight = styled.img`
   margin-right: -120px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  display: none;
 
   @media (max-width: 960px) {
     margin: -650px 0 0 -60px;
+    display: initial;
   }
 `
 

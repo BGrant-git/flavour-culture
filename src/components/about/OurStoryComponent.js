@@ -8,7 +8,6 @@ import SectionLeft from "./SectionLeft"
 const storyImg1 = require("../../images/about/storydanny.jpg")
 const storyImg2 = require("../../images/about/storyjohnny.jpg")
 const storyImg3 = require("../../images/about/storyplate.jpg")
-const bottomHenna = require("../../images/henna/henna3.png")
 const divider = require("../../images/henna/divider.png")
 
 const StoryContainer = styled.div`
@@ -32,10 +31,6 @@ const MainTitle = styled.div`
   @media (max-width: 960px) {
     margin-bottom: 0;
   }
-`
-
-const BottomHenna = styled.img`
-  padding-bottom: 10px;
 `
 
 const Divider = styled.img`
@@ -123,7 +118,6 @@ const OurStoryComponent = () => {
               hasSocial
             />
           )}
-          <BottomHenna src={bottomHenna} alt="" />
         </StoryContainer>
       </Grid>
       <Grid item sm={false} md={1} />
