@@ -7,14 +7,16 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 600px;
+  height: 90.2%;
   margin-left: 20px;
   margin-bottom: 20px;
-  background-color: #f0ead6;
+  background-color: ;
   border-radius: 25px 25px 0 0;
+  background-color: var(--eggshell);
 
   @media (max-width: 960px) {
     margin-left: 0;
+    height: auto;
   }
 `
 

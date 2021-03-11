@@ -8,7 +8,6 @@ import SectionLeft from "./SectionLeft"
 const storyImg1 = require("../../images/about/storydanny.jpg")
 const storyImg2 = require("../../images/about/storyjohnny.jpg")
 const storyImg3 = require("../../images/about/storyplate.jpg")
-const topHennna = require("../../images/henna/henna1.png")
 const bottomHenna = require("../../images/henna/henna3.png")
 const divider = require("../../images/henna/divider.png")
 
@@ -107,13 +106,14 @@ const OurStoryComponent = () => {
           <Divider
             src={divider}
             alt=""
-            style={matches ? { marginTop: "-70px" } : null}
+            style={matches ? { marginTop: "-30px" } : null}
           />
           {matches ? (
             <SectionLeft
               heading={"Heading"}
               text1={content[4]}
               img={storyImg3}
+              mobRoseRight
             />
           ) : (
             <SectionRight

@@ -15,7 +15,7 @@ const BannerImg = styled.img`
 const TopHenna = styled.img`
   height: 200px;
   display: block;
-  margin
+  margin: auto;
 `
 
 const About = () => {
