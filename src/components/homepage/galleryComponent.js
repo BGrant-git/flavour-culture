@@ -108,6 +108,7 @@ const GalleryComponent = () => {
         className="image-gallery-image"
         src={require("../../images/home/carousel/desk/jondan-wide.jpg")}
         alt=""
+        style={{ filter: "brightness(1.4)" }}
       />
     </div>
   )
@@ -159,7 +160,7 @@ const GalleryComponent = () => {
           },
         ]
 
-  const randomIndex = Math.floor(Math.random() * 3)
+  const randomIndex = Math.floor(Math.random() * 4)
 
   return (
     <div>

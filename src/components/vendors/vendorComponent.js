@@ -28,7 +28,7 @@ const VendorComponent = () => {
   const matches = useMediaQuery("(max-width: 960px)")
 
   const brat = require("../../../content/gallery/Brathaus/sausage.jpg")
-  const fcc = require("../../images/vendors/fcc.jpg")
+  const fcc = require("../../images/vendors/fcc2.jpg")
   const naan = require("../../images/vendors/naan.jpg")
 
   const vendorInfo = [
