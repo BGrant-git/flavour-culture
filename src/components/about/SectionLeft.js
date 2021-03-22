@@ -94,10 +94,6 @@ const RoseLeft = styled.img`
   height: 600px;
   margin-left: -150px;
   margin-right: -100px;
-
-  @media (max-width: 960px) {
-    display: none;
-  }
 `
 
 const RoseRight = styled.img`
@@ -108,11 +104,6 @@ const RoseRight = styled.img`
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   display: none;
-
-  @media (max-width: 960px) {
-    margin: -650px 0 0 -60px;
-    display: initial;
-  }
 `
 
 const RoseRightMob = styled.img`
@@ -120,14 +111,25 @@ const RoseRightMob = styled.img`
   margin: -650px 0 0 85%;
 `
 
+const RoseLeftMob = styled.img`
+  height: 300px;
+  margin: -725px 0 0 -55px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+`
+
 const SectionLeft = props => {
-  const matches = useMediaQuery("(max-width: 960px")
+  const matches = useMediaQuery("(max-width: 650px")
   const matchesSmall = useMediaQuery("(max-width: 675px")
 
   return (
     <SectionContainer>
       <Grid container>
-        {props.hasRosemary ? <RoseLeft src={rosemary} alt="" /> : null}
+        {matches ? (
+          <RoseLeftMob src={rosemary} alt="" />
+        ) : (
+          <RoseLeft src={rosemary} alt="" />
+        )}
         <Grid item sm={12} md={4}>
           <ImageContainer>
             <StoryImage src={props.img} alt="" />
@@ -161,7 +163,7 @@ const SectionLeft = props => {
             </>
           ) : null}
         </TextContainerGrid>
-        {props.mobRoseRight && matchesSmall ? (
+        {matchesSmall ? (
           <RoseRightMob src={rosemary} alt="" />
         ) : (
           <RoseRight src={rosemary} alt="" />

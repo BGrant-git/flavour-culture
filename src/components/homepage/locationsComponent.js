@@ -15,10 +15,6 @@ const Container = styled.div`
   background-color: var(--eggshell);
   border-radius: 25px 25px 0 0;
   font-size: 22px;
-
-  @media (max-width: 960px) {
-    margin-right: 0;
-  }
 `
 
 const Header = styled.div`

@@ -19,7 +19,7 @@ const TopHenna = styled.img`
 `
 
 const BottomHenna = styled.img`
-  margin: -40px 0 20px;
+  margin: -40px auto 20px;
 `
 
 const About = () => {

@@ -27,6 +27,7 @@ const BottomHenna = styled.img`
   margin: auto;
   display: block;
   margin-top: -60px;
+  margin-bottom: 20px;
 
   @media (max-width: 960px) {
     height: 250px;
@@ -38,16 +39,18 @@ const BottomHenna = styled.img`
 const Vendors = () => {
   return (
     <Layout>
-      <BannerImg src={banner} alt="" />
-      <MandalaStyle src={mandala} alt="" />
-      <Grid container>
-        <Grid item md={false} lg={1} />
-        <Grid item md={12} lg={10}>
-          <VendorComponent />
+      <div style={{ overflowX: "hidden" }}>
+        <BannerImg src={banner} alt="" />
+        <MandalaStyle src={mandala} alt="" />
+        <Grid container>
+          <Grid item md={false} lg={1} />
+          <Grid item md={12} lg={10}>
+            <VendorComponent />
+          </Grid>
+          <Grid item md={false} lg={1} />
         </Grid>
-        <Grid item md={false} lg={1} />
-      </Grid>
-      <BottomHenna src={henna} alt="" />
+        <BottomHenna src={henna} alt="" />
+      </div>
     </Layout>
   )
 }
