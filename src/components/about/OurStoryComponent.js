@@ -14,7 +14,7 @@ const StoryContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overlfow: undefined;
+  overflow: undefined;
 
   @media (max-width: 960px) {
     overflow: hidden;
@@ -67,7 +67,6 @@ const OurStoryComponent = () => {
             text1={content[0]}
             text2={content[1]}
             img={storyImg1}
-            hasRosemary
           />
           <Divider src={divider} alt="" />
           {matches ? (
@@ -96,7 +95,6 @@ const OurStoryComponent = () => {
             text1={content[3]}
             img={storyImg2}
             hasVendorButtons
-            hasRosemary
           />
           <Divider
             src={divider}

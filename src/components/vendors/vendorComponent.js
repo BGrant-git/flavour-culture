@@ -27,7 +27,9 @@ const Divider = styled.img`
 const VendorComponent = () => {
   const matches = useMediaQuery("(max-width: 960px)")
 
-  const img1 = require("../../../content/gallery/Brathaus/PXL_20201125_124046901.PORTRAIT~2.jpg")
+  const brat = require("../../../content/gallery/Brathaus/sausage.jpg")
+  const fcc = require("../../images/vendors/fcc.jpg")
+  const naan = require("../../images/vendors/naan.jpg")
 
   const vendorInfo = [
     {
@@ -91,7 +93,7 @@ const VendorComponent = () => {
           heading={vendorInfo[0].name}
           subheading={vendorInfo[0].subheading}
           text={vendorInfo[0].text}
-          img={img1}
+          img={brat}
         />
       </div>
       <Divider
@@ -105,7 +107,7 @@ const VendorComponent = () => {
             heading={vendorInfo[1].name}
             subheading={vendorInfo[1].subheading}
             text={vendorInfo[1].text}
-            img={img1}
+            img={naan}
           />
         </div>
       ) : (
@@ -114,7 +116,7 @@ const VendorComponent = () => {
             heading={vendorInfo[1].name}
             subheading={vendorInfo[1].subheading}
             text={vendorInfo[1].text}
-            img={img1}
+            img={naan}
           />
         </div>
       )}
@@ -124,7 +126,7 @@ const VendorComponent = () => {
           heading={vendorInfo[2].name}
           subheading={vendorInfo[2].subheading}
           text={vendorInfo[2].text}
-          img={img1}
+          img={fcc}
         />
       </div>
     </>

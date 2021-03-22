@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Grid, useMediaQuery } from "@material-ui/core/"
 
@@ -95,6 +95,7 @@ const CheckBox = styled.input`
 `
 
 const CheckboxLabel = styled.label`
+  font-size: 20px;
   padding-left: 10px;
 
   @media (max-width: 1000px) {
@@ -103,6 +104,9 @@ const CheckboxLabel = styled.label`
 `
 
 const ContactComponent = () => {
+  const [catering, setCatering] = useState(true)
+  const [brat, setBrat] = useState(true)
+  const [naan, setNaan] = useState(true)
   const matches = useMediaQuery("(max-width: 960px")
 
   return (
@@ -129,25 +133,69 @@ const ContactComponent = () => {
           <Input type="text" name="name" required />
           <Label>*Email:</Label>
           <Input type="email" name="email" required />
-          <Label>*Phone Number:</Label>
-          <Input type="tel" name="phone" required />
+          <Label>Contact Number:</Label>
+          <Input type="tel" name="phone" />
           <h2 style={{ paddingTop: "5px" }}>Select Vendor:</h2>
           <CheckboxItemContainer>
-            <CheckBox type="checkbox" id="fcc" name="vendor" value="fcc" />
+            <CheckBox
+              type="checkbox"
+              id="fcc"
+              name="vendor"
+              value="fcc"
+              onClick={() => setCatering(!catering)}
+            />
             <CheckboxLabel for="fcc">Flavour Culture Catering</CheckboxLabel>
           </CheckboxItemContainer>
           <CheckboxItemContainer>
-            <CheckBox type="checkbox" id="brat" name="vendor" value="brat" />
+            <CheckBox
+              type="checkbox"
+              id="brat"
+              name="vendor"
+              value="brat"
+              onClick={() => setBrat(!brat)}
+            />
             <CheckboxLabel for="brat">Brathaus</CheckboxLabel>
-          </CheckboxItemContainer>{" "}
+          </CheckboxItemContainer>
           <CheckboxItemContainer>
-            <CheckBox type="checkbox" id="naan" name="vendor" value="naan" />
+            <CheckBox
+              type="checkbox"
+              id="naan"
+              name="vendor"
+              value="naan"
+              onClick={() => setNaan(!naan)}
+            />
             <CheckboxLabel for="naan">Naan Stop</CheckboxLabel>
           </CheckboxItemContainer>
           <h2>Select Style of Service</h2>
           <CheckboxItemContainer>
-            <CheckBox type="checkbox" id="plate" name="service" value="plate" />
-            <CheckboxLabel for="plate">Pre-plated drop off</CheckboxLabel>
+            <CheckBox
+              type="checkbox"
+              id="plate"
+              name="service"
+              value="plate"
+              disabled={catering}
+            />
+            <CheckboxLabel
+              for="plate"
+              style={catering ? { color: "grey" } : null}
+            >
+              Pre-plated drop off
+            </CheckboxLabel>
+          </CheckboxItemContainer>
+          <CheckboxItemContainer>
+            <CheckBox
+              type="checkbox"
+              id="canteen"
+              name="vendor"
+              value="canteen"
+              disabled={catering}
+            />
+            <CheckboxLabel
+              for="canteen"
+              style={catering ? { color: "grey" } : null}
+            >
+              Banqueting
+            </CheckboxLabel>
           </CheckboxItemContainer>
           <CheckboxItemContainer>
             <CheckBox
@@ -155,19 +203,15 @@ const ContactComponent = () => {
               id="street"
               name="service"
               value="street"
+              disabled={true}
+              checked={naan && brat ? false : true}
             />
-            <CheckboxLabel for="street">
-              Street style (marquee/van)
+            <CheckboxLabel
+              for="street"
+              style={naan && brat ? { color: "grey" } : null}
+            >
+              Street food style
             </CheckboxLabel>
-          </CheckboxItemContainer>{" "}
-          <CheckboxItemContainer>
-            <CheckBox
-              type="checkbox"
-              id="canteen"
-              name="vendor"
-              value="canteen"
-            />
-            <CheckboxLabel for="canteen">Banqueting </CheckboxLabel>
           </CheckboxItemContainer>
         </GridSection>
         <GridSection

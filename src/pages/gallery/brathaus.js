@@ -5,7 +5,6 @@ import styled from "styled-components"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack"
 
 import Layout from "../../components/layout"
-
 import Gallery from "@browniebroke/gatsby-image-gallery"
 import "@browniebroke/gatsby-image-gallery/dist/style.css"
 
@@ -20,15 +19,16 @@ const Title = styled.h1`
   margin: auto;
   margin-left: 25%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     margin-left: auto;
   }
 `
 
 const BackButton = styled.button`
   margin: 20px 0 0 110px;
+  background: white;
 
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     margin: 50% 0 0 -50%;
   }
 `
@@ -59,7 +59,7 @@ const Brathaus = () => {
           <Grid container>
             <Grid item xs={false} sm={2} />
             <Grid item xs={12} sm={8}>
-              <div>
+              <div style={{ paddingBottom: "10px" }}>
                 <TitleContainer>
                   <Link to="/gallery">
                     <BackButton style={{ cursor: "pointer" }}>

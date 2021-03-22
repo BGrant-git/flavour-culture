@@ -1,7 +1,7 @@
 // gallery index
 import React from "react"
 import { Link } from "gatsby"
-import Grid from "@material-ui/core/Grid"
+import { Grid, useMediaQuery } from "@material-ui/core/"
 import styled from "styled-components"
 
 import Layout from "../../components/layout"
@@ -65,6 +65,8 @@ const CardTitle = styled.h1`
 `
 
 const GalleryPage = () => {
+  const matches = useMediaQuery("(max-width: 600px")
+
   return (
     <Layout>
       <Grid container>
@@ -81,7 +83,7 @@ const GalleryPage = () => {
                   </CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
-              <AlbumsLink to="/">
+              <AlbumsLink to="#">
                 <AlbumsCard>
                   <img
                     style={{ height: "150px", width: "150px" }}
@@ -90,13 +92,17 @@ const GalleryPage = () => {
                   />
 
                   <CardTitle
-                    style={{ fontFamily: "TAKOYAKI", fontSize: "60px" }}
+                    style={
+                      matches
+                        ? { fontSize: "40px", fontFamily: "TAKOYAKI" }
+                        : { fontSize: "60px", fontFamily: "TAKOYAKI" }
+                    }
                   >
-                    Naan Stop
+                    Naan Stop - Coming Soon
                   </CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
-              <AlbumsLink to="naanstop">
+              <AlbumsLink to="fcc">
                 <AlbumsCard>
                   <img src={naanThumb} alt="" />
                   <CardTitle style={{ fontFamily: "Montserrat" }}>
@@ -104,7 +110,7 @@ const GalleryPage = () => {
                   </CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
-              <AlbumsLink to="fc">
+              <AlbumsLink to="bts">
                 <AlbumsCard style={{ borderRadius: "0 0 10px 10px" }}>
                   <img src={btsThumb} alt="" />
                   <CardTitle style={{ fontFamily: "Revans" }}>

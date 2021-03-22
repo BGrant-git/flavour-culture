@@ -30,7 +30,7 @@ const SectionImage = styled.img`
   overflow: hidden;
   padding: 1vw;
   border-radius: 60px;
-  z-index: 2;
+  z-index: 1;
 
   @media (max-width: 960px) {
     width: 90%;
@@ -71,7 +71,7 @@ const Rosemary = styled.img`
   margin-right: -100px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  z-index: 1;
+  z-index: 0;
 
   @media (max-width: 960px) {
     margin-top: -300px;

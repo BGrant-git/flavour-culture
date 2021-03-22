@@ -2,20 +2,20 @@ import React from "react"
 import ImageGallery from "react-image-gallery"
 import styled from "styled-components"
 import { useMediaQuery } from "@material-ui/core"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
-const Container = styled.div`
-  max-height: 500px;
-  overflow: hidden;
+const Caption = styled.p`
+  text-align: right;
+  border-radius: 0 25px 25px 0;
 
-  @media (max-width: 720px) {
-    height: 400px;
+  @media (max-width: 600px) {
+    font-size: 100px;
   }
 `
 
-const Caption = styled.p`
-  font-size: 25px;
-  text-align: right;
-  border-radius: 0 25px 25px 0;
+const AnchorLinkStyle = styled(AnchorLink)`
+  color: white;
+  font-size: 45px;
 `
 
 const GalleryComponent = () => {
@@ -25,14 +25,11 @@ const GalleryComponent = () => {
     <div>
       <img
         className="image-gallery-image"
-        src={require("../../images/carousel-images/image1.jpg")}
+        src={require("../../images/home/carousel/mob/indian.jpg")}
         alt=""
       />
       <Caption className="image-gallery-description">
-        "Catering was so good everyone fell asleep after lunch. Gohilton know
-        whats up"
-        <br />
-        <strong> - Barney Gee (Monastery Productions) </strong>
+        <AnchorLinkStyle to="/vendors#NaanStop">Naan Stop</AnchorLinkStyle>
       </Caption>
     </div>
   )
@@ -40,14 +37,11 @@ const GalleryComponent = () => {
     <div>
       <img
         className="image-gallery-image"
-        src={require("../../images/carousel-images/image2.jpg")}
+        src={require("../../images/home/carousel/mob/indian2.jpg")}
         alt=""
       />
       <Caption className="image-gallery-description">
-        "These guys make good food. Best sausage that's been in me mouth in all
-        of 2020"
-        <br />
-        <strong> - John Foodman </strong>
+        <AnchorLinkStyle to="/vendors#NaanStop">Naan Stop</AnchorLinkStyle>
       </Caption>
     </div>
   )
@@ -55,27 +49,20 @@ const GalleryComponent = () => {
     <div>
       <img
         className="image-gallery-image"
-        src={require("../../images/carousel-images/image3.jpg")}
+        src={require("../../images/home/carousel/mob/jondan.jpg")}
         alt=""
       />
-      <Caption className="image-gallery-description">
-        "Best curry outside of Hounslow mate was on the bog for a fornight"
-        <br />
-        <strong> - Taylor Swift </strong>
-      </Caption>
     </div>
   )
   const Image3 = () => (
     <div>
       <img
         className="image-gallery-image"
-        src={require("../../images/carousel-images/test.jpg")}
+        src={require("../../images/home/carousel/mob/sausage.jpg")}
         alt=""
       />
       <Caption className="image-gallery-description">
-        "Catering was so good everyone fell asleep after lunch. Gohilton know
-        whats up" <br />
-        <strong> - Barney Gee (Monastery Productions) </strong>
+        <AnchorLinkStyle to="/vendors#BRATHAUS">BRATHAUS</AnchorLinkStyle>
       </Caption>
     </div>
   )
@@ -83,14 +70,11 @@ const GalleryComponent = () => {
     <div>
       <img
         className="image-gallery-image"
-        src={require("../../images/carousel-images/test2.jpg")}
+        src={require("../../images/home/carousel/desk/sausage-wide.jpg")}
         alt=""
       />
       <Caption className="image-gallery-description">
-        "These guys make good food. Best sausage that's been in me mouth in all
-        of 2020"
-        <br />
-        <strong> - John Foodman </strong>
+        <AnchorLinkStyle to="/vendors#BRATHAUS">BRATHAUS</AnchorLinkStyle>
       </Caption>
     </div>
   )
@@ -98,14 +82,33 @@ const GalleryComponent = () => {
     <div>
       <img
         className="image-gallery-image"
-        src={require("../../images/carousel-images/test3.jpg")}
+        src={require("../../images/home/carousel/desk/indian1-wide.jpg")}
         alt=""
       />
       <Caption className="image-gallery-description">
-        "Best curry outside of Hounslow mate was on the bog for a fornight"
-        <br />
-        <strong> - Taylor Swift </strong>
+        <AnchorLinkStyle to="/vendors#NaanStop">Naan Stop</AnchorLinkStyle>
       </Caption>
+    </div>
+  )
+  const Image6 = () => (
+    <div>
+      <img
+        className="image-gallery-image"
+        src={require("../../images/home/carousel/desk/indian2-wide.jpg")}
+        alt=""
+      />
+      <Caption className="image-gallery-description">
+        <AnchorLinkStyle to="/vendors#NaanStop">Naan Stop</AnchorLinkStyle>
+      </Caption>
+    </div>
+  )
+  const Image7 = () => (
+    <div>
+      <img
+        className="image-gallery-image"
+        src={require("../../images/home/carousel/desk/jondan-wide.jpg")}
+        alt=""
+      />
     </div>
   )
 
@@ -127,13 +130,13 @@ const GalleryComponent = () => {
             thumbnail: "",
             renderItem: Image2,
           },
-        ]
-      : [
           {
             original: "",
             thumbnail: "",
             renderItem: Image3,
           },
+        ]
+      : [
           {
             original: "",
             thumbnail: "",
@@ -144,12 +147,22 @@ const GalleryComponent = () => {
             thumbnail: "",
             renderItem: Image5,
           },
+          {
+            original: "",
+            thumbnail: "",
+            renderItem: Image6,
+          },
+          {
+            original: "",
+            thumbnail: "",
+            renderItem: Image7,
+          },
         ]
 
   const randomIndex = Math.floor(Math.random() * 3)
 
   return (
-    <Container>
+    <div>
       <ImageGallery
         items={images()}
         startIndex={randomIndex}
@@ -162,7 +175,7 @@ const GalleryComponent = () => {
         slideDuration={450}
         className="image-gallery-description"
       />
-    </Container>
+    </div>
   )
 }
 
