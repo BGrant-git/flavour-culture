@@ -97,7 +97,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/ben-grant-397bbb1b6/"
               >
                 {" "}
-                Ben Ga{" "}
+                Ben G{" "}
               </Links>
             </strong>{" "}
             |{" "}

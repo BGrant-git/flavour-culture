@@ -7,22 +7,6 @@
 }
 
 @font-face {
-  font-family: "Ash";
-  src: local("Ash"), url(../../fonts/Ash/DCC\ -\ Ash.otf) format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "BeautyMountains";
-  src: local("BeautyMountains"),
-    url(../../fonts/BeautyMountains/BeautyMountainsPersonalUse-od7z.ttf)
-      format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
   font-family: "Sonder";
   src: local("SonderSans"),
     url(../../fonts/Sonder/SonderSans-Black.otf) format("woff");
@@ -40,6 +24,14 @@
 @font-face {
   font-family: "Revans";
   src: local("Revans"), url(../../fonts/Revans/Revans-Medium.ttf) format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"),
+    url(../../fonts/Roboto/Roboto-Regular.ttf) format("woff");
   font-style: normal;
   font-weight: normal;
 }
@@ -74,4 +66,9 @@ body {
 button {
   cursor: pointer;
   font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
