@@ -30,7 +30,6 @@ const AlbumsContainer = styled.div`
 
 const AlbumsLink = styled(Link)`
   width: 100%;
-  text-decoration: none;
 `
 
 const AlbumsCard = styled.div`
@@ -113,9 +112,7 @@ const GalleryPage = () => {
               <AlbumsLink to="bts">
                 <AlbumsCard style={{ borderRadius: "0 0 10px 10px" }}>
                   <img src={btsThumb} alt="" />
-                  <CardTitle style={{ fontFamily: "Revans" }}>
-                    Behind The Scenes
-                  </CardTitle>
+                  <CardTitle>Behind The Scenes</CardTitle>
                 </AlbumsCard>
               </AlbumsLink>
             </AlbumsContainer>

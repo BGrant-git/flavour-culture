@@ -38,7 +38,6 @@ const NavItem = styled.div`
 `
 
 const Links = styled(Link)`
-  text-decoration: none;
   color: white;
   font-size: 24px;
   font-family: "Thunder";

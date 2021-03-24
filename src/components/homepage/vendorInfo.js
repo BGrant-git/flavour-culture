@@ -7,10 +7,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 90.2%;
+  height: 90.75%;
   margin-left: 20px;
-  margin-bottom: 20px;
-  background-color: ;
   border-radius: 25px 25px 0 0;
   background-color: var(--eggshell);
 
