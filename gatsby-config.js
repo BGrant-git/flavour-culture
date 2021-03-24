@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Flavour Culture`,
@@ -35,6 +39,12 @@ module.exports = {
     ],
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-JZR3MHL4QT",
+      },
+    },
     `gatsby-plugin-breakpoints`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -64,6 +74,14 @@ module.exports = {
         start_url: `/`,
         display: `standalone`,
         icon: `src/images/icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-source-google-places`,
+      options: {
+        placeIds: ["ChIJC78FrtMPdkgRVNANhmuxKJ0"],
+        apiKey: process.env.GATSBY_GOOGLE_API_KEY,
+        language: "en-GB", // optional, defaults to en-US
       },
     },
   ],
