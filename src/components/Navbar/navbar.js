@@ -111,7 +111,7 @@ const Navbar = ({ menuLinks }) => {
   return (
     <Navigation>
       <Title>
-        <Link to="/home">
+        <Link to="/home/">
           <LogoStyle src={require("../../images/icon.png")} alt="" />
         </Link>
       </Title>

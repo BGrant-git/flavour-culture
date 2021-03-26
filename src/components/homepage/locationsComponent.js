@@ -76,11 +76,6 @@ const LocationsComponent = () => {
     height: "300px",
   }
 
-  const bratLocation = {
-    lat: 51.49868110373929,
-    lng: -0.23894967099745187,
-  }
-
   return (
     <Container>
       <MarketIcon src={require("../../images/home/marketicon.png")} alt="" />
@@ -121,7 +116,7 @@ const LocationsComponent = () => {
                 alt=""
               />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={6} style={{ textAlign: "left" }}>
               <strong>Acton Market</strong>
               <br />
               <Times>Every Saturday</Times>
@@ -133,19 +128,37 @@ const LocationsComponent = () => {
                 <p>
                   The Mount/King Street
                   <br />
-                  Acton, W3 1NS
+                  Acton W3 1NS
+                </p>
+              </Address>
+            </Grid>
+          </InfoContainerGrid>
+          <InfoContainerGrid container>
+            <Grid item xs={1}>
+              <MapMarker
+                src={require("../../images/home/map_marker_C.png")}
+                alt=""
+              />
+            </Grid>
+            <Grid item xs={6} style={{ textAlign: "left" }}>
+              <strong>The Merton Apprentice</strong>
+              <br />
+              <Times>Friday - Saturday</Times>
+              <Times>18.00 - 22.00</Times>
+            </Grid>
+            <Grid item xs={5}>
+              <Address>
+                <p>
+                  Merton Abbey Mills
+                  <br />
+                  SW19 2RD
                 </p>
               </Address>
             </Grid>
           </InfoContainerGrid>
         </InfoContainer>
 
-        <MapComponent
-          mapStyles={mapStyles}
-          center={bratLocation}
-          zoom={12}
-          brat={bratLocation}
-        />
+        <MapComponent mapStyles={mapStyles} />
       </VendorContainer>
     </Container>
   )

@@ -14,15 +14,22 @@ const MapComponent = props => {
         lng: -0.20022,
         loc: "A",
       },
+      {
+        lat: 51.413216370457675,
+        lng: -0.183425847287169,
+        loc: "C",
+      },
     ],
   ]
+
+  const mapCenter = { lat: 51.47088816497439, lng: -0.2521988042378051 }
 
   return (
     <LoadScript googleMapsApiKey={process.env.GATSBY_GOOGLE_API_KEY}>
       <GoogleMap
         mapContainerStyle={props.mapStyles}
-        zoom={props.zoom}
-        center={props.center}
+        zoom={11}
+        center={mapCenter}
         clickableIcons={false}
       >
         {markerLocations[0].map((item, i) => (
