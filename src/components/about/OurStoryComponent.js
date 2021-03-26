@@ -7,7 +7,8 @@ import SectionLeft from "./SectionLeft"
 
 const storyImg1 = require("../../images/about/storydanny.jpg")
 const storyImg2 = require("../../images/about/storyjohnny.jpg")
-const storyImg3 = require("../../images/about/storyplate.jpg")
+const storyImg3 = require("../../images/vendors/jondan.jpg")
+const storyImg4 = require("../../images/vendors/storyplate.jpg")
 const divider = require("../../images/henna/divider.png")
 
 const StoryContainer = styled.div`
@@ -93,7 +94,8 @@ const OurStoryComponent = () => {
           <SectionLeft
             heading={"Heading"}
             text1={content[3]}
-            img={storyImg2}
+            img={storyImg3}
+            imgBright
             hasVendorButtons
           />
           <Divider
@@ -105,14 +107,14 @@ const OurStoryComponent = () => {
             <SectionLeft
               heading={"Heading"}
               text1={content[4]}
-              img={storyImg3}
+              img={storyImg4}
               mobRoseRight
             />
           ) : (
             <SectionRight
               heading={"Heading"}
               text1={content[4]}
-              img={storyImg3}
+              img={storyImg4}
               hasSocial
             />
           )}

@@ -28,8 +28,8 @@ const VendorComponent = () => {
   const matches = useMediaQuery("(max-width: 960px)")
 
   const brat = require("../../../content/gallery/Brathaus/sausage.jpg")
-  const fcc = require("../../images/vendors/fcc2.jpg")
-  const naan = require("../../images/vendors/naan.jpg")
+  const fcc = require("../../images/home/carousel/mob/indian.jpg")
+  const naan = require("../../images/vendors/storyplate.jpg")
 
   const vendorInfo = [
     {
@@ -121,7 +121,7 @@ const VendorComponent = () => {
         </div>
       )}
       <Divider src={divider} alt="" />
-      <div id="FCC">
+      <div id="Flavour-Culture-Catering">
         <VendorComponentRight
           heading={vendorInfo[2].name}
           subheading={vendorInfo[2].subheading}

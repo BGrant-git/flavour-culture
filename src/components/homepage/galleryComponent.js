@@ -33,7 +33,7 @@ const GalleryComponent = () => {
   )
 
   const Image1 = () => (
-    <AnchorLinkStyle to="/vendors#FCC">
+    <AnchorLinkStyle to="/vendors#Flavour-Culture-Catering">
       <img
         className="image-gallery-image"
         src={require("../../images/home/carousel/mob/indian2.jpg")}
@@ -79,7 +79,7 @@ const GalleryComponent = () => {
   )
 
   const Image5 = () => (
-    <AnchorLinkStyle to="/vendors#FCC">
+    <AnchorLinkStyle to="/vendors#Flavour-Culture-Catering">
       <img
         className="image-gallery-image"
         src={require("../../images/home/carousel/desk/indian1-wide.jpg")}
