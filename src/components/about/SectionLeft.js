@@ -132,7 +132,11 @@ const SectionLeft = props => {
         )}
         <Grid item sm={12} md={4}>
           <ImageContainer>
-            <StoryImage src={props.img} alt="" />
+            <StoryImage
+              src={props.img}
+              alt=""
+              style={props.imgBright ? { filter: "brightness(1.3)" } : null}
+            />
           </ImageContainer>
         </Grid>
         <TextContainerGrid
@@ -150,7 +154,7 @@ const SectionLeft = props => {
             <>
               <h3 style={{ textAlign: "center" }}>Check Out Our Vendors:</h3>
               <VendorButtonsContainer>
-                <AnchorLink to="/vendors#FCC">
+                <AnchorLink to="/vendors#Flavour-Culture-Catering">
                   <VendorButton>Flavour Culture Catering</VendorButton>
                 </AnchorLink>
                 <AnchorLink to="/vendors#BRATHAUS">

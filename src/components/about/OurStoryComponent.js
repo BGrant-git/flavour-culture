@@ -7,7 +7,8 @@ import SectionLeft from "./SectionLeft"
 
 const storyImg1 = require("../../images/about/storydanny.jpg")
 const storyImg2 = require("../../images/about/storyjohnny.jpg")
-const storyImg3 = require("../../images/about/storyplate.jpg")
+const storyImg3 = require("../../images/vendors/jondan.jpg")
+const storyImg4 = require("../../images/vendors/storyplate.jpg")
 const divider = require("../../images/henna/divider.png")
 
 const StoryContainer = styled.div`
@@ -21,16 +22,30 @@ const StoryContainer = styled.div`
   }
 `
 
-const MainTitle = styled.div`
-  padding: 20px;
-  padding-top: 35px;
-  font-size: 45px;
-  font-family: "Thunder";
-  margin-bottom: -120px;
+const TitleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: -75px;
 
-  @media (max-width: 960px) {
+  @media (max-width: 690px) {
     margin-bottom: 0;
   }
+`
+
+const Title = styled.h1`
+  padding: 30px;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Thunder";
+`
+
+const TitleRule = styled.div`
+  height: 5px;
+  background: black;
+  width: 20%;
+  border-radius: 4px;
 `
 
 const Divider = styled.img`
@@ -60,8 +75,11 @@ const OurStoryComponent = () => {
       <Grid item xs={false} md={1}></Grid>
       <Grid item sm={12} md={10}>
         <StoryContainer>
-          <MainTitle>OUR STORY</MainTitle>
-
+          <TitleContainer>
+            <TitleRule />
+            <Title>OUR STORY</Title>
+            <TitleRule />
+          </TitleContainer>
           <SectionLeft
             heading={"Heading"}
             text1={content[0]}
@@ -93,7 +111,8 @@ const OurStoryComponent = () => {
           <SectionLeft
             heading={"Heading"}
             text1={content[3]}
-            img={storyImg2}
+            img={storyImg3}
+            imgBright
             hasVendorButtons
           />
           <Divider
@@ -105,14 +124,14 @@ const OurStoryComponent = () => {
             <SectionLeft
               heading={"Heading"}
               text1={content[4]}
-              img={storyImg3}
+              img={storyImg4}
               mobRoseRight
             />
           ) : (
             <SectionRight
               heading={"Heading"}
               text1={content[4]}
-              img={storyImg3}
+              img={storyImg4}
               hasSocial
             />
           )}

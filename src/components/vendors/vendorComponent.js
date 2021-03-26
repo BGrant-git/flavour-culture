@@ -7,11 +7,24 @@ import VendorComponentLeft from "./VendorComponentLeft"
 
 const divider = require("../../images/henna/divider.png")
 
+const TitleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 const Title = styled.h1`
   padding: 30px;
   text-align: center;
   font-size: 50px;
   font-family: "Thunder";
+`
+
+const TitleRule = styled.div`
+  height: 5px;
+  background: black;
+  width: 20%;
+  border-radius: 4px;
 `
 
 const Divider = styled.img`
@@ -28,8 +41,8 @@ const VendorComponent = () => {
   const matches = useMediaQuery("(max-width: 960px)")
 
   const brat = require("../../../content/gallery/Brathaus/sausage.jpg")
-  const fcc = require("../../images/vendors/fcc2.jpg")
-  const naan = require("../../images/vendors/naan.jpg")
+  const fcc = require("../../images/vendors/indian.jpg")
+  const naan = require("../../images/vendors/storyplate.jpg")
 
   const vendorInfo = [
     {
@@ -87,7 +100,11 @@ const VendorComponent = () => {
 
   return (
     <>
-      <Title>VENDORS</Title>
+      <TitleContainer>
+        <TitleRule />
+        <Title>VENDORS</Title>
+        <TitleRule />
+      </TitleContainer>
       <div id="BRATHAUS">
         <VendorComponentRight
           heading={vendorInfo[0].name}
@@ -121,7 +138,7 @@ const VendorComponent = () => {
         </div>
       )}
       <Divider src={divider} alt="" />
-      <div id="FCC">
+      <div id="Flavour-Culture-Catering">
         <VendorComponentRight
           heading={vendorInfo[2].name}
           subheading={vendorInfo[2].subheading}
