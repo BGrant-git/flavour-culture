@@ -22,95 +22,84 @@ const GalleryComponent = () => {
   const matches = useMediaQuery("(max-width: 600px)")
 
   const Image0 = () => (
-    <div>
+    <AnchorLinkStyle to="/vendors#NaanStop">
       <img
         className="image-gallery-image"
         src={require("../../images/home/carousel/mob/indian.jpg")}
         alt=""
       />
-      <Caption className="image-gallery-description">
-        <AnchorLinkStyle to="/vendors#NaanStop">Naan Stop</AnchorLinkStyle>
-      </Caption>
-    </div>
+      <Caption className="image-gallery-description">Naan Stop</Caption>
+    </AnchorLinkStyle>
   )
+
   const Image1 = () => (
-    <div>
+    <AnchorLinkStyle to="/vendors#FCC">
       <img
         className="image-gallery-image"
         src={require("../../images/home/carousel/mob/indian2.jpg")}
         alt=""
       />
       <Caption className="image-gallery-description">
-        <AnchorLinkStyle to="/vendors#NaanStop">Naan Stop</AnchorLinkStyle>
+        Flavour Culture Catering
       </Caption>
-    </div>
+    </AnchorLinkStyle>
   )
+
   const Image2 = () => (
-    <div>
+    <AnchorLinkStyle to="/vendors#BRATHAUS">
       <img
         className="image-gallery-image"
         src={require("../../images/home/carousel/mob/jondan.jpg")}
         alt=""
       />
-    </div>
+      <Caption className="image-gallery-description">BRATHAUS</Caption>
+    </AnchorLinkStyle>
   )
+
   const Image3 = () => (
-    <div>
+    <AnchorLinkStyle to="/vendors#BRATHAUS">
       <img
         className="image-gallery-image"
         src={require("../../images/home/carousel/mob/sausage.jpg")}
         alt=""
       />
-      <Caption className="image-gallery-description">
-        <AnchorLinkStyle to="/vendors#BRATHAUS">BRATHAUS</AnchorLinkStyle>
-      </Caption>
-    </div>
+      <Caption className="image-gallery-description">BRATHAUS</Caption>
+    </AnchorLinkStyle>
   )
+
   const Image4 = () => (
-    <div>
+    <AnchorLinkStyle to="/vendors#BRATHAUS">
       <img
         className="image-gallery-image"
         src={require("../../images/home/carousel/desk/sausage-wide.jpg")}
         alt=""
       />
-      <Caption className="image-gallery-description">
-        <AnchorLinkStyle to="/vendors#BRATHAUS">BRATHAUS</AnchorLinkStyle>
-      </Caption>
-    </div>
+      <Caption className="image-gallery-description">BRATHAUS</Caption>
+    </AnchorLinkStyle>
   )
+
   const Image5 = () => (
-    <div>
+    <AnchorLinkStyle to="/vendors#FCC">
       <img
         className="image-gallery-image"
         src={require("../../images/home/carousel/desk/indian1-wide.jpg")}
         alt=""
       />
       <Caption className="image-gallery-description">
-        <AnchorLinkStyle to="/vendors#NaanStop">Naan Stop</AnchorLinkStyle>
+        Flavour Culture Catering
       </Caption>
-    </div>
+    </AnchorLinkStyle>
   )
+
   const Image6 = () => (
-    <div>
+    <AnchorLinkStyle to="/vendors#NaanStop">
       <img
         className="image-gallery-image"
         src={require("../../images/home/carousel/desk/indian2-wide.jpg")}
         alt=""
       />
-      <Caption className="image-gallery-description">
-        <AnchorLinkStyle to="/vendors#NaanStop">Naan Stop</AnchorLinkStyle>
-      </Caption>
-    </div>
-  )
-  const Image7 = () => (
-    <div>
-      <img
-        className="image-gallery-image"
-        src={require("../../images/home/carousel/desk/jondan-wide.jpg")}
-        alt=""
-        style={{ filter: "brightness(1.4)" }}
-      />
-    </div>
+      <Caption className="image-gallery-description">Naan Stop</Caption>
+    </AnchorLinkStyle>
   )
 
   const images = () =>
@@ -152,11 +141,6 @@ const GalleryComponent = () => {
             original: "",
             thumbnail: "",
             renderItem: Image6,
-          },
-          {
-            original: "",
-            thumbnail: "",
-            renderItem: Image7,
           },
         ]
 

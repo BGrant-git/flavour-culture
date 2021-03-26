@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const UserImg = styled.img`
   padding: 20px 0;
-  width: 85px;
+  width: 80px;
 `
 
 const AuthorName = styled.h2`
@@ -24,7 +24,7 @@ const AuthorName = styled.h2`
 
 const UserRating = styled.div`
   padding: 5px 0;
-  color: yellow;
+  color: gold;
 `
 
 const UserText = styled.p`
