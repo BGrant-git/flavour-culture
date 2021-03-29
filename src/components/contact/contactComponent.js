@@ -112,147 +112,142 @@ const ContactComponent = () => {
   return (
     <Container>
       <form
+        action="https://getform.io/f/17128148-c85c-428d-8bdc-6c42ce4641ca"
         method="POST"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
-        name="contact-box"
-        action="/"
       >
-        <fieldset>
-          <input type="hidden" name="form-name" value="contact" />
-          <Grid container>
-            <Grid item xs={false} md={1} />
-            <GridSection
-              item
-              xs={12}
-              md={5}
-              style={{
-                borderRadius: matches ? "20px 20px 0 0" : "20px 0 0 20px",
-              }}
-            >
-              <Title>Make a Booking</Title>
-              <Label>
-                *Name:
-                <Input type="text" name="name" required />
-              </Label>
-              <Label>
-                *Email:
-                <Input type="email" name="email" required />
-              </Label>
-              <Label>
-                Contact Number:
-                <Input type="text" name="phone" />
-              </Label>
-              <h2 style={{ paddingTop: "5px" }}>Select Vendor:</h2>
-              <CheckboxItemContainer>
-                <CheckboxLabel>
-                  <CheckBox
-                    type="checkbox"
-                    id="fcc"
-                    name="vendor"
-                    value="fcc"
-                    onClick={() => setCatering(!catering)}
-                  />{" "}
-                  Flavour Culture Catering
-                </CheckboxLabel>
-              </CheckboxItemContainer>
-              <CheckboxItemContainer>
-                <CheckboxLabel>
-                  <CheckBox
-                    type="checkbox"
-                    id="brat"
-                    name="vendor"
-                    value="brat"
-                    onClick={() => setBrat(!brat)}
-                  />{" "}
-                  Brathaus
-                </CheckboxLabel>
-              </CheckboxItemContainer>
-              <CheckboxItemContainer>
-                <CheckboxLabel>
-                  <CheckBox
-                    type="checkbox"
-                    id="naan"
-                    name="vendor"
-                    value="naan"
-                    onClick={() => setNaan(!naan)}
-                  />{" "}
-                  Naan Stop
-                </CheckboxLabel>
-              </CheckboxItemContainer>
-              <h2>Select Style of Service</h2>
-              <CheckboxItemContainer>
-                <CheckboxLabel style={catering ? { color: "grey" } : null}>
-                  <CheckBox
-                    type="checkbox"
-                    id="plate"
-                    name="service"
-                    value="plate"
-                    disabled={catering}
-                  />{" "}
-                  Pre-plated drop off
-                </CheckboxLabel>
-              </CheckboxItemContainer>
-              <CheckboxItemContainer>
-                <CheckboxLabel style={catering ? { color: "grey" } : null}>
-                  <CheckBox
-                    type="checkbox"
-                    id="canteen"
-                    name="vendor"
-                    value="canteen"
-                    disabled={catering}
-                  />{" "}
-                  Banqueting
-                </CheckboxLabel>
-              </CheckboxItemContainer>
-              <CheckboxItemContainer>
-                <CheckboxLabel style={naan && brat ? { color: "grey" } : null}>
-                  <CheckBox
-                    type="checkbox"
-                    id="street"
-                    name="service"
-                    value="street"
-                    disabled={true}
-                    checked={naan && brat ? false : true}
-                  />{" "}
-                  Street food style
-                </CheckboxLabel>
-              </CheckboxItemContainer>
-            </GridSection>
-            <GridSection
-              item
-              xs={12}
-              md={5}
-              style={{
-                borderRadius: matches ? "0 0 20px 20px" : "0 20px 20px 0",
-              }}
-            >
-              <Label>
-                Event Date
-                <Input type="date" name="date" />
-              </Label>
-              <Label>
-                Event Location:
-                <Input type="text" name="location" />
-              </Label>
-              <Label>
-                Number of Guests:
-                <Input type="text" name="guest-number" />
-              </Label>
-              <Label>
-                Dietary requirements:
-                <Input type="text" name="diet" />
-              </Label>
-              <Label>
-                Additonal Information:
-                <InputMessage name="message" />
-              </Label>
-              <br />
-              <Submit type="submit">SUBMIT</Submit>
-            </GridSection>
-            <Grid item xs={false} md={1} />
-          </Grid>
-        </fieldset>
+        <input type="hidden" name="form-name" value="contact" />
+        <Grid container>
+          <Grid item xs={false} md={1} />
+          <GridSection
+            item
+            xs={12}
+            md={5}
+            style={{
+              borderRadius: matches ? "20px 20px 0 0" : "20px 0 0 20px",
+            }}
+          >
+            <Title>Make a Booking</Title>
+            <Label>
+              *Name:
+              <Input type="text" name="name" required />
+            </Label>
+            <Label>
+              *Email:
+              <Input type="email" name="email" required />
+            </Label>
+            <Label>
+              Contact Number:
+              <Input type="text" name="phone" />
+            </Label>
+            <h2 style={{ paddingTop: "5px" }}>Select Vendor:</h2>
+            <CheckboxItemContainer>
+              <CheckboxLabel>
+                <CheckBox
+                  type="checkbox"
+                  id="flavour-culture-catering"
+                  name="vendor"
+                  value="flavour-culture-catering"
+                  onClick={() => setCatering(!catering)}
+                />{" "}
+                Flavour Culture Catering
+              </CheckboxLabel>
+            </CheckboxItemContainer>
+            <CheckboxItemContainer>
+              <CheckboxLabel>
+                <CheckBox
+                  type="checkbox"
+                  id="brathaus"
+                  name="vendor"
+                  value="brathaus"
+                  onClick={() => setBrat(!brat)}
+                />{" "}
+                Brathaus
+              </CheckboxLabel>
+            </CheckboxItemContainer>
+            <CheckboxItemContainer>
+              <CheckboxLabel>
+                <CheckBox
+                  type="checkbox"
+                  id="naan-stop"
+                  name="vendor"
+                  value="naan-stop"
+                  onClick={() => setNaan(!naan)}
+                />{" "}
+                Naan Stop
+              </CheckboxLabel>
+            </CheckboxItemContainer>
+            <h2>Select Style of Service</h2>
+            <CheckboxItemContainer>
+              <CheckboxLabel style={catering ? { color: "grey" } : null}>
+                <CheckBox
+                  type="checkbox"
+                  id="pre-plated"
+                  name="service"
+                  value="pre-plated"
+                  disabled={catering}
+                />{" "}
+                Pre-plated drop off
+              </CheckboxLabel>
+            </CheckboxItemContainer>
+            <CheckboxItemContainer>
+              <CheckboxLabel style={catering ? { color: "grey" } : null}>
+                <CheckBox
+                  type="checkbox"
+                  id="banqueting"
+                  name="service"
+                  value="banqueting"
+                  disabled={catering}
+                />{" "}
+                Banqueting
+              </CheckboxLabel>
+            </CheckboxItemContainer>
+            <CheckboxItemContainer>
+              <CheckboxLabel style={naan && brat ? { color: "grey" } : null}>
+                <CheckBox
+                  type="checkbox"
+                  id="street-food"
+                  name="service"
+                  value="street-food"
+                  disabled={true}
+                  checked={naan && brat ? false : true}
+                />{" "}
+                Street food style
+              </CheckboxLabel>
+            </CheckboxItemContainer>
+          </GridSection>
+          <GridSection
+            item
+            xs={12}
+            md={5}
+            style={{
+              borderRadius: matches ? "0 0 20px 20px" : "0 20px 20px 0",
+            }}
+          >
+            <Label>
+              Event Date
+              <Input type="date" name="date" />
+            </Label>
+            <Label>
+              Event Location:
+              <Input type="text" name="location" />
+            </Label>
+            <Label>
+              Number of Guests:
+              <Input type="text" name="guest-number" />
+            </Label>
+            <Label>
+              Dietary requirements:
+              <Input type="text" name="diet" />
+            </Label>
+            <Label>
+              Additonal Information:
+              <InputMessage name="message" />
+            </Label>
+            <br />
+            <Submit type="submit">SUBMIT</Submit>
+          </GridSection>
+          <Grid item xs={false} md={1} />
+        </Grid>
       </form>
     </Container>
   )
