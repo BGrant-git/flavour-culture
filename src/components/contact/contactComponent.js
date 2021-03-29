@@ -5,12 +5,11 @@ import { Grid, useMediaQuery } from "@material-ui/core/"
 const Container = styled.div`
   width: 100%;
   color: white;
-  margin: 0 auto 20px;
-  padding: 150px 0 50px;
+  margin: 0 auto;
+  padding: 150px 0 100px;
   background-image: url(${require("../../images/contact/contact-desktop-bg.jpg")});
   background-size: 100%;
   background-repeat: no-repeat;
-
   text-align: left;
 
   @media (max-width: 1330px) {
