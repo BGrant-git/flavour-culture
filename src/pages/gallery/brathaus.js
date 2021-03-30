@@ -55,25 +55,14 @@ const Brathaus = () => {
     }
   `)
 
-  // const images = data.allFile.edges.sort((a, b) => {
-  //   const nameA = a.node.childImageSharp.full.originalName.toUpperCase()
-  //   const nameB = b.node.childImageSharp.full.originalName.toUpperCase()
-
-  //   if (nameA < nameB) {
-  //     return -1
-  //   }
-  //   if (nameA > nameB) {
-  //     return 1
-  //   }
-  //   return 0
-  // })
-
-  const captions = ["caption one", "caption two", "last caption"]
-
   const images = data.allFile.edges.map(({ node }, i) => ({
     ...node.childImageSharp,
-    title: node.childImageSharp.thumb.originalName.replace(/\..+$/, ""),
-    caption: `${i}`,
+
+    caption: `${
+      i === 0 || i === 4 || i === 6 || i === 16 || i === 17
+        ? "BRATHAUS North End Rd. Market"
+        : "BRATHAUS Acton Market"
+    }`,
   }))
 
   return (
@@ -90,7 +79,7 @@ const Brathaus = () => {
               </Link>
               <Title>Brathaus</Title>
             </TitleContainer>
-            <Gallery images={images} captions={captions} />
+            <Gallery images={images} />
           </div>
         </Grid>
         <Grid item xs={false} sm={2} />
