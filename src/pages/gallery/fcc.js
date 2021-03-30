@@ -3,11 +3,10 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import Grid from "@material-ui/core/Grid"
 import styled from "styled-components"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack"
-
-import Layout from "../../components/layout"
-
 import Gallery from "@browniebroke/gatsby-image-gallery"
 import "@browniebroke/gatsby-image-gallery/dist/style.css"
+
+import Layout from "../../components/layout"
 
 const TitleContainer = styled.div`
   padding: 20px;
