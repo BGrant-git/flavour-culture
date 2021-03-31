@@ -5,11 +5,11 @@ import { Grid, useMediaQuery } from "@material-ui/core/"
 import SectionRight from "./SectionRight"
 import SectionLeft from "./SectionLeft"
 
-const storyImg1 = require("../../images/about/storydanny.jpg")
-const storyImg2 = require("../../images/about/storyjohnny.jpg")
-const storyImg3 = require("../../images/vendors/jondan.jpg")
-const storyImg4 = require("../../images/vendors/storyplate.jpg")
-const divider = require("../../images/henna/divider.png")
+import storyImg1 from "../../images/about/storydanny.jpg"
+import storyImg2 from "../../images/about/storyjohnny.jpg"
+import storyImg3 from "../../images/vendors/jondan.jpg"
+import storyImg4 from "../../images/vendors/storyplate.jpg"
+import divider from "../../images/henna/divider.png"
 
 const StoryContainer = styled.div`
   display: flex;

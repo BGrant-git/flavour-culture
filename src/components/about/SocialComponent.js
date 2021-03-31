@@ -3,7 +3,7 @@ import styled from "styled-components"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 
-const googleIcon = require("../../images/google.png")
+import googleIcon from "../../images/google.png"
 
 const SocialContanier = styled.div`
   width: 100%;

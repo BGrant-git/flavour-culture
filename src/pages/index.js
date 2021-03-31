@@ -4,6 +4,8 @@ import "./css/index.css"
 
 import SEO from "../components/seo"
 
+import logoImg from "../images/icon.png"
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,7 +21,7 @@ const ComingSoon = () => {
   return (
     <Container>
       <SEO />
-      <Logo src={require("../images/icon.png")} alt="" />
+      <Logo src={logoImg} alt="" />
       <h2>Flavourculture.co.uk coming soon!</h2>
     </Container>
   )

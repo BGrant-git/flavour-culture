@@ -3,6 +3,8 @@ import styled from "styled-components"
 
 import RatingsComponent from "./ratingsComponent"
 
+import googleIcon from "../../../images/home/Google_'G'_Logo.svg.webp"
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -55,10 +57,7 @@ const ReviewItemComponent = props => {
         </UserRating>
         <UserText>{props.userText}</UserText>
         <RelativeTime>
-          <GoogleIconStyles
-            src={require("../../../images/home/Google_'G'_Logo.svg.webp")}
-            alt=""
-          />
+          <GoogleIconStyles src={googleIcon} alt="" />
           <p>{props.relativeTime}</p>
         </RelativeTime>
       </Container>

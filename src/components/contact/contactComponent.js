@@ -2,18 +2,21 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Grid, useMediaQuery } from "@material-ui/core/"
 
+import backgroundMob from "../../images/contact/mob-bg.jpg"
+import backgroundDesk from "../../images/contact/contact-desktop-bg.jpg"
+
 const Container = styled.div`
   width: 100%;
   color: white;
   margin: 0 auto;
   padding: 150px 0 100px;
-  background-image: url(${require("../../images/contact/contact-desktop-bg.jpg")});
+  background-image: url(${backgroundDesk});
   background-size: 100%;
   background-repeat: no-repeat;
   text-align: left;
 
   @media (max-width: 1330px) {
-    background-image: url(${require("../../images/contact/mob-bg.jpg")});
+    background-image: url(${backgroundMob});
     padding-top: 100px;
   }
 `

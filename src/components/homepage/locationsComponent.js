@@ -4,6 +4,11 @@ import Grid from "@material-ui/core/Grid"
 
 import MapComponent from "./map"
 
+import marketIcon from "../../images/home/marketicon.png"
+import mapmarkerA from "../../images/home/map_marker_A.png"
+import mapmarkerB from "../../images/home/map_marker_B.png"
+import mapmarkerC from "../../images/home/map_marker_C.png"
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -78,7 +83,7 @@ const LocationsComponent = () => {
 
   return (
     <Container>
-      <MarketIcon src={require("../../images/home/marketicon.png")} alt="" />
+      <MarketIcon src={marketIcon} alt="" />
       <Header>
         <h1>LOCATIONS</h1>
       </Header>
@@ -87,10 +92,7 @@ const LocationsComponent = () => {
           <VendorName>BRATHAUS</VendorName>
           <InfoContainerGrid container>
             <Grid item xs={1}>
-              <MapMarker
-                src={require("../../images/home/map_marker_A.png")}
-                alt=""
-              />
+              <MapMarker src={mapmarkerA} alt="" />
             </Grid>
             <Grid item xs={6} style={{ textAlign: "left" }}>
               <strong>North End Rd. Market</strong>
@@ -111,10 +113,7 @@ const LocationsComponent = () => {
           </InfoContainerGrid>
           <InfoContainerGrid container>
             <Grid item xs={1}>
-              <MapMarker
-                src={require("../../images/home/map_marker_B.png")}
-                alt=""
-              />
+              <MapMarker src={mapmarkerB} alt="" />
             </Grid>
             <Grid item xs={6} style={{ textAlign: "left" }}>
               <strong>Acton Market</strong>
@@ -135,10 +134,7 @@ const LocationsComponent = () => {
           </InfoContainerGrid>
           <InfoContainerGrid container>
             <Grid item xs={1}>
-              <MapMarker
-                src={require("../../images/home/map_marker_C.png")}
-                alt=""
-              />
+              <MapMarker src={mapmarkerC} alt="" />
             </Grid>
             <Grid item xs={6} style={{ textAlign: "left" }}>
               <strong>The Merton Apprentice</strong>

@@ -4,7 +4,6 @@ import Grid from "@material-ui/core/Grid"
 import styled from "styled-components"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack"
 import Gallery from "@browniebroke/gatsby-image-gallery"
-import "@browniebroke/gatsby-image-gallery/dist/style.css"
 
 import Layout from "../../components/layout"
 
@@ -41,14 +40,8 @@ const Fcc = () => {
         edges {
           node {
             childImageSharp {
-              thumb: fluid(maxWidth: 500, maxHeight: 500, quality: 100) {
-                ...GatsbyImageSharpFluid
-                originalName
-              }
-              full: fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-                originalName
-              }
+              thumb: gatsbyImageData(width: 270, height: 270)
+              full: gatsbyImageData(layout: FULL_WIDTH)
             }
           }
         }

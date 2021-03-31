@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 
 import NavbarLinks from "./navbarlinks"
 
+import logo from "../../images/icon.png"
+
 const Navigation = styled.nav`
   height: 75px;
   display: flex;
@@ -112,7 +114,7 @@ const Navbar = ({ menuLinks }) => {
     <Navigation>
       <Title>
         <Link to="/home/">
-          <LogoStyle src={require("../../images/icon.png")} alt="" />
+          <LogoStyle src={logo} alt="" />
         </Link>
       </Title>
       <Toggle

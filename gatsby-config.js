@@ -75,6 +75,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-image`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {

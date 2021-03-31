@@ -5,8 +5,9 @@ import Grid from "@material-ui/core/Grid"
 import Layout from "../components/layout"
 import OurStoryComponent from "../components/about/OurStoryComponent"
 
-const henna1 = require("../images/henna/henna1.png")
-const henna2 = require("../images/henna/henna3.png")
+import bannerImg from "../images/about/storybanner.jpg"
+import henna1 from "../images/henna/henna1.png"
+import henna2 from "../images/henna/henna3.png"
 
 const BannerImg = styled.img`
   width: 100%;
@@ -26,7 +27,7 @@ const About = () => {
   return (
     <Layout>
       <Grid container>
-        <BannerImg src={require("../images/about/storybanner.jpg")} alt="" />
+        <BannerImg src={bannerImg} alt="" />
         <TopHenna src={henna1} atl="" />
         <Grid item xs={12}>
           <OurStoryComponent />
