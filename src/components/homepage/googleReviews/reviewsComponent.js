@@ -47,8 +47,6 @@ const ReviewsComponent = () => {
     data.googlePlacesPlace.childrenGooglePlacesReview.map(i => i)
   )
 
-  const yes = reviewsData.map(item => console.log(item[1].author_name))
-
   return (
     <Container>
       <Title>
