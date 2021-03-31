@@ -56,21 +56,6 @@ const Fcc = () => {
     }
   `)
 
-  const images = data.allFile.edges.sort((a, b) => {
-    const nameA = a.node.childImageSharp.full.originalName
-    const nameB = b.node.childImageSharp.full.originalName
-
-    if (nameA < nameB) {
-      return -1
-    }
-    if (nameA > nameB) {
-      return 1
-    }
-    return 0
-  })
-
-  console.log(images)
-
   return (
     <Layout>
       <Grid container>

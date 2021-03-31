@@ -59,9 +59,7 @@ const Brathaus = () => {
     ...node.childImageSharp,
 
     caption: `${
-      i === 0 || i === 4 || i === 6 || i === 16 || i === 17
-        ? "BRATHAUS North End Rd. Market"
-        : "BRATHAUS Acton Market"
+      i > 14 ? "BRATHAUS North End Rd. Market" : "BRATHAUS Acton Market"
     }`,
   }))
 
