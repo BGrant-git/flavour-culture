@@ -40,7 +40,7 @@ const Divider = styled.img`
 const VendorComponent = () => {
   const matches = useMediaQuery("(max-width: 960px)")
 
-  const brat = require("../../../content/gallery/Brathaus/sausage.jpg")
+  const brat = require("../../../content/gallery/Brathaus/001.jpg")
   const fcc = require("../../images/vendors/indian.jpg")
   const naan = require("../../images/vendors/storyplate.jpg")
 
