@@ -5,7 +5,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import SocialComponent from "./SocialComponent"
 
-const rosemary = require("../../images/rose.png")
+import rosemary from "../../images/rose.png"
 
 const SectionContainer = styled.div`
   width: 100%;

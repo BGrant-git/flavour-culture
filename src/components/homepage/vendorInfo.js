@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
+import dinnerIcon from "../../images/home/dinnericon.png"
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -57,7 +59,7 @@ const Button = styled.button`
 const VendorInfo = () => {
   return (
     <Container>
-      <DinnerIcon src={require("../../images/home/dinnericon.png")} alt="" />
+      <DinnerIcon src={dinnerIcon} alt="" />
       <Header>
         <h1>HOSTING AN EVENT?</h1>
       </Header>

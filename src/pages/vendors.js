@@ -5,9 +5,9 @@ import Grid from "@material-ui/core/Grid"
 import Layout from "../components/layout"
 import VendorComponent from "../components/vendors/vendorComponent"
 
-const banner = require("../images/vendors/vendor-banner.jpg")
-const mandala = require("../images/henna/mandala1.png")
-const henna = require("../images/henna/henna4.png")
+import bannerImg from "../images/vendors/vendor-banner.jpg"
+import mandala from "../images/henna/mandala1.png"
+import henna from "../images/henna/henna4.png"
 
 const BannerImg = styled.img`
   width: 100%;
@@ -40,7 +40,7 @@ const Vendors = () => {
   return (
     <Layout>
       <div style={{ overflowX: "hidden" }}>
-        <BannerImg src={banner} alt="" />
+        <BannerImg src={bannerImg} alt="" />
         <MandalaStyle src={mandala} alt="" />
         <Grid container>
           <Grid item md={false} lg={1} />

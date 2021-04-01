@@ -6,7 +6,7 @@ import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 
-const googleIcon = require("../images/google-footer.png")
+import googleIcon from "../images/google-footer.png"
 
 const FooterContainer = styled.div`
   display: flex;

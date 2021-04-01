@@ -7,6 +7,7 @@ module.exports = {
     title: `Flavour Culture`,
     description: `Flavour Culture Catering, BRATHAUS Authentic German Sausages, Naan Stop Indian, UK`,
     url: "https://www.flavourculture.co.uk",
+    siteUrl: "https://www.flavourculture.co.uk",
     image: "src/images/icon.png",
     titleLink: [
       {
@@ -40,12 +41,6 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "G-JZR3MHL4QT",
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
@@ -75,11 +70,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.flavourculture.co.uk",
-        sitemap: "https://www.flavourculture.co.uk",
+        sitemap: "https://www.flavourculture.co.uk/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

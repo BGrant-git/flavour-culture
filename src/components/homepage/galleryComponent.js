@@ -4,6 +4,14 @@ import styled from "styled-components"
 import { useMediaQuery } from "@material-ui/core"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
+import mobIndian1 from "../../images/home/carousel/mob/indian.jpg"
+import mobIndian2 from "../../images/home/carousel/mob/indian2.jpg"
+import mobJondan from "../../images/home/carousel/mob/jondan.jpg"
+import mobSausage from "../../images/home/carousel/mob/sausage.jpg"
+import deskSausage from "../../images/home/carousel/desk/sausage-wide.jpg"
+import deskIndian1 from "../../images/home/carousel/desk/indian1-wide.jpg"
+import deskIndian2 from "../../images/home/carousel/desk/indian2-wide.jpg"
+
 const Caption = styled.p`
   text-align: right;
   border-radius: 0 25px 25px 0;
@@ -23,22 +31,14 @@ const GalleryComponent = () => {
 
   const Image0 = () => (
     <AnchorLinkStyle to="/vendors#NaanStop">
-      <img
-        className="image-gallery-image"
-        src={require("../../images/home/carousel/mob/indian.jpg")}
-        alt=""
-      />
+      <img className="image-gallery-image" src={mobIndian1} alt="" />
       <Caption className="image-gallery-description">Naan Stop</Caption>
     </AnchorLinkStyle>
   )
 
   const Image1 = () => (
     <AnchorLinkStyle to="/vendors#Flavour-Culture-Catering">
-      <img
-        className="image-gallery-image"
-        src={require("../../images/home/carousel/mob/indian2.jpg")}
-        alt=""
-      />
+      <img className="image-gallery-image" src={mobIndian2} alt="" />
       <Caption className="image-gallery-description">
         Flavour Culture Catering
       </Caption>
@@ -47,44 +47,28 @@ const GalleryComponent = () => {
 
   const Image2 = () => (
     <AnchorLinkStyle to="/vendors#BRATHAUS">
-      <img
-        className="image-gallery-image"
-        src={require("../../images/home/carousel/mob/jondan.jpg")}
-        alt=""
-      />
+      <img className="image-gallery-image" src={mobJondan} alt="" />
       <Caption className="image-gallery-description">BRATHAUS</Caption>
     </AnchorLinkStyle>
   )
 
   const Image3 = () => (
     <AnchorLinkStyle to="/vendors#BRATHAUS">
-      <img
-        className="image-gallery-image"
-        src={require("../../images/home/carousel/mob/sausage.jpg")}
-        alt=""
-      />
+      <img className="image-gallery-image" src={mobSausage} alt="" />
       <Caption className="image-gallery-description">BRATHAUS</Caption>
     </AnchorLinkStyle>
   )
 
   const Image4 = () => (
     <AnchorLinkStyle to="/vendors#BRATHAUS">
-      <img
-        className="image-gallery-image"
-        src={require("../../images/home/carousel/desk/sausage-wide.jpg")}
-        alt=""
-      />
+      <img className="image-gallery-image" src={deskSausage} alt="" />
       <Caption className="image-gallery-description">BRATHAUS</Caption>
     </AnchorLinkStyle>
   )
 
   const Image5 = () => (
     <AnchorLinkStyle to="/vendors#Flavour-Culture-Catering">
-      <img
-        className="image-gallery-image"
-        src={require("../../images/home/carousel/desk/indian1-wide.jpg")}
-        alt=""
-      />
+      <img className="image-gallery-image" src={deskIndian1} alt="" />
       <Caption className="image-gallery-description">
         Flavour Culture Catering
       </Caption>
@@ -93,11 +77,7 @@ const GalleryComponent = () => {
 
   const Image6 = () => (
     <AnchorLinkStyle to="/vendors#NaanStop">
-      <img
-        className="image-gallery-image"
-        src={require("../../images/home/carousel/desk/indian2-wide.jpg")}
-        alt=""
-      />
+      <img className="image-gallery-image" src={deskIndian2} alt="" />
       <Caption className="image-gallery-description">Naan Stop</Caption>
     </AnchorLinkStyle>
   )
