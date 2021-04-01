@@ -3,7 +3,6 @@ import ImageGallery from "react-image-gallery"
 import styled from "styled-components"
 import { useMediaQuery } from "@material-ui/core"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { StaticImage } from "gatsby-plugin-image"
 
 import mobIndian1 from "../../images/home/carousel/mob/indian.jpg"
 import mobIndian2 from "../../images/home/carousel/mob/indian2.jpg"

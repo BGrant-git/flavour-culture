@@ -59,7 +59,7 @@ const ReviewsComponent = () => {
       <Grid container direction="row">
         <Grid container item justify="center">
           {reviewsData.map((item, i) => (
-            <Grid item>
+            <Grid item key={i}>
               <ReviewContainer>
                 <ReviewItemComponent
                   userPhotoUrl={item[1].profile_photo_url}
