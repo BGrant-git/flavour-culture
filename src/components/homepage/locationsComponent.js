@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
+import { Grid, useMediaQuery } from "@material-ui/core/"
 
 import MapComponent from "./map"
 
@@ -48,6 +48,20 @@ const InfoContainer = styled.div`
 
 const InfoContainerGrid = styled(Grid)`
   padding: 5px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    background: #cabe99;
+    padding: 10px;
+  }
+
+  @media (max-width: 960px) {
+    &:hover {
+      padding: 5px 0;
+    }
+  }
 `
 
 const Times = styled.p`
@@ -57,8 +71,13 @@ const Times = styled.p`
 const VendorName = styled.h1`
   width: 100%;
   font-size: 42px;
-  margin-bottom: 10px;
+  margin-bottom: -5px;
   text-align: center;
+`
+
+const VendorSubTitle = styled.p`
+  text-align: center;
+  padding-bottom: 10px;
 `
 
 const MapMarker = styled.img`
@@ -76,10 +95,72 @@ const Address = styled.div`
 `
 
 const LocationsComponent = () => {
-  const mapStyles = {
-    width: "100%",
-    height: "300px",
+  const matches = useMediaQuery("(max-width:960px)")
+
+  const initialView = {
+    loc: {
+      lat: 51.47116539815708,
+      lng: -0.204846863438927,
+    },
+    zoom: {
+      z: 11,
+    },
   }
+
+  const [mapView, setMapView] = useState(initialView)
+
+  const handleLocClick = loc => {
+    loc === 0
+      ? setMapView({
+          loc: {
+            lat: 51.48258,
+            lng: -0.20022,
+          },
+          zoom: {
+            z: 15,
+          },
+        })
+      : loc === 1
+      ? setMapView({
+          loc: {
+            lat: 51.50799771795835,
+            lng: -0.27228767069153964,
+          },
+          zoom: {
+            z: 15,
+          },
+        })
+      : loc === 2
+      ? setMapView({
+          loc: {
+            lat: 51.413216370457675,
+            lng: -0.183425847287169,
+          },
+          zoom: {
+            z: 15,
+          },
+        })
+      : setMapView({
+          loc: {
+            lat: 51.47088816497439,
+            lng: -0.2521988042378051,
+          },
+          zoom: {
+            z: 15,
+          },
+        })
+
+    setTimeout(() => {
+      setMapView(initialView)
+    }, 5000)
+  }
+
+  const mapStyles = matches
+    ? {
+        width: "100%",
+        height: "400px",
+      }
+    : { width: "100%", height: "300px" }
 
   return (
     <Container>
@@ -90,7 +171,10 @@ const LocationsComponent = () => {
       <VendorContainer>
         <InfoContainer>
           <VendorName>BRATHAUS</VendorName>
-          <InfoContainerGrid container>
+          <VendorSubTitle>
+            ({matches ? "tap" : "click"} on vendor to zoom)
+          </VendorSubTitle>
+          <InfoContainerGrid container onClick={() => handleLocClick(0)}>
             <Grid item xs={1}>
               <MapMarker src={mapmarkerA} alt="" />
             </Grid>
@@ -106,12 +190,12 @@ const LocationsComponent = () => {
                 <p>
                   North End Road
                   <br />
-                  Fulham SW6 1NS
+                  Fulham SW6 1NW
                 </p>
               </Address>
             </Grid>
           </InfoContainerGrid>
-          <InfoContainerGrid container>
+          <InfoContainerGrid container onClick={() => handleLocClick(1)}>
             <Grid item xs={1}>
               <MapMarker src={mapmarkerB} alt="" />
             </Grid>
@@ -127,12 +211,12 @@ const LocationsComponent = () => {
                 <p>
                   The Mount/King Street
                   <br />
-                  Acton W3 1NS
+                  Acton W3 9NW
                 </p>
               </Address>
             </Grid>
           </InfoContainerGrid>
-          <InfoContainerGrid container>
+          <InfoContainerGrid container onClick={() => handleLocClick(2)}>
             <Grid item xs={1}>
               <MapMarker src={mapmarkerC} alt="" />
             </Grid>
@@ -141,6 +225,7 @@ const LocationsComponent = () => {
               <br />
               <Times>Friday - Saturday</Times>
               <Times>18.00 - 22.00</Times>
+              <Times>Launched ---</Times>
             </Grid>
             <Grid item xs={5}>
               <Address>
@@ -154,7 +239,7 @@ const LocationsComponent = () => {
           </InfoContainerGrid>
         </InfoContainer>
 
-        <MapComponent mapStyles={mapStyles} />
+        <MapComponent mapStyles={mapStyles} mapView={mapView} />
       </VendorContainer>
     </Container>
   )

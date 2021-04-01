@@ -25,6 +25,12 @@ const ReviewContainer = styled.div`
   border-radius: 10px;
   min-height: 320px;
   max-width: 400px;
+
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 const ReviewsComponent = () => {
@@ -52,7 +58,12 @@ const ReviewsComponent = () => {
       <Title>
         <h1>
           Check out our{" "}
-          <a href="https://maps.app.goo.gl/zAfMGh18ESzfFq4NA">Google</a>{" "}
+          <a
+            href="https://maps.app.goo.gl/zAfMGh18ESzfFq4NA"
+            style={{ color: "purple" }}
+          >
+            Google
+          </a>{" "}
           reviews...
         </h1>
       </Title>

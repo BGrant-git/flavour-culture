@@ -1,7 +1,7 @@
 import React from "react"
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
 
-const MapComponent = props => {
+const MapComponent = ({ mapStyles, mapView }) => {
   const markerLocations = [
     [
       {
@@ -22,18 +22,18 @@ const MapComponent = props => {
     ],
   ]
 
-  const mapCenter = { lat: 51.47088816497439, lng: -0.2521988042378051 }
-
   return (
     <LoadScript googleMapsApiKey={process.env.GATSBY_GOOGLE_API_KEY}>
       <GoogleMap
-        mapContainerStyle={props.mapStyles}
-        zoom={11}
-        center={mapCenter}
+        mapContainerStyle={mapStyles}
+        zoom={mapView.zoom.z}
+        center={mapView.loc}
         clickableIcons={false}
       >
         {markerLocations[0].map((item, i) => (
-          <Marker key={i} position={item} label={item.loc} />
+          <>
+            <Marker key={i} position={item} label={item.loc} />
+          </>
         ))}
       </GoogleMap>
     </LoadScript>
