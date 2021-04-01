@@ -50,7 +50,6 @@ const InfoContainerGrid = styled(Grid)`
   padding: 5px 0;
   cursor: pointer;
   border-radius: 10px;
-
   transition: 0.1s ease-in-out;
 
   &:hover {
