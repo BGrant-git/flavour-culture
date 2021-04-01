@@ -7,6 +7,7 @@ module.exports = {
     title: `Flavour Culture`,
     description: `Flavour Culture Catering, BRATHAUS Authentic German Sausages, Naan Stop Indian, UK`,
     url: "https://www.flavourculture.co.uk",
+    siteUrl: "https://www.flavourculture.co.uk",
     image: "src/images/icon.png",
     titleLink: [
       {
@@ -70,11 +71,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.flavourculture.co.uk",
-        sitemap: "https://www.flavourculture.co.uk",
+        sitemap: "https://www.flavourculture.co.uk/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
