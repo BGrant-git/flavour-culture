@@ -16,6 +16,7 @@ const Navigation = styled.nav`
   padding: 0;
   z-index: 2;
   align-self: center;
+  min-width: 100%;
 
   @media (max-width: 960px) {
     position: sticky;
@@ -113,7 +114,7 @@ const Navbar = ({ menuLinks }) => {
   return (
     <Navigation>
       <Title>
-        <Link to="/home/">
+        <Link to="/">
           <LogoStyle src={logo} alt="" />
         </Link>
       </Title>

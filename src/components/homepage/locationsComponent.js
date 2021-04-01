@@ -53,7 +53,7 @@ const InfoContainerGrid = styled(Grid)`
   transition: 0.1s ease-in-out;
 
   &:hover {
-    background: #cabe99;
+    background: #e4decb;
     padding: 10px;
   }
 

@@ -3,8 +3,7 @@ import styled from "styled-components"
 import "./css/index.css"
 
 import SEO from "../components/seo"
-
-import logoImg from "../images/icon.png"
+import Home from "../components/homepage/home"
 
 const Container = styled.div`
   display: flex;
@@ -17,14 +16,13 @@ const Logo = styled.img`
   margin: 20px;
 `
 
-const ComingSoon = () => {
+const Index = () => {
   return (
     <Container>
       <SEO />
-      <Logo src={logoImg} alt="" />
-      <h2>Flavourculture.co.uk coming soon!</h2>
+      <Home />
     </Container>
   )
 }
 
-export default ComingSoon
+export default Index

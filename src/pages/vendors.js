@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 
-import Layout from "../components/layout"
 import VendorComponent from "../components/vendors/vendorComponent"
 
 import bannerImg from "../images/vendors/vendor-banner.jpg"
@@ -38,20 +37,18 @@ const BottomHenna = styled.img`
 
 const Vendors = () => {
   return (
-    <Layout>
-      <div style={{ overflowX: "hidden" }}>
-        <BannerImg src={bannerImg} alt="" />
-        <MandalaStyle src={mandala} alt="" />
-        <Grid container>
-          <Grid item md={false} lg={1} />
-          <Grid item md={12} lg={10}>
-            <VendorComponent />
-          </Grid>
-          <Grid item md={false} lg={1} />
+    <div style={{ overflowX: "hidden" }}>
+      <BannerImg src={bannerImg} alt="" />
+      <MandalaStyle src={mandala} alt="" />
+      <Grid container>
+        <Grid item md={false} lg={1} />
+        <Grid item md={12} lg={10}>
+          <VendorComponent />
         </Grid>
-        <BottomHenna src={henna} alt="" />
-      </div>
-    </Layout>
+        <Grid item md={false} lg={1} />
+      </Grid>
+      <BottomHenna src={henna} alt="" />
+    </div>
   )
 }
 

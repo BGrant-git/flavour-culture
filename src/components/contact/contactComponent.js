@@ -74,6 +74,7 @@ const Submit = styled.button`
   margin: 5px 5px 5px 0;
   padding: 10px;
   font-family: inherit;
+  font-size: 20px;
 
   @media (max-width: 600px) {
     font-size: 24px;

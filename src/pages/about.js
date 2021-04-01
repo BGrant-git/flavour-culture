@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 
-import Layout from "../components/layout"
 import OurStoryComponent from "../components/about/OurStoryComponent"
 
 import bannerImg from "../images/about/storybanner.jpg"
@@ -25,16 +24,14 @@ const BottomHenna = styled.img`
 
 const About = () => {
   return (
-    <Layout>
-      <Grid container>
-        <BannerImg src={bannerImg} alt="" />
-        <TopHenna src={henna1} atl="" />
-        <Grid item xs={12}>
-          <OurStoryComponent />
-        </Grid>
-        <BottomHenna src={henna2} alt="" />
+    <Grid container>
+      <BannerImg src={bannerImg} alt="" />
+      <TopHenna src={henna1} atl="" />
+      <Grid item xs={12}>
+        <OurStoryComponent />
       </Grid>
-    </Layout>
+      <BottomHenna src={henna2} alt="" />
+    </Grid>
   )
 }
 

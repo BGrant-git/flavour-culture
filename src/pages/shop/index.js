@@ -11,11 +11,9 @@ const Container = styled.div`
 
 const Shop = () => {
   return (
-    <Layout>
-      <Container>
-        <h2>Shop coming soon!</h2>
-      </Container>
-    </Layout>
+    <Container>
+      <h2>Shop coming soon!</h2>
+    </Container>
   )
 }
 

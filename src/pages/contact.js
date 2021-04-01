@@ -1,13 +1,14 @@
 import React from "react"
 
-import Layout from "../components/layout"
 import ContactComponent from "../components/contact/contactComponent"
+import ContactSocialComponent from "../components/contact/ContactSocialComponent"
 
 const Contact = () => {
   return (
-    <Layout>
+    <>
       <ContactComponent />
-    </Layout>
+      <ContactSocialComponent />
+    </>
   )
 }
 
