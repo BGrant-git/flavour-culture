@@ -11,11 +11,6 @@ const Container = styled.div`
   align-items: center;
 `
 
-const Logo = styled.img`
-  height: 300px;
-  margin: 20px;
-`
-
 const Index = () => {
   return (
     <Container>

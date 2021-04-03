@@ -31,9 +31,9 @@ const MapComponent = ({ mapStyles, mapView }) => {
         clickableIcons={false}
       >
         {markerLocations[0].map((item, i) => (
-          <>
-            <Marker key={i} position={item} label={item.loc} />
-          </>
+          <div key={i}>
+            <Marker position={item} label={item.loc} />
+          </div>
         ))}
       </GoogleMap>
     </LoadScript>

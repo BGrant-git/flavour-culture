@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
 
 import googleIcon from "../../images/contact/google.png"
 import facebookIcon from "../../images/contact/facebook.png"

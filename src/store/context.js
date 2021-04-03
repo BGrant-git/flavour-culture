@@ -7,7 +7,7 @@ const StoreContextProvider = ({ children }) => {
 
   return (
     <StoreContext.Provider
-      value={{ tesContext: [testContext, setTestContext] }}
+      value={{ testContext: [testContext, setTestContext] }}
     >
       {children}
     </StoreContext.Provider>

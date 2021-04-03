@@ -110,8 +110,13 @@ const LocationsComponent = () => {
   const [mapView, setMapView] = useState(initialView)
 
   const handleLocClick = loc => {
-    loc === 0
-      ? setMapView({
+    if (loc === 0) {
+    } else if (loc === 1) {
+    }
+
+    switch (loc) {
+      case 0:
+        setMapView({
           loc: {
             lat: 51.48258,
             lng: -0.20022,
@@ -120,8 +125,9 @@ const LocationsComponent = () => {
             z: 15,
           },
         })
-      : loc === 1
-      ? setMapView({
+        break
+      case 1:
+        setMapView({
           loc: {
             lat: 51.50799771795835,
             lng: -0.27228767069153964,
@@ -130,8 +136,9 @@ const LocationsComponent = () => {
             z: 15,
           },
         })
-      : loc === 2
-      ? setMapView({
+        break
+      case 2:
+        setMapView({
           loc: {
             lat: 51.413216370457675,
             lng: -0.183425847287169,
@@ -140,19 +147,22 @@ const LocationsComponent = () => {
             z: 15,
           },
         })
-      : setMapView({
+        break
+      default:
+        setMapView({
           loc: {
-            lat: 51.47088816497439,
-            lng: -0.2521988042378051,
+            lat: 51.47116539815708,
+            lng: -0.204846863438927,
           },
           zoom: {
-            z: 15,
+            z: 11,
           },
         })
+    }
 
     setTimeout(() => {
       setMapView(initialView)
-    }, 5000)
+    }, 7000)
   }
 
   const mapStyles = matches

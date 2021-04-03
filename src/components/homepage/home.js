@@ -1,12 +1,17 @@
-import React from "react"
+import React, { useContext } from "react"
 import Grid from "@material-ui/core/Grid"
 
+import { StoreContext } from "../../store/context.js"
 import GalleryComponent from "./galleryComponent"
 import LocationsComponent from "./locationsComponent"
 import VendorInfo from "./vendorInfo"
 import ReviewsComponent from "./googleReviews/reviewsComponent"
 
 const Home = () => {
+  const { testContext } = useContext(StoreContext)
+
+  console.log(testContext)
+
   return (
     <Grid container>
       <Grid item style={{ margin: "auto" }}>

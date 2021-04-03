@@ -3,10 +3,12 @@ import React from "react"
 import StoreContextProvider from "./src/store/context"
 import Layout from "./src/components/layout"
 
-export default ({ element }) => {
+const wrapWithProvider = ({ element }) => {
   return (
     <StoreContextProvider>
       <Layout>{element}</Layout>
     </StoreContextProvider>
   )
 }
+
+export default wrapWithProvider
