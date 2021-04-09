@@ -126,11 +126,11 @@ const Navbar = ({ menuLinks }) => {
       </Toggle>
       {navbarOpen ? (
         <Navbox>
-          <NavbarLinks menuLinks={menuLinks} />
+          <NavbarLinks menuLinks={menuLinks} setNavbarOpen={setNavbarOpen} />
         </Navbox>
       ) : (
         <Navbox open>
-          <NavbarLinks menuLinks={menuLinks} />
+          <NavbarLinks menuLinks={menuLinks} setNavbarOpen={setNavbarOpen} />
         </Navbox>
       )}
     </Navigation>

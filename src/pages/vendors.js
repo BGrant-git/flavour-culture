@@ -2,11 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 
-import VendorComponent from "../components/vendors/vendorComponent"
+import VendorComponent from "src/components/vendors/vendorComponent"
 
-import bannerImg from "../images/vendors/vendor-banner.jpg"
-import mandala from "../images/henna/mandala1.png"
-import henna from "../images/henna/henna4.png"
+import bannerImg from "src/images/vendors/vendor-banner.jpg"
+import mandala from "src/images/henna/mandala1.png"
+import henna from "src/images/henna/henna4.png"
 
 const BannerImg = styled.img`
   width: 100%;

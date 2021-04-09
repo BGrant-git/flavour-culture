@@ -47,11 +47,16 @@ const Links = styled(Link)`
   }
 `
 
-const NavbarLinks = ({ menuLinks }) => {
+const NavbarLinks = ({ menuLinks, setNavbarOpen }) => {
   return (
     <>
       {menuLinks.map((item, i) => (
-        <NavItem key={i}>
+        <NavItem
+          key={i}
+          onClick={() => {
+            setNavbarOpen(false)
+          }}
+        >
           <Links to={item.link}>{item.name}</Links>
         </NavItem>
       ))}

@@ -41,7 +41,7 @@ const Layout = ({ children }) => (
         <Helmet
           title={"Flavour Culture"}
           meta={[{ name: "Flavour Culture", content: "Food, Dining, Cuisine" }]}
-        ></Helmet>
+        />
         <Site>
           <Navbar
             titleLink={data.site.siteMetadata.titleLink}
