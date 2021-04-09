@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-import googleIcon from "../../images/contact/google.png"
-import facebookIcon from "../../images/contact/facebook.png"
-import instaIcon from "../../images/contact/instagram.svg"
-import mailIcon from "../../images/contact/mail.png"
+import googleIcon from "src/images/contact/google.png"
+import facebookIcon from "src/images/contact/facebook.png"
+import instaIcon from "src/images/contact/instagram.svg"
+import mailIcon from "src/images/contact/mail.png"
 
 const Container = styled.div`
   padding: 20px 0;

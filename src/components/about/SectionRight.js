@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid"
 
 import SocialComponent from "./SocialComponent"
 
-import rosemary from "../../images/rose.png"
+import rosemary from "src/images/rose.png"
 
 const SectionContainer = styled.div`
   width: 100%;

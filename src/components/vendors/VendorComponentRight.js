@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 import { useMediaQuery } from "@material-ui/core"
 
-import rosemary from "../../images/rose.png"
+import rosemary from "src/images/rose.png"
 
 const SectionContainer = styled.div`
   width: 95%;

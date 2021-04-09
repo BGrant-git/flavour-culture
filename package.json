@@ -38,6 +38,7 @@
     "typeface-rubik": "^1.1.13"
   },
   "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.6",
     "prettier": "2.2.1"
   },
   "keywords": [

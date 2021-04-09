@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import RatingsComponent from "./ratingsComponent"
 
-import googleIcon from "../../../images/home/Google_'G'_Logo.svg.webp"
+import googleIcon from "src/images/home/Google_'G'_Logo.svg.webp"
 
 const Container = styled.div`
   display: flex;

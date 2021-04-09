@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import dinnerIcon from "../../images/home/dinnericon.png"
+import dinnerIcon from "src/images/home/dinnericon.png"
 
 const Container = styled.div`
   display: flex;

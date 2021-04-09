@@ -4,10 +4,10 @@ import { Grid, useMediaQuery } from "@material-ui/core/"
 
 import MapComponent from "./map"
 
-import marketIcon from "../../images/home/marketicon.png"
-import mapmarkerA from "../../images/home/map_marker_A.png"
-import mapmarkerB from "../../images/home/map_marker_B.png"
-import mapmarkerC from "../../images/home/map_marker_C.png"
+import marketIcon from "src/images/home/marketicon.png"
+import mapmarkerA from "src/images/home/map_marker_A.png"
+import mapmarkerB from "src/images/home/map_marker_B.png"
+import mapmarkerC from "src/images/home/map_marker_C.png"
 
 const Container = styled.div`
   display: flex;
@@ -94,83 +94,76 @@ const Address = styled.div`
   text-align: right;
 `
 
+const initialView = {
+  loc: {
+    lat: 51.47116539815708,
+    lng: -0.204846863438927,
+  },
+  zoom: {
+    z: 11,
+  },
+}
+
+const handleLocClick = (setMapView, loc) => {
+  switch (loc) {
+    case 0:
+      setMapView({
+        loc: {
+          lat: 51.48258,
+          lng: -0.20022,
+        },
+        zoom: {
+          z: 16,
+        },
+      })
+      break
+    case 1:
+      setMapView({
+        loc: {
+          lat: 51.50799771795835,
+          lng: -0.27228767069153964,
+        },
+        zoom: {
+          z: 16,
+        },
+      })
+      break
+    case 2:
+      setMapView({
+        loc: {
+          lat: 51.413216370457675,
+          lng: -0.183425847287169,
+        },
+        zoom: {
+          z: 18,
+        },
+      })
+      break
+  }
+
+  setTimeout(() => {
+    setMapView(initialView)
+  }, 7000)
+}
+
+const mapStyles = matches => {
+  if (matches) {
+    return {
+      width: "100%",
+      height: "400px",
+    }
+  } else {
+    return {
+      width: "100%",
+      height: "300px",
+    }
+  }
+}
+
 const LocationsComponent = () => {
   const matches = useMediaQuery("(max-width:960px)")
 
-  const initialView = {
-    loc: {
-      lat: 51.47116539815708,
-      lng: -0.204846863438927,
-    },
-    zoom: {
-      z: 11,
-    },
-  }
-
   const [mapView, setMapView] = useState(initialView)
-
-  const handleLocClick = loc => {
-    if (loc === 0) {
-    } else if (loc === 1) {
-    }
-
-    switch (loc) {
-      case 0:
-        setMapView({
-          loc: {
-            lat: 51.48258,
-            lng: -0.20022,
-          },
-          zoom: {
-            z: 15,
-          },
-        })
-        break
-      case 1:
-        setMapView({
-          loc: {
-            lat: 51.50799771795835,
-            lng: -0.27228767069153964,
-          },
-          zoom: {
-            z: 15,
-          },
-        })
-        break
-      case 2:
-        setMapView({
-          loc: {
-            lat: 51.413216370457675,
-            lng: -0.183425847287169,
-          },
-          zoom: {
-            z: 15,
-          },
-        })
-        break
-      default:
-        setMapView({
-          loc: {
-            lat: 51.47116539815708,
-            lng: -0.204846863438927,
-          },
-          zoom: {
-            z: 11,
-          },
-        })
-    }
-
-    setTimeout(() => {
-      setMapView(initialView)
-    }, 7000)
-  }
-
-  const mapStyles = matches
-    ? {
-        width: "100%",
-        height: "400px",
-      }
-    : { width: "100%", height: "300px" }
 
   return (
     <Container>
@@ -184,7 +177,10 @@ const LocationsComponent = () => {
           <VendorSubTitle>
             ({matches ? "tap" : "click"} on vendor to zoom)
           </VendorSubTitle>
-          <InfoContainerGrid container onClick={() => handleLocClick(0)}>
+          <InfoContainerGrid
+            container
+            onClick={() => handleLocClick(setMapView, 0)}
+          >
             <Grid item xs={1}>
               <MapMarker src={mapmarkerA} alt="" />
             </Grid>
@@ -205,7 +201,10 @@ const LocationsComponent = () => {
               </Address>
             </Grid>
           </InfoContainerGrid>
-          <InfoContainerGrid container onClick={() => handleLocClick(1)}>
+          <InfoContainerGrid
+            container
+            onClick={() => handleLocClick(setMapView, 1)}
+          >
             <Grid item xs={1}>
               <MapMarker src={mapmarkerB} alt="" />
             </Grid>
@@ -226,7 +225,10 @@ const LocationsComponent = () => {
               </Address>
             </Grid>
           </InfoContainerGrid>
-          <InfoContainerGrid container onClick={() => handleLocClick(2)}>
+          <InfoContainerGrid
+            container
+            onClick={() => handleLocClick(setMapView, 2)}
+          >
             <Grid item xs={1}>
               <MapMarker src={mapmarkerC} alt="" />
             </Grid>
@@ -249,7 +251,7 @@ const LocationsComponent = () => {
           </InfoContainerGrid>
         </InfoContainer>
 
-        <MapComponent mapStyles={mapStyles} mapView={mapView} />
+        <MapComponent mapStyles={mapStyles(matches)} mapView={mapView} />
       </VendorContainer>
     </Container>
   )

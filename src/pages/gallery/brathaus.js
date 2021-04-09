@@ -48,7 +48,6 @@ const Brathaus = () => {
 
   const images = data.allFile.edges.map(({ node }, i) => ({
     ...node.childImageSharp,
-
     caption: `${
       i < 5 ? "BRATHAUS North End Rd. Market" : "BRATHAUS Acton Market"
     }`,

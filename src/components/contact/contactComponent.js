@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Grid, useMediaQuery } from "@material-ui/core/"
 
-import backgroundMob from "../../images/contact/mob-bg.jpg"
-import backgroundDesk from "../../images/contact/contact-desktop-bg.jpg"
+import backgroundMob from "src/images/contact/mob-bg.jpg"
+import backgroundDesk from "src/images/contact/contact-desktop-bg.jpg"
 
 const Container = styled.div`
   width: 100%;

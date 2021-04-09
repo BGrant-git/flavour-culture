@@ -4,10 +4,10 @@ import { Link } from "gatsby"
 import { Grid, useMediaQuery } from "@material-ui/core/"
 import styled from "styled-components"
 
-import brathausThumb from "../../images/thumbnails/brat_thumb.jpg"
-import btsThumb from "../../images/thumbnails/bts_thumb.jpg"
-import naanThumb from "../../images/thumbnails/naan_thumb.jpg"
-import StockImg from "../../images/thumbnails/naan-stock-img.jpg"
+import brathausThumb from "src/images/thumbnails/brat_thumb.jpg"
+import btsThumb from "src/images/thumbnails/bts_thumb.jpg"
+import naanThumb from "src/images/thumbnails/naan_thumb.jpg"
+import StockImg from "src/images/thumbnails/naan-stock-img.jpg"
 
 const GalleryContainer = styled.div`
   width: 100%;
