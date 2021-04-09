@@ -86,7 +86,7 @@ const RosemaryMob = styled.img`
   margin-left: -50px;
 `
 
-const VendorComponentRight = props => {
+const VendorComponentRight = ({ heading, subheading, text, img }) => {
   const matches = useMediaQuery("(max-width: 960px)")
 
   return (
@@ -94,16 +94,16 @@ const VendorComponentRight = props => {
       <Grid container>
         <Grid item sm={12} md={8}>
           <SectionTextContainer>
-            <SectionHeading>{props.heading}</SectionHeading>
-            <SectionSubheading>{props.subheading}</SectionSubheading>
-            {props.text.map((item, i) => (
+            <SectionHeading>{heading}</SectionHeading>
+            <SectionSubheading>{subheading}</SectionSubheading>
+            {text.map((item, i) => (
               <SectionText index={i}>{item}</SectionText>
             ))}
           </SectionTextContainer>
         </Grid>
         <Grid item sm={12} md={4}>
           <SectionImageContainer>
-            <SectionImage src={props.img} alt="" />
+            <SectionImage src={img} alt="" />
           </SectionImageContainer>
         </Grid>
         {matches ? <RosemaryMob src={rosemary} alt="" /> : null}

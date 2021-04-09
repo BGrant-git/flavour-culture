@@ -30,6 +30,7 @@ const StoryImage = styled.img`
   width: 350px;
   overflow: hidden;
   border-radius: 60px;
+  z-index: 1;
 
   @media (max-width: 960px) {
     width: 90%;
@@ -60,7 +61,7 @@ const Button = styled.button`
   padding: 15px;
   margin: 5px;
   align-self: center;
-  font-size: 16px;
+  font-size: 22px;
   color: white;
   border-radius: 5px;
   background-image: linear-gradient(to bottom right, #8b0000, red);
@@ -96,16 +97,6 @@ const RoseLeft = styled.img`
   margin-right: -100px;
 `
 
-const RoseRight = styled.img`
-  height: 300px;
-  margin-top: 150px;
-  margin-left: -20px;
-  margin-right: -120px;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  display: none;
-`
-
 const RoseRightMob = styled.img`
   height: 300px;
   margin: -650px 0 0 85%;
@@ -120,7 +111,6 @@ const RoseLeftMob = styled.img`
 
 const SectionLeft = props => {
   const matches = useMediaQuery("(max-width: 650px")
-  const matchesSmall = useMediaQuery("(max-width: 675px")
 
   return (
     <SectionContainer>
@@ -146,8 +136,9 @@ const SectionLeft = props => {
           md={8}
           style={matches ? null : { paddingRight: "50px" }}
         >
-          <Text style={{ paddingBottom: 15 }}>{props.text1}</Text>
-          <Text>{props.text2}</Text>
+          {props.text.map((item, i) => (
+            <Text key={i}>{item}</Text>
+          ))}
           {props.hasSocial ? <SocialComponent /> : null}
           {props.hasButton ? <Button>Make a booking</Button> : null}
           {props.hasVendorButtons ? (
@@ -167,11 +158,7 @@ const SectionLeft = props => {
             </>
           ) : null}
         </TextContainerGrid>
-        {matchesSmall ? (
-          <RoseRightMob src={rosemary} alt="" />
-        ) : (
-          <RoseRight src={rosemary} alt="" />
-        )}
+        {matches ? <RoseRightMob src={rosemary} alt="" /> : null}
       </Grid>
     </SectionContainer>
   )

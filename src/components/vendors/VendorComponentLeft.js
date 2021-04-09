@@ -71,21 +71,21 @@ const Rosemary = styled.img`
   }
 `
 
-const VendorComponentLeft = props => {
+const VendorComponentLeft = ({ img, heading, subheading, text }) => {
   return (
     <SectionContainer>
       <Grid container>
         <Rosemary src={rosemary} alt="" />
         <Grid item sm={12} md={4}>
           <SectionImageContainer>
-            <SectionImage src={props.img} alt="" />
+            <SectionImage src={img} alt="" />
           </SectionImageContainer>
         </Grid>
         <Grid item sm={12} md={8}>
           <SectionTextContainer>
-            <SectionHeading>{props.heading}</SectionHeading>
-            <SectionSubheading>{props.subheading}</SectionSubheading>
-            {props.text.map((item, i) => (
+            <SectionHeading>{heading}</SectionHeading>
+            <SectionSubheading>{subheading}</SectionSubheading>
+            {text.map((item, i) => (
               <SectionText index={i}>{item}</SectionText>
             ))}
           </SectionTextContainer>

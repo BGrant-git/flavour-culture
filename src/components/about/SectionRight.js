@@ -74,18 +74,19 @@ const RoseRight = styled.img`
   }
 `
 
-const SectionRight = props => (
+const SectionRight = ({ text, hasSocial, hasButton, img }) => (
   <SectionContainer>
     <Grid container>
       <TextContainerGrid item sm={12} md={8}>
-        <p style={{ paddingBottom: 15 }}>{props.text1}</p>
-        <p>{props.text2}</p>
-        {props.hasSocial ? <SocialComponent /> : null}
-        {props.hasButton ? <Button>Make a booking</Button> : null}
+        {text.map((item, i) => (
+          <p key={i}>{item}</p>
+        ))}
+        {hasSocial ? <SocialComponent /> : null}
+        {hasButton ? <Button>Make a booking</Button> : null}
       </TextContainerGrid>
       <Grid item sm={12} md={4}>
         <ImageContainer>
-          <StoryImage src={props.img} alt="" />
+          <StoryImage src={img} alt="" />
         </ImageContainer>
       </Grid>
 

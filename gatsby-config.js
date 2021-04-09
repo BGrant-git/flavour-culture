@@ -91,7 +91,7 @@ module.exports = {
         short_name: `FlavourCulture`,
         start_url: `/`,
         display: `standalone`,
-        icon: `"src/images/icon.png`,
+        icon: `src/images/icon.png`,
       },
     },
     {

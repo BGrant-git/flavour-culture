@@ -3,7 +3,7 @@ import { useMediaQuery } from "@material-ui/core"
 import styled from "styled-components"
 
 import VendorComponentRight from "./VendorComponentRight"
-import VendorComponentLeft from "./VendorComponentLeft"
+import ResponsiveVendor from "./ResponsiveVendor"
 
 import brat from "../../../content/gallery/Brathaus/001.jpg"
 import fcc from "src/images/vendors/indian.jpg"
@@ -107,25 +107,13 @@ const VendorComponent = () => {
         alt=""
         style={!matches ? { marginTop: "-60px" } : null}
       />
-      {matches ? (
-        <div id="NaanStop">
-          <VendorComponentRight
-            heading={vendorInfo[1].name}
-            subheading={vendorInfo[1].subheading}
-            text={vendorInfo[1].text}
-            img={naan}
-          />
-        </div>
-      ) : (
-        <div id="NaanStop">
-          <VendorComponentLeft
-            heading={vendorInfo[1].name}
-            subheading={vendorInfo[1].subheading}
-            text={vendorInfo[1].text}
-            img={naan}
-          />
-        </div>
-      )}
+      <ResponsiveVendor
+        matches={matches}
+        heading={vendorInfo[1].name}
+        subheading={vendorInfo[1].subheading}
+        text={vendorInfo[1].text}
+        img={naan}
+      />
       <Divider src={divider} alt="" />
       <div id="Flavour-Culture-Catering">
         <VendorComponentRight
