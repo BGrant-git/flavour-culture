@@ -45,7 +45,7 @@ const TextContainer = styled.div`
 const Button = styled.button`
   font-size: 22px;
   padding: 12px;
-  margin: auto;
+  margin: 0 auto 20px;
   background-color: var(--main-color);
   font-family: "Thunder";
   color: white;
