@@ -116,7 +116,7 @@ const ContactComponent = () => {
   return (
     <Container>
       <form
-        action="https://getform.io/f/17128148-c85c-428d-8bdc-6c42ce4641ca"
+        action="https://getform.io/f/3524bb20-d441-4d18-907f-6901c923e163"
         method="POST"
       >
         <input type="hidden" name="form-name" value="contact" />

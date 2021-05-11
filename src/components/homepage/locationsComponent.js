@@ -59,7 +59,7 @@ const InfoContainerGrid = styled(Grid)`
 
   @media (max-width: 960px) {
     &:hover {
-      padding: 5px 0;
+      padding: 2px 0;
     }
   }
 `

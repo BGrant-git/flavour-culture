@@ -99,7 +99,7 @@ module.exports = {
       options: {
         placeIds: ["ChIJC78FrtMPdkgRVNANhmuxKJ0"],
         apiKey: process.env.GATSBY_GOOGLE_API_KEY,
-        language: "en-GB", // optional, defaults to en-US
+        language: "en-GB",
       },
     },
   ],
