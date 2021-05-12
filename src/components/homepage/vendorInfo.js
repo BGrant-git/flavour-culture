@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { useMediaQuery } from "@material-ui/core"
 
 import dinnerIcon from "src/images/home/dinnericon.png"
+import { vendorText } from "src/flavour-culture-text/homepage-text"
 
 const Container = styled.div`
   display: flex;
@@ -40,6 +42,7 @@ const DinnerIcon = styled.img`
 const TextContainer = styled.div`
   padding: 20px;
   font-size: 24px;
+  text-align: center;
 `
 
 const Button = styled.button`
@@ -56,7 +59,17 @@ const Button = styled.button`
   }
 `
 
+const responsiveTextPadding = matches => {
+  if (matches) {
+    return { padding: "10px 0" }
+  } else {
+    return { padding: "20px 0" }
+  }
+}
+
 const VendorInfo = () => {
+  const matches = useMediaQuery("(max-width:960px)")
+
   return (
     <Container>
       <DinnerIcon src={dinnerIcon} alt="" />
@@ -64,13 +77,9 @@ const VendorInfo = () => {
         <h1>HOSTING AN EVENT?</h1>
       </Header>
       <TextContainer>
-        <p>
-          <strong>Flavour Culture Catering</strong> lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Nostrum sunt omnis quo, unde ut
-          inventore. <br />
-          Dolorem non corporis voluptatibus ex exercitationem voluptatum soluta
-          doloribus, quaerat pariatur, fugiat doloremque nulla dignissimos.
-        </p>
+        <h2 style={responsiveTextPadding(matches)}>{vendorText[0]}</h2>
+        <h4 style={responsiveTextPadding(matches)}>{vendorText[1]}</h4>
+        <p style={responsiveTextPadding(matches)}> {vendorText[2]}</p>
       </TextContainer>
       <Link to="/contact">
         <Button>MAKE A BOOKING</Button>
