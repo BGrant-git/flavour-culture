@@ -66,7 +66,7 @@ const Brathaus = () => {
             </Link>
             <Title>Brathaus</Title>
           </TitleContainer>
-          <Gallery images={images} />
+          <Gallery images={images} mdColWidth={33.33} />
         </div>
       </Grid>
       <Grid item xs={false} sm={2} />

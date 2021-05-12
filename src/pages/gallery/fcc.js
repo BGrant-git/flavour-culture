@@ -38,7 +38,7 @@ const Fcc = () => {
         edges {
           node {
             childImageSharp {
-              thumb: gatsbyImageData(width: 270, height: 270)
+              thumb: gatsbyImageData(aspectRatio: 1)
               full: gatsbyImageData(layout: FULL_WIDTH)
             }
           }
@@ -62,6 +62,7 @@ const Fcc = () => {
           </TitleContainer>
           <Gallery
             images={data.allFile.edges.map(({ node }) => node.childImageSharp)}
+            mdColWidth={33.33}
           />
         </div>
       </Grid>

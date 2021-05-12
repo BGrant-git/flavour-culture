@@ -61,6 +61,7 @@ const Bts = () => {
           </TitleContainer>
           <Gallery
             images={data.allFile.edges.map(({ node }) => node.childImageSharp)}
+            mdColWidth={33.33}
           />
         </div>
       </Grid>

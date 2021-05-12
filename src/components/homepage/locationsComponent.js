@@ -139,6 +139,8 @@ const handleLocClick = (setMapView, loc) => {
         },
       })
       break
+    default:
+      setMapView(initialView)
   }
 
   setTimeout(() => {
