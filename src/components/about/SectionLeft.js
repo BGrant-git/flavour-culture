@@ -29,7 +29,7 @@ const StoryImage = styled.img`
   height: auto;
   width: 350px;
   overflow: hidden;
-  border-radius: 60px;
+  border-radius: 30px;
 
   @media (max-width: 960px) {
     width: 90%;

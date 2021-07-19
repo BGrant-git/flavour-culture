@@ -26,7 +26,7 @@ const SectionImage = styled.img`
   width: 400px;
   overflow: hidden;
   padding: 1vw;
-  border-radius: 60px;
+  border-radius: 30px;
 
   @media (max-width: 960px) {
     width: 90%;

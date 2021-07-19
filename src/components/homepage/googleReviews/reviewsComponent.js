@@ -22,7 +22,7 @@ const ReviewContainer = styled.div`
   width: 75%;
   margin: 10px auto;
   border: 2px solid lightgrey;
-  border-radius: 10px;
+  border-radius: 5px;
   height: 460px;
   max-width: 400px;
 
