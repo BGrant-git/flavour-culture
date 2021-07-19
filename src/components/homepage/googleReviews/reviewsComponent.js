@@ -23,14 +23,19 @@ const ReviewContainer = styled.div`
   margin: 10px auto;
   border: 2px solid lightgrey;
   border-radius: 10px;
-  min-height: 320px;
+  height: 460px;
   max-width: 400px;
 
   transition: 0.1s ease-in-out;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
+`
+
+const StyledA = styled.a`
+  color: purple;
+  text-decoration: underline;
 `
 
 const ReviewsComponent = () => {
@@ -58,12 +63,12 @@ const ReviewsComponent = () => {
       <Title>
         <h1>
           Check out our{" "}
-          <a
+          <StyledA
             href="https://maps.app.goo.gl/zAfMGh18ESzfFq4NA"
             style={{ color: "purple" }}
           >
             Google
-          </a>{" "}
+          </StyledA>{" "}
           reviews...
         </h1>
       </Title>

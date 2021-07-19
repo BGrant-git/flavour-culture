@@ -64,6 +64,7 @@ const Fcc = () => {
               <Title>Flavour Culture Catering</Title>
             </TitleContainer>
             <Gallery
+              mdColWidth={33.33}
               images={data.allFile.edges.map(
                 ({ node }) => node.childImageSharp
               )}
