@@ -8,11 +8,12 @@ import googleIcon from "../../../images/home/Google_'G'_Logo.svg.webp"
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
   text-align: center;
   font-family: Roboto;
+  height: 100%;
 `
 
 const UserImg = styled.img`

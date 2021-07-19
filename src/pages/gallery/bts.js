@@ -62,6 +62,7 @@ const Bts = () => {
               <Title>Behind The Scenes</Title>
             </TitleContainer>
             <Gallery
+              mdColWidth={33.33}
               images={data.allFile.edges.map(
                 ({ node }) => node.childImageSharp
               )}

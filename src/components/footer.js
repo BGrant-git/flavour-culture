@@ -90,17 +90,7 @@ const Footer = () => {
         </Grid>
         <Grid item>
           <div>
-            © {new Date().getFullYear()} Flavour Culture | site made by
-            <strong>
-              <Links
-                style={{ textDecoration: "none" }}
-                href="https://www.linkedin.com/in/ben-grant-397bbb1b6/"
-              >
-                {" "}
-                Ben G{" "}
-              </Links>
-            </strong>{" "}
-            |{" "}
+            © {new Date().getFullYear()} Flavour Culture |{" "}
             <Links href="https://www.termsfeed.com/live/2fcfa9e4-943c-42d5-949c-8cbcb57136da">
               {" "}
               privacy policy
