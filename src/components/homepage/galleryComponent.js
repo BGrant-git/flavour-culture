@@ -12,6 +12,10 @@ import deskSausage from "../../images/home/carousel/desk/sausage-wide.jpg"
 import deskIndian1 from "../../images/home/carousel/desk/indian1-wide.jpg"
 import deskIndian2 from "../../images/home/carousel/desk/indian2-wide.jpg"
 
+const ContentWrapper = styled.div`
+  width: 100vw;
+`
+
 const Caption = styled.p`
   text-align: right;
   border-radius: 0 25px 25px 0;
@@ -127,7 +131,7 @@ const GalleryComponent = () => {
   const randomIndex = Math.floor(Math.random() * 4)
 
   return (
-    <div>
+    <ContentWrapper>
       <ImageGallery
         items={images()}
         startIndex={randomIndex}
@@ -140,7 +144,7 @@ const GalleryComponent = () => {
         slideDuration={450}
         className="image-gallery-description"
       />
-    </div>
+    </ContentWrapper>
   )
 }
 

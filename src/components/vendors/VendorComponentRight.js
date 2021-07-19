@@ -29,7 +29,7 @@ const SectionImage = styled.img`
   width: 400px;
   overflow: hidden;
   padding: 1vw;
-  border-radius: 60px;
+  border-radius: 30px;
   z-index: 1;
 
   @media (max-width: 960px) {

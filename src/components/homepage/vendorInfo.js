@@ -49,7 +49,7 @@ const Button = styled.button`
   background-color: var(--main-color);
   font-family: "Thunder";
   color: white;
-  border-radius: 16px;
+  border-radius: 6px;
   :hover {
     color: var(--main-color);
     background-color: white;
