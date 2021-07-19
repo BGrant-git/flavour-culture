@@ -128,19 +128,17 @@ const GalleryComponent = () => {
           },
         ]
 
-  const randomIndex = Math.floor(Math.random() * 4)
-
   return (
     <ContentWrapper>
       <ImageGallery
         items={images()}
-        startIndex={randomIndex}
+        startIndex={0}
         showThumbnails={false}
         showFullscreenButton={false}
         autoPlay={true}
         showPlayButton={false}
         showNav={false}
-        slideInterval={5000}
+        slideInterval={3000}
         slideDuration={450}
         className="image-gallery-description"
       />
