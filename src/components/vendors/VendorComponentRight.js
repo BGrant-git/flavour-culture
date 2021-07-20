@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
-import { useMediaQuery } from "@material-ui/core"
+import { useMediaQuery, Button } from "@material-ui/core"
+import InstagramIcon from "@material-ui/icons/Instagram"
 
 import rosemary from "../../images/rose.png"
 

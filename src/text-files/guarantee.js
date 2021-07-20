@@ -1,0 +1,4 @@
+export const ourGuarantee = [
+  `At Flavour Culture we want people to trust that quality and love is put into every dish. We believe tasty street food should never take a long time so all our food vendors will have your food prepared fast & cooked fresh to order. That's why when you see our logo you know flavour comes first.`,
+  `We love being outside and want to make this possible for future generations, that's why we source all our ingredients locally when possible. We avoid single use plastics to reduce our carbon footprint, & provide biodegradable packaging for every meal. On our market stalls we use 100% reclaimed wood to build our front counters as well as storage units & shelving. This promotes conscious decisions on sustainability & keeps our projects affordable so we can offer competitive prices.`,
+]

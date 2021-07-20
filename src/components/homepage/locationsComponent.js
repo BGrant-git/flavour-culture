@@ -182,7 +182,7 @@ const LocationsComponent = () => {
               <strong>The Merton Apprentice</strong>
               <br />
               <Times>Friday - Saturday</Times>
-              <Times>18.00 - 22.00</Times>
+              <Times>Varied opening times</Times>
             </Grid>
             <Grid item xs={5}>
               <Address>
