@@ -139,7 +139,7 @@ const GalleryComponent = () => {
         showPlayButton={false}
         showNav={false}
         slideInterval={3000}
-        slideDuration={450}
+        slideDuration={1000}
         className="image-gallery-description"
       />
     </ContentWrapper>

@@ -7,7 +7,7 @@ import backgroundMob from "../../images/contact/mob-bg.jpg"
 import backgroundDesk from "../../images/contact/contact-desktop-bg.jpg"
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   color: white;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,8 @@ const Container = styled.div`
 
   @media (max-width: 1400px) {
     background-image: url(${backgroundMob});
-    padding-top: 100px;
+
+    overflow-x: hidden;
   }
 `
 
@@ -30,7 +31,6 @@ const TitleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 600px;
-
   margin: 50px 5px 0;
 
   h1 {
@@ -44,6 +44,10 @@ const TitleRule = styled.div`
   background: white;
   width: 20%;
   border-radius: 4px;
+
+  @media (max-width: 1000px) {
+    width: 15px;
+  }
 `
 
 const GridSection = styled(Grid)`
@@ -70,7 +74,7 @@ const FormWrapper = styled.div`
   margin: 25px auto 10px;
 
   @media (max-width: 1000px) {
-    width: 100%100px;
+    width: 100%;
   }
 `
 
@@ -166,6 +170,10 @@ const EmailWrapper = styled.div`
   a {
     color: #ffffff;
     text-decoration: underline;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
   }
 `
 
