@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from "@material-ui/core/Grid"
+import { Grid, Button } from "@material-ui/core"
 
 import SocialComponent from "./SocialComponent"
 
@@ -50,7 +50,7 @@ const TextContainerGrid = styled(Grid)`
   }
 `
 
-const Button = styled.button`
+const SyledButton = styled.button`
   width: 250px;
   padding: 15px;
   margin: 5px;
@@ -74,6 +74,19 @@ const RoseRight = styled.img`
   }
 `
 
+const buttonStyles = {
+  color: "white",
+  backgroundColor: "var(--main-color)",
+  width: "200px",
+  height: "53px",
+  margin: "0 auto",
+  fontFamily: "inherit",
+  fontSize: 16,
+  "&:hover": {
+    backgroundColor: "black",
+  },
+}
+
 const SectionRight = props => (
   <SectionContainer>
     <Grid container>
@@ -81,7 +94,11 @@ const SectionRight = props => (
         <p style={{ paddingBottom: 15 }}>{props.text1}</p>
         <p>{props.text2}</p>
         {props.hasSocial ? <SocialComponent /> : null}
-        {props.hasButton ? <Button>Make a booking</Button> : null}
+        {props.hasButton ? (
+          <Button variant="container" style={buttonStyles}>
+            Make a booking
+          </Button>
+        ) : null}
       </TextContainerGrid>
       <Grid item sm={12} md={4}>
         <ImageContainer>

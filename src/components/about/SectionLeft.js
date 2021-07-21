@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Grid, useMediaQuery } from "@material-ui/core/"
+import { Grid, useMediaQuery, Button } from "@material-ui/core/"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import SocialComponent from "./SocialComponent"
@@ -12,6 +12,10 @@ const SectionContainer = styled.div`
   margin: 10px auto;
   padding: 20px;
   border-radius: 50px;
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -28,7 +32,6 @@ const ImageContainer = styled.div`
 const StoryImage = styled.img`
   height: auto;
   width: 350px;
-  overflow: hidden;
   border-radius: 30px;
 
   @media (max-width: 960px) {
@@ -55,38 +58,13 @@ const Text = styled.p`
   padding-bottom: 15px;
 `
 
-const Button = styled.button`
-  width: 250px;
-  padding: 15px;
-  margin: 5px;
-  align-self: center;
-  font-size: 16px;
-  color: white;
-  border-radius: 5px;
-  background-image: linear-gradient(to bottom right, #8b0000, red);
-`
-
 const VendorButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (max-width: 600px) {
     flex-direction: column;
-  }
-`
-
-const VendorButton = styled.button`
-  background-image: linear-gradient(to bottom right, #8b0000, red);
-  color: white;
-  padding: 10px;
-  font-size: 22px;
-  margin: 3px;
-  border-radius: 11px;
-
-  @media (max-width: 600px) {
-    width: 100%;
-    height: undefined;
-    text-align: center;
   }
 `
 
@@ -117,6 +95,39 @@ const RoseLeftMob = styled.img`
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 `
+
+const vendorButtonStyles = {
+  color: "white",
+  backgroundColor: "var(--main-color)",
+  maxWidth: "200px",
+  height: "53px",
+  fontFamily: "inherit",
+  lineHeight: "16px",
+  margin: "0 3px",
+  borderRadius: "11px",
+  fontSize: "16px",
+  "&:hover": {
+    backgroundColor: "black",
+  },
+  "@media (max-width: 600px)": {
+    margin: "3px auto",
+    fontSize: "18px",
+    lineHeight: "18px",
+  },
+}
+
+const buttonStyles = {
+  color: "white",
+  backgroundColor: "var(--main-color)",
+  width: "200px",
+  height: "53px",
+  margin: "auto",
+  fontFamily: "inherit",
+  fontSize: 16,
+  "&:hover": {
+    backgroundColor: "black",
+  },
+}
 
 const SectionLeft = props => {
   const matches = useMediaQuery("(max-width: 650px")
@@ -149,19 +160,29 @@ const SectionLeft = props => {
           <Text style={{ paddingBottom: 15 }}>{props.text1}</Text>
           <Text>{props.text2}</Text>
           {props.hasSocial ? <SocialComponent /> : null}
-          {props.hasButton ? <Button>Make a booking</Button> : null}
+          {props.hasButton ? (
+            <Button variant="contained" style={buttonStyles}>
+              Make a booking
+            </Button>
+          ) : null}
           {props.hasVendorButtons ? (
             <>
               <h3 style={{ textAlign: "center" }}>Check Out Our Vendors:</h3>
               <VendorButtonsContainer>
                 <AnchorLink to="/vendors#Flavour-Culture-Catering">
-                  <VendorButton>Flavour Culture Catering</VendorButton>
+                  <Button variant="contained" style={vendorButtonStyles}>
+                    Flavour Culture Catering
+                  </Button>
                 </AnchorLink>
                 <AnchorLink to="/vendors#BRATHAUS">
-                  <VendorButton>BRATHAUS</VendorButton>
+                  <Button variant="contained" style={vendorButtonStyles}>
+                    BRATHAUS
+                  </Button>
                 </AnchorLink>
                 <AnchorLink to="/vendors#NaanStop">
-                  <VendorButton>Naan Stop</VendorButton>
+                  <Button variant="contained" style={vendorButtonStyles}>
+                    Naan Stop
+                  </Button>
                 </AnchorLink>
               </VendorButtonsContainer>
             </>

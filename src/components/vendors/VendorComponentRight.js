@@ -87,6 +87,19 @@ const RosemaryMob = styled.img`
   margin-left: -50px;
 `
 
+const buttonStyles = {
+  color: "white",
+  backgroundColor: "var(--main-color)",
+  margin: "0 auto",
+  padding: "5px 15px",
+  textTransform: "none",
+  fontFamily: "inherit",
+  fontSize: 19,
+  "&:hover": {
+    backgroundColor: "black",
+  },
+}
+
 const VendorComponentRight = props => {
   const matches = useMediaQuery("(max-width: 960px)")
 
@@ -100,6 +113,16 @@ const VendorComponentRight = props => {
             {props.text.map((item, i) => (
               <SectionText index={i}>{item}</SectionText>
             ))}
+            <a href={props.insta.url}>
+              <Button
+                variant="contained"
+                size="large"
+                startIcon={<InstagramIcon />}
+                style={buttonStyles}
+              >
+                {props.insta.name}
+              </Button>
+            </a>
           </SectionTextContainer>
         </Grid>
         <Grid item sm={12} md={4}>
