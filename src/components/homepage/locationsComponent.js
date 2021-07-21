@@ -53,14 +53,10 @@ const InfoContainerGrid = styled(Grid)`
   transition: 0.1s ease-in-out;
 
   &:hover {
-    background: #cabe99;
-    padding: 10px;
+    background: #d3cbb4;
+    transform: scale(0.99);
   }
 
-  @media (max-width: 960px) {
-    &:hover {
-      padding: 5px 0;
-    }
   }
 `
 
@@ -112,16 +108,19 @@ const LocationsComponent = () => {
   const handleLocClick = loc => {
     loc === 0
       ? setMapView({
+          // merton apprentice
           loc: {
-            lat: 51.48258,
-            lng: -0.20022,
+            lat: 51.413216370457675,
+            lng: -0.183425847287169,
           },
+
           zoom: {
             z: 15,
           },
         })
       : loc === 1
       ? setMapView({
+          // acton market
           loc: {
             lat: 51.50799771795835,
             lng: -0.27228767069153964,
@@ -132,9 +131,10 @@ const LocationsComponent = () => {
         })
       : loc === 2
       ? setMapView({
+          // north end road
           loc: {
-            lat: 51.413216370457675,
-            lng: -0.183425847287169,
+            lat: 51.48258,
+            lng: -0.20022,
           },
           zoom: {
             z: 15,
@@ -152,7 +152,7 @@ const LocationsComponent = () => {
 
     setTimeout(() => {
       setMapView(initialView)
-    }, 5000)
+    }, 15000)
   }
 
   const mapStyles = matches
@@ -179,18 +179,17 @@ const LocationsComponent = () => {
               <MapMarker src={mapmarkerA} alt="" />
             </Grid>
             <Grid item xs={6} style={{ textAlign: "left" }}>
-              <strong>North End Rd. Market</strong>
+              <strong>The Merton Apprentice</strong>
               <br />
-              <Times>Monday - Saturday</Times>
-              <Times>10.00 - 16.00</Times>
-              <Times>Launched 1st Feb 2021</Times>
+              <Times>Friday - Saturday</Times>
+              <Times>Varied opening times</Times>
             </Grid>
             <Grid item xs={5}>
               <Address>
                 <p>
-                  North End Road
+                  Merton Abbey Mills
                   <br />
-                  Fulham SW6 1NW
+                  SW19 2RD
                 </p>
               </Address>
             </Grid>
@@ -204,7 +203,6 @@ const LocationsComponent = () => {
               <br />
               <Times>Every Saturday</Times>
               <Times>10.00 - 16.00</Times>
-              <Times style={{ color: "red" }}>Closed</Times>
             </Grid>
             <Grid item xs={5}>
               <Address>
@@ -221,18 +219,18 @@ const LocationsComponent = () => {
               <MapMarker src={mapmarkerC} alt="" />
             </Grid>
             <Grid item xs={6} style={{ textAlign: "left" }}>
-              <strong>The Merton Apprentice</strong>
+              <strong>North End Rd. Market</strong>
               <br />
-              <Times>Friday - Saturday</Times>
-              <Times>18.00 - 22.00</Times>
-              <Times>Launched ---</Times>
+              <Times>Monday - Saturday</Times>
+              <Times>10.00 - 16.00</Times>
+              <Times style={{ color: "red" }}>Temporarily closed</Times>
             </Grid>
             <Grid item xs={5}>
               <Address>
                 <p>
-                  Merton Abbey Mills
+                  North End Road
                   <br />
-                  SW19 2RD
+                  Fulham SW6 1NW
                 </p>
               </Address>
             </Grid>

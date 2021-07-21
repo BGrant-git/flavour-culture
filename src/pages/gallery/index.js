@@ -45,8 +45,8 @@ const AlbumsCard = styled.div`
   text-align: left;
 
   :hover {
-    transform: scale(1.1);
-    -o-transform: scale(1.1);
+    transform: scale(1.01);
+    -o-transform: scale(1.01);
     transition: all 0.1s ease-in;
     -moz-transition: -moz-transform all 0.1s ease-in;
   }

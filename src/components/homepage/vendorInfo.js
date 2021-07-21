@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import InstagramIcon from "@material-ui/icons/Instagram"
 
+import { vendorInfo } from "../../text-files/homepageText"
 import dinnerIcon from "../../images/home/dinnericon.png"
 
 const Container = styled.div`
@@ -42,6 +44,10 @@ const TextContainer = styled.div`
   font-size: 24px;
 `
 
+const ButtonWrapper = styled.div`
+  display: flex;
+`
+
 const Button = styled.button`
   font-size: 22px;
   padding: 12px;
@@ -50,10 +56,29 @@ const Button = styled.button`
   font-family: "Thunder";
   color: white;
   border-radius: 6px;
+  transition: 0.1s ease-in;
+
   :hover {
-    color: var(--main-color);
-    background-color: white;
+    background-color: black;
   }
+`
+
+const InstaIconStyled = styled.div`
+  margin: 0 5px;
+  width: 53px;
+  height: 53px;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 6px;
+  transition: 0.1s ease-in-out;
+
+  :hover {
+    background-color: black;
+  }
+`
+
+const StyledP = styled.div`
+  margin: 25px 0;
 `
 
 const VendorInfo = () => {
@@ -64,17 +89,20 @@ const VendorInfo = () => {
         <h1>HOSTING AN EVENT?</h1>
       </Header>
       <TextContainer>
-        <p>
-          <strong>Flavour Culture Catering</strong> lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Nostrum sunt omnis quo, unde ut
-          inventore. <br />
-          Dolorem non corporis voluptatibus ex exercitationem voluptatum soluta
-          doloribus, quaerat pariatur, fugiat doloremque nulla dignissimos.
-        </p>
+        {vendorInfo.map((item, i) => (
+          <StyledP key={i}>{item}</StyledP>
+        ))}
       </TextContainer>
-      <Link to="/contact">
-        <Button>MAKE A BOOKING</Button>
-      </Link>
+      <ButtonWrapper>
+        <Link to="/contact">
+          <Button>MAKE A BOOKING</Button>
+        </Link>
+        <InstaIconStyled>
+          <a href="https://www.instagram.com/flavour_culture">
+            <InstagramIcon style={{ width: 53, height: 53 }} />
+          </a>
+        </InstaIconStyled>
+      </ButtonWrapper>
     </Container>
   )
 }

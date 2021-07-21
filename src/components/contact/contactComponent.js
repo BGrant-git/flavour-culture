@@ -2,25 +2,51 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { Grid, useMediaQuery } from "@material-ui/core/"
 
+import { ourGuarantee } from "../../text-files/guarantee"
 import backgroundMob from "../../images/contact/mob-bg.jpg"
 import backgroundDesk from "../../images/contact/contact-desktop-bg.jpg"
 
 const Container = styled.div`
   width: 100%;
-  height: 89vh;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url(${backgroundDesk});
-  background-size: 100%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
   text-align: left;
 
-  @media (max-width: 1330px) {
+  @media (max-width: 1400px) {
     background-image: url(${backgroundMob});
-    padding-top: 100px;
-    height: auto;
+
+    overflow-x: hidden;
+  }
+`
+
+const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin: 50px 5px 0;
+
+  h1 {
+    font-size: 50px;
+    padding: 0 5px;
+  }
+`
+
+const TitleRule = styled.div`
+  height: 5px;
+  background: white;
+  width: 20%;
+  border-radius: 4px;
+
+  @media (max-width: 1000px) {
+    width: 15px;
   }
 `
 
@@ -29,11 +55,30 @@ const GridSection = styled(Grid)`
   background-color: rgba(0, 0, 0, 0.5);
 `
 
-const ContentWrapper = styled.div`
-  width: 1200px;
+const CopyWrapper = styled.div`
+  max-width: 1000px;
+  margin: 50px auto 25px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  text-align: center;
+
+  p {
+    font-size: 20px;
+    margin: 10px 0;
+  }
 `
 
-const Title = styled.h1`
+const FormWrapper = styled.div`
+  width: 1200px;
+  margin: 25px auto 10px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+`
+
+const FormTitle = styled.h1`
   padding-bottom: 20px;
   font-size: 45px;
   text-align: left;
@@ -113,6 +158,25 @@ const CheckboxLabel = styled.label`
   }
 `
 
+const EmailWrapper = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 1000px;
+  margin: 10px auto 40px;
+  padding: 10px 0;
+  font-size: 25px;
+  text-align: center;
+
+  a {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+`
+
 const ContactComponent = () => {
   const [catering, setCatering] = useState(true)
   const [brat, setBrat] = useState(true)
@@ -121,7 +185,18 @@ const ContactComponent = () => {
 
   return (
     <Container>
-      <ContentWrapper>
+      <TitleWrapper>
+        <TitleRule />
+        <h1>CONTACT US</h1>
+        <TitleRule />
+      </TitleWrapper>
+      <CopyWrapper>
+        <h1>Our Guarantee</h1>
+        {ourGuarantee.map((item, i) => (
+          <p key={i}>{item}</p>
+        ))}
+      </CopyWrapper>
+      <FormWrapper>
         <form
           action="https://getform.io/f/17128148-c85c-428d-8bdc-6c42ce4641ca"
           method="POST"
@@ -137,7 +212,7 @@ const ContactComponent = () => {
                 borderRadius: matches ? "0" : "10px 0 0 10px",
               }}
             >
-              <Title>Make a Booking</Title>
+              <FormTitle>Make a Booking</FormTitle>
               <Label>
                 *Name:
                 <Input type="text" name="name" required />
@@ -260,7 +335,15 @@ const ContactComponent = () => {
             <Grid item xs={false} md={1} />
           </Grid>
         </form>
-      </ContentWrapper>
+      </FormWrapper>
+      <EmailWrapper>
+        <p>
+          Or send us an email at:{" "}
+          <a href="mailto:info@flavourculture.co.uk">
+            info@flavourculture.co.uk
+          </a>
+        </p>
+      </EmailWrapper>
     </Container>
   )
 }

@@ -26,12 +26,16 @@ module.exports = {
       },
       {
         name: "Gallery",
-        link: "/gallery/",
+        link: "/gallery",
       },
 
       {
         name: "Contact",
         link: "/contact",
+      },
+      {
+        name: "Shop",
+        link: "/shop",
       },
     ],
   },

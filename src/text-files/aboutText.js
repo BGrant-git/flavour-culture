@@ -1,0 +1,7 @@
+export const aboutText = [
+  `Flavour Culture began during the first 2020 lockdown in the minds of two school friends cycling along the London river Thames (we nicknamed it “The Nile” after riding it almost every day).`,
+  `Most food joints were shut so the only options for lunch were fast food takeaways or a burger van. We saw a return to the streets in our industry and wanted to be a part of it. A shared passion for cooking great food combined with our 15 years of experience in hospitality & events fueled the drive to build a business.`,
+  `After lockdown 2.0 and many months of planning, “Flavour Culture Catering” was underway. We started cooking from home to deliver meals to the film & music industry. Many of our friends and family had told us our food is delicious but after some happy clients caught a buzz off our food, it certified our mission.`,
+  `Shortly after, with the major Christmas markets being closed we predicted a shortage of the festive sausage in London so we launched our first pop up ‘BRATHAUS’,  selling German bratwurst. We handled the pressure of a Christmas market & the success of our street stall continued into the new year as we brought our concept to two new locations.`,
+  `We found the beauty of mobile catering is that we are able to interact with guests on a personal level and express our dedication to the food. We love the challenges that face us on a daily basis. Chefs often are stuck behind the scenes and don’t get the fulfillment from seeing a customer smile after that first bite.`,
+]
