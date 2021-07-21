@@ -66,14 +66,15 @@ const CopyWrapper = styled.div`
   p {
     font-size: 20px;
     margin: 10px 0;
+    border-radius: 0;
   }
 `
 
 const FormWrapper = styled.div`
   width: 1200px;
-  margin: 25px auto 10px;
+  margin: 25px auto 0;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     width: 100%;
   }
 `
