@@ -117,6 +117,7 @@ const OurStoryComponent = () => {
               text1={aboutText[4]}
               img={storyImg4}
               mobRoseRight
+              hasSocial
             />
           ) : (
             <SectionRight

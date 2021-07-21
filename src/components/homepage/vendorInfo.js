@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { Button, Box } from "@material-ui/core"
 import InstagramIcon from "@material-ui/icons/Instagram"
 
 import { vendorInfo } from "../../text-files/homepageText"
@@ -48,28 +49,13 @@ const ButtonWrapper = styled.div`
   display: flex;
 `
 
-const Button = styled.button`
-  font-size: 22px;
-  padding: 12px;
-  margin: auto;
-  background-color: var(--main-color);
-  font-family: "Thunder";
-  color: white;
-  border-radius: 6px;
-  transition: 0.1s ease-in;
-
-  :hover {
-    background-color: black;
-  }
-`
-
-const InstaIconStyled = styled.div`
+const InstaIconWrapper = styled(Box)`
   margin: 0 5px;
   width: 53px;
   height: 53px;
   color: white;
   background-color: var(--main-color);
-  border-radius: 6px;
+  border-radius: 4px;
   transition: 0.1s ease-in-out;
 
   :hover {
@@ -80,6 +66,18 @@ const InstaIconStyled = styled.div`
 const StyledP = styled.div`
   margin: 25px 0;
 `
+
+const buttonStyles = {
+  color: "white",
+  backgroundColor: "var(--main-color)",
+  width: "200px",
+  height: "53px",
+  fontFamily: "inherit",
+  fontSize: "18px",
+  "&:hover": {
+    backgroundColor: "black",
+  },
+}
 
 const VendorInfo = () => {
   return (
@@ -95,13 +93,15 @@ const VendorInfo = () => {
       </TextContainer>
       <ButtonWrapper>
         <Link to="/contact">
-          <Button>MAKE A BOOKING</Button>
+          <Button variant="contained" color="black" style={buttonStyles}>
+            MAKE A BOOKING
+          </Button>
         </Link>
-        <InstaIconStyled>
+        <InstaIconWrapper boxShadow={2}>
           <a href="https://www.instagram.com/flavour_culture">
             <InstagramIcon style={{ width: 53, height: 53 }} />
           </a>
-        </InstaIconStyled>
+        </InstaIconWrapper>
       </ButtonWrapper>
     </Container>
   )

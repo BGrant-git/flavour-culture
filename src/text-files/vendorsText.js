@@ -12,6 +12,10 @@ export const vendorInfo = [
       `German street food classics are some of our most popular dishes with our famous currywurst & special curry salted fries. Now one of the only vendors in London offering a vegan currywurst in addition to our veganwurst, a regular favourite for the best experience without the meat.`,
       ,
     ],
+    insta: {
+      name: `@brathausldn`,
+      url: `https://www.instagram.com/brathausldn/`,
+    },
   },
   {
     name: "Naan Stop",
@@ -33,5 +37,9 @@ export const vendorInfo = [
     text: [
       `At Flavour Culture we believe if there’s one kind of story we all share, it’s one about food. It brings people together, from family meals at home, fresh food trucks at a music festival to a quick lunch break on a film set. It’s that feeling of something to look forward to & that connection of people around food that we bring to your clients.`,
     ],
+    insta: {
+      name: `@flavour_culture`,
+      url: `https://www.instagram.com/flavour_culture/`,
+    },
   },
 ]

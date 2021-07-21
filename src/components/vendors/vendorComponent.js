@@ -67,6 +67,7 @@ const VendorComponent = () => {
           subheading={vendorInfo[0].subheading}
           text={vendorInfo[0].text}
           img={brat}
+          insta={vendorInfo[0].insta}
         />
       </div>
       <Divider
@@ -100,6 +101,7 @@ const VendorComponent = () => {
           subheading={vendorInfo[2].subheading}
           text={vendorInfo[2].text}
           img={fcc}
+          insta={vendorInfo[2].insta}
         />
       </div>
     </>

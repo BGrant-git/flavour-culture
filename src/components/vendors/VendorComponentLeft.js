@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Grid, Button } from "@material-ui/core"
+import { Grid, Button, withStyles } from "@material-ui/core"
 import InstagramIcon from "@material-ui/icons/Instagram"
 
 import rosemary from "../../images/rose.png"

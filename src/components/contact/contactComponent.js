@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { Grid, useMediaQuery } from "@material-ui/core/"
+import { Grid, useMediaQuery, withStyles, Button } from "@material-ui/core/"
 
 import { ourGuarantee } from "../../text-files/guarantee"
 import backgroundMob from "../../images/contact/mob-bg.jpg"
@@ -132,6 +132,19 @@ const Submit = styled.button`
     font-size: 24px;
   }
 `
+const MuiButton = withStyles(() => ({
+  root: {
+    color: "var(--main-color)",
+    backgroundColor: "white",
+    width: "175px",
+    height: "45px",
+    fontFamily: "inherit",
+    fontSize: 18,
+    "&:hover": {
+      backgroundColor: "black",
+    },
+  },
+}))(Button)
 
 const CheckboxItemContainer = styled.div`
   display: flex;
@@ -331,7 +344,9 @@ const ContactComponent = () => {
                 <InputMessage name="message" />
               </Label>
               <br />
-              <Submit type="submit">SUBMIT</Submit>
+              <MuiButton variant="contained" type="submit">
+                SUBMIT
+              </MuiButton>
             </GridSection>
             <Grid item xs={false} md={1} />
           </Grid>
