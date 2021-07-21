@@ -30,7 +30,7 @@ const TextWrapper = styled.div`
 `
 
 const getHeight = () =>
-  window !== "undefined" ? window.innerHeight - 155 : null
+  typeof window !== "undefined" ? window.innerHeight - 155 : null
 
 const Shop = () => {
   const [windowHeight, setWindowHeight] = useState(getHeight())
