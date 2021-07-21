@@ -52,6 +52,9 @@ const Shop = () => {
   return (
     <Layout>
       <ContentWrapper height={windowHeight}>
+        <TextWrapper>
+          <h1>Flavour Culture Shop coming soon! hello team</h1>
+        </TextWrapper>
         <StyledImg src={mandala} alt="" />
       </ContentWrapper>
     </Layout>
