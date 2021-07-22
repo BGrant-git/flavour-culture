@@ -4,6 +4,7 @@ import { Grid, useMediaQuery } from "@material-ui/core/"
 
 import MapComponent from "./map"
 
+import { bratDetails } from "../../text-files/homepageText"
 import marketIcon from "../../images/home/marketicon.png"
 import mapmarkerA from "../../images/home/map_marker_A.png"
 import mapmarkerB from "../../images/home/map_marker_B.png"
@@ -179,17 +180,17 @@ const LocationsComponent = () => {
               <MapMarker src={mapmarkerA} alt="" />
             </Grid>
             <Grid item xs={6} style={{ textAlign: "left" }}>
-              <strong>The Merton Apprentice</strong>
+              <strong>{bratDetails.merton.name}</strong>
               <br />
-              <Times>Friday - Saturday</Times>
-              <Times>Varied opening times</Times>
+              <Times>{bratDetails.merton.days}</Times>
+              <Times>{bratDetails.merton.hours}</Times>
             </Grid>
             <Grid item xs={5}>
               <Address>
                 <p>
-                  Merton Abbey Mills
+                  {bratDetails.merton.address[0]}
                   <br />
-                  SW19 2RD
+                  {bratDetails.merton.address[1]}
                 </p>
               </Address>
             </Grid>
@@ -199,17 +200,17 @@ const LocationsComponent = () => {
               <MapMarker src={mapmarkerB} alt="" />
             </Grid>
             <Grid item xs={6} style={{ textAlign: "left" }}>
-              <strong>Acton Market</strong>
+              <strong>{bratDetails.acton.name}</strong>
               <br />
-              <Times>Every Saturday</Times>
-              <Times>10.00 - 16.00</Times>
+              <Times>{bratDetails.acton.days}</Times>
+              <Times>{bratDetails.acton.hours}</Times>
             </Grid>
             <Grid item xs={5}>
               <Address>
                 <p>
-                  The Mount/King Street
+                  {bratDetails.acton.address[0]}
                   <br />
-                  Acton W3 9NW
+                  {bratDetails.acton.address[1]}
                 </p>
               </Address>
             </Grid>
@@ -219,18 +220,18 @@ const LocationsComponent = () => {
               <MapMarker src={mapmarkerC} alt="" />
             </Grid>
             <Grid item xs={6} style={{ textAlign: "left" }}>
-              <strong>North End Rd. Market</strong>
+              <strong>{bratDetails.north.name}</strong>
               <br />
-              <Times>Monday - Saturday</Times>
-              <Times>10.00 - 16.00</Times>
+              <Times>{bratDetails.north.days}</Times>
+              <Times>{bratDetails.north.hours}</Times>
               <Times style={{ color: "red" }}>Temporarily closed</Times>
             </Grid>
             <Grid item xs={5}>
               <Address>
                 <p>
-                  North End Road
+                  {bratDetails.north.address[0]}
                   <br />
-                  Fulham SW6 1NW
+                  {bratDetails.north.address[1]}
                 </p>
               </Address>
             </Grid>

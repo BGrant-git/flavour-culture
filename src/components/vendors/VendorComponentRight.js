@@ -66,6 +66,12 @@ const SectionText = styled.p`
   font-size: 20px;
 `
 
+const ButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
+
 const Rosemary = styled.img`
   height: 600px;
   margin-left: -150px;
@@ -113,16 +119,18 @@ const VendorComponentRight = props => {
             {props.text.map((item, i) => (
               <SectionText index={i}>{item}</SectionText>
             ))}
-            <a href={props.insta.url}>
-              <Button
-                variant="contained"
-                size="large"
-                startIcon={<InstagramIcon />}
-                style={buttonStyles}
-              >
-                {props.insta.name}
-              </Button>
-            </a>
+            <ButtonWrapper>
+              <a href={props.insta.url}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  startIcon={<InstagramIcon />}
+                  style={buttonStyles}
+                >
+                  {props.insta.name}
+                </Button>
+              </a>
+            </ButtonWrapper>
           </SectionTextContainer>
         </Grid>
         <Grid item sm={12} md={4}>

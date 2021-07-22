@@ -23,9 +23,15 @@ const StyledImg = styled.img`
   }
 `
 
-const TextWrapper = styled.div`
-  margin: 0 auto 10px;
+const HeadingWrapper = styled.div`
+  margin: 5px auto;
   max-width: 300px;
+  text-align: center;
+`
+
+const TeaserWrapper = styled.div`
+  margin: 5px auto;
+  max-width: 600px;
   text-align: center;
 `
 
@@ -52,10 +58,17 @@ const Shop = () => {
   return (
     <Layout>
       <ContentWrapper height={windowHeight}>
-        <TextWrapper>
+        <HeadingWrapper>
           <h1>Flavour Culture Shop coming soon!</h1>
-        </TextWrapper>
+        </HeadingWrapper>
         <StyledImg src={mandala} alt="" />
+        <TeaserWrapper>
+          <h2>
+            Expect some homemade favourites from our street vendors and DIY meal
+            kits with which you can create your own meals using our step by step
+            guide.
+          </h2>
+        </TeaserWrapper>
       </ContentWrapper>
     </Layout>
   )
