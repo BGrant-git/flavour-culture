@@ -3,8 +3,7 @@ import styled from "styled-components"
 import { Grid, useMediaQuery, withStyles, Button } from "@material-ui/core/"
 
 import { ourGuarantee } from "../../text-files/guarantee"
-import backgroundMob from "../../images/contact/mob-bg.jpg"
-import backgroundDesk from "../../images/contact/contact-desktop-bg.jpg"
+import backgroundDesk from "../../images/contact/desk-bg.jpg"
 
 const Container = styled.div`
   width: 100%;
@@ -15,13 +14,10 @@ const Container = styled.div`
   align-items: center;
   background-image: url(${backgroundDesk});
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100%;
+  background-size: cover;
   text-align: left;
 
-  @media (max-width: 1400px) {
-    background-image: url(${backgroundMob});
-
+  @media (max-width: 690px) {
     overflow-x: hidden;
   }
 `
