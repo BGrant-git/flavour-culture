@@ -22,11 +22,9 @@ export const vendorInfo = [
     subheading: "Fresh & vibrant naan wraps. As spicy as you like it.",
     text: [
       `We love Indian food but often it can be very oily. At Naan Stop we want you to experience a healthy and nutritious meal which provides that comfort food feeling without the guilt.`,
-      ,
       `START from scratch with our freshly handmade naan.`,
-
+      `NEXT choose from a juicy selection of marinated meats or seasonal vegetables, this can be made as spicy as you like it, how much of our secret masala can you handle?`,
       `THEN load it with refreshing salads, punchy pickles & sauces that we create to complement the flavours. `,
-      ,
       `FINALLY, choose from our Kenyan masala chips (the sauce that always gets people talking), Samosas and special Indian street snacks.`,
     ],
   },
