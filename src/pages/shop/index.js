@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
-import Layout from "../../components/layout"
-
 import mandala from "../../images/henna/mandala2.png"
 
 const ContentWrapper = styled.div`
@@ -56,21 +54,19 @@ const Shop = () => {
   }, [])
 
   return (
-    <Layout>
-      <ContentWrapper height={windowHeight}>
-        <HeadingWrapper>
-          <h1>Flavour Culture Shop coming soon!</h1>
-        </HeadingWrapper>
-        <StyledImg src={mandala} alt="" />
-        <TeaserWrapper>
-          <h2>
-            Expect some homemade favourites from our street vendors and DIY meal
-            kits with which you can create your own meals using our step by step
-            guide.
-          </h2>
-        </TeaserWrapper>
-      </ContentWrapper>
-    </Layout>
+    <ContentWrapper height={windowHeight}>
+      <HeadingWrapper>
+        <h1>Flavour Culture Shop coming soon!</h1>
+      </HeadingWrapper>
+      <StyledImg src={mandala} alt="" />
+      <TeaserWrapper>
+        <h2>
+          Expect some homemade favourites from our street vendors and DIY meal
+          kits with which you can create your own meals using our step by step
+          guide.
+        </h2>
+      </TeaserWrapper>
+    </ContentWrapper>
   )
 }
 

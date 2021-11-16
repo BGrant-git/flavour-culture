@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import Grid from "@material-ui/core/Grid"
 import { graphql, useStaticQuery } from "gatsby"
@@ -39,6 +39,7 @@ const StyledA = styled.a`
 `
 
 const ReviewsComponent = () => {
+  //change author_url to link to comment
   const data = useStaticQuery(graphql`
     query ReviewsQuery {
       googlePlacesPlace {

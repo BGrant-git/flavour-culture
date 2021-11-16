@@ -5,8 +5,6 @@ import styled from "styled-components"
 import ArrowBackIcon from "@material-ui/icons/ArrowBack"
 import Gallery from "@browniebroke/gatsby-image-gallery"
 
-import Layout from "../../components/layout"
-
 const TitleContainer = styled.div`
   padding: 20px;
   display: flex;
@@ -57,25 +55,23 @@ const Brathaus = () => {
   }))
 
   return (
-    <Layout>
-      <Grid container>
-        <Grid item xs={false} sm={2} />
-        <Grid item xs={12} sm={8}>
-          <div style={{ paddingBottom: "10px" }}>
-            <TitleContainer>
-              <Link to="/gallery">
-                <BackButton style={{ cursor: "pointer" }}>
-                  <ArrowBackIcon />
-                </BackButton>
-              </Link>
-              <Title>Brathaus</Title>
-            </TitleContainer>
-            <Gallery mdColWidth={33.33} images={images} />
-          </div>
-        </Grid>
-        <Grid item xs={false} sm={2} />
+    <Grid container>
+      <Grid item xs={false} sm={2} />
+      <Grid item xs={12} sm={8}>
+        <div style={{ paddingBottom: "10px" }}>
+          <TitleContainer>
+            <Link to="/gallery">
+              <BackButton style={{ cursor: "pointer" }}>
+                <ArrowBackIcon />
+              </BackButton>
+            </Link>
+            <Title>Brathaus</Title>
+          </TitleContainer>
+          <Gallery mdColWidth={33.33} images={images} />
+        </div>
       </Grid>
-    </Layout>
+      <Grid item xs={false} sm={2} />
+    </Grid>
   )
 }
 

@@ -25,16 +25,14 @@ const BottomHenna = styled.img`
 
 const About = () => {
   return (
-    <Layout>
-      <Grid container>
-        <BannerImg src={bannerImg} alt="" />
-        <TopHenna src={henna1} atl="" />
-        <Grid item xs={12}>
-          <OurStoryComponent />
-        </Grid>
-        <BottomHenna src={henna2} alt="" />
+    <Grid container>
+      <BannerImg src={bannerImg} alt="" />
+      <TopHenna src={henna1} atl="" />
+      <Grid item xs={12}>
+        <OurStoryComponent />
       </Grid>
-    </Layout>
+      <BottomHenna src={henna2} alt="" />
+    </Grid>
   )
 }
 

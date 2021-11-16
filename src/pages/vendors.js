@@ -38,20 +38,18 @@ const BottomHenna = styled.img`
 
 const Vendors = () => {
   return (
-    <Layout>
-      <div style={{ overflowX: "hidden" }}>
-        <BannerImg src={bannerImg} alt="" />
-        <MandalaStyle src={mandala} alt="" />
-        <Grid container>
-          <Grid item md={false} lg={1} />
-          <Grid item md={12} lg={10}>
-            <VendorComponent />
-          </Grid>
-          <Grid item md={false} lg={1} />
+    <div style={{ overflowX: "hidden" }}>
+      <BannerImg src={bannerImg} alt="" />
+      <MandalaStyle src={mandala} alt="" />
+      <Grid container>
+        <Grid item md={false} lg={1} />
+        <Grid item md={12} lg={10}>
+          <VendorComponent />
         </Grid>
-        <BottomHenna src={henna} alt="" />
-      </div>
-    </Layout>
+        <Grid item md={false} lg={1} />
+      </Grid>
+      <BottomHenna src={henna} alt="" />
+    </div>
   )
 }
 

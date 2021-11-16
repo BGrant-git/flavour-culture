@@ -4,11 +4,7 @@ import Layout from "../components/layout"
 import ContactComponent from "../components/contact/contactComponent"
 
 const Contact = () => {
-  return (
-    <Layout>
-      <ContactComponent />
-    </Layout>
-  )
+  return <ContactComponent />
 }
 
 export default Contact

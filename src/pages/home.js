@@ -7,10 +7,10 @@ import SEO from "../components/seo"
 
 const Index = () => {
   return (
-    <Layout>
+    <>
       <SEO />
       <Home />
-    </Layout>
+    </>
   )
 }
 

@@ -46,6 +46,10 @@ const CopyWrapper = styled.div`
   width: 500px;
   margin: auto;
   font-size: 20px;
+
+  @media (max-width: 960px) {
+    width: 90%;
+  }
 `
 
 const VendorComponent = () => {
@@ -82,6 +86,7 @@ const VendorComponent = () => {
             subheading={vendorInfo[1].subheading}
             text={vendorInfo[1].text}
             img={naan}
+            insta={vendorInfo[2].insta}
           />
         </div>
       ) : (
