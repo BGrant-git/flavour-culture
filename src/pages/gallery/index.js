@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import { Grid, useMediaQuery } from "@material-ui/core/"
 import styled from "styled-components"
 
-import Layout from "../../components/layout"
 import brathausThumb from "../../images/thumbnails/brat_thumb.jpg"
 import btsThumb from "../../images/thumbnails/bts_thumb.jpg"
 import naanThumb from "../../images/thumbnails/naan_thumb.jpg"
@@ -67,63 +66,59 @@ const GalleryPage = () => {
   const matches = useMediaQuery("(max-width: 600px")
 
   return (
-    <Layout>
-      <Grid container>
-        <Grid item sm={false} md={3} />
-        <Grid item xs={12} sm={12} md={6}>
-          <GalleryContainer>
-            <Title>Gallery</Title>
-            <AlbumsContainer>
-              <AlbumsLink to="brathaus">
-                <AlbumsCard style={{ borderRadius: "10px 10px 0 0" }}>
-                  <img src={brathausThumb} alt="" />
-                  <CardTitle style={{ fontFamily: "Sonder" }}>
-                    BRATHAUS
-                  </CardTitle>
-                </AlbumsCard>
-              </AlbumsLink>
-              <AlbumsLink to="#">
-                <AlbumsCard>
-                  <img
-                    style={{ height: "150px", width: "150px" }}
-                    src={StockImg}
-                    alt=""
-                  />
+    <Grid container>
+      <Grid item sm={false} md={3} />
+      <Grid item xs={12} sm={12} md={6}>
+        <GalleryContainer>
+          <Title>Gallery</Title>
+          <AlbumsContainer>
+            <AlbumsLink to="brathaus">
+              <AlbumsCard style={{ borderRadius: "10px 10px 0 0" }}>
+                <img src={brathausThumb} alt="" />
+                <CardTitle style={{ fontFamily: "Sonder" }}>BRATHAUS</CardTitle>
+              </AlbumsCard>
+            </AlbumsLink>
+            <AlbumsLink to="#">
+              <AlbumsCard>
+                <img
+                  style={{ height: "150px", width: "150px" }}
+                  src={StockImg}
+                  alt=""
+                />
 
-                  <CardTitle
-                    style={
-                      matches
-                        ? { fontSize: "40px", fontFamily: "TAKOYAKI" }
-                        : { fontSize: "60px", fontFamily: "TAKOYAKI" }
-                    }
-                  >
-                    Naan Stop - Coming Soon
-                  </CardTitle>
-                </AlbumsCard>
-              </AlbumsLink>
-              <AlbumsLink to="fcc">
-                <AlbumsCard>
-                  <img src={naanThumb} alt="" />
-                  <CardTitle style={{ fontFamily: "Montserrat" }}>
-                    Flavour Culture Catering
-                  </CardTitle>
-                </AlbumsCard>
-              </AlbumsLink>
-              <AlbumsLink to="bts">
-                <AlbumsCard style={{ borderRadius: "0 0 10px 10px" }}>
-                  <img src={btsThumb} alt="" />
-                  <CardTitle>Behind The Scenes</CardTitle>
-                </AlbumsCard>
-              </AlbumsLink>
-            </AlbumsContainer>
-          </GalleryContainer>
-        </Grid>
-        <Grid item sm={false} md={3} />
-        <Grid item sm={false} md={12}>
-          <div style={{ height: 200 }}></div>
-        </Grid>
+                <CardTitle
+                  style={
+                    matches
+                      ? { fontSize: "40px", fontFamily: "TAKOYAKI" }
+                      : { fontSize: "60px", fontFamily: "TAKOYAKI" }
+                  }
+                >
+                  Naan Stop - Coming Soon
+                </CardTitle>
+              </AlbumsCard>
+            </AlbumsLink>
+            <AlbumsLink to="fcc">
+              <AlbumsCard>
+                <img src={naanThumb} alt="" />
+                <CardTitle style={{ fontFamily: "Montserrat" }}>
+                  Flavour Culture Catering
+                </CardTitle>
+              </AlbumsCard>
+            </AlbumsLink>
+            <AlbumsLink to="bts">
+              <AlbumsCard style={{ borderRadius: "0 0 10px 10px" }}>
+                <img src={btsThumb} alt="" />
+                <CardTitle>Behind The Scenes</CardTitle>
+              </AlbumsCard>
+            </AlbumsLink>
+          </AlbumsContainer>
+        </GalleryContainer>
       </Grid>
-    </Layout>
+      <Grid item sm={false} md={3} />
+      <Grid item sm={false} md={12}>
+        <div style={{ height: 200 }}></div>
+      </Grid>
+    </Grid>
   )
 }
 

@@ -17,21 +17,19 @@ const Link = styled.p`
 
 const NotFound = () => {
   return (
-    <Layout>
-      <Container>
-        <h1 style={{ padding: "10px" }}>Page not found</h1>
-        <p style={{ padding: "10px" }}>
-          The page you are looking for doesn't exist or has moved.
-        </p>
-        <Link
-          onClick={() => {
-            navigate(-1)
-          }}
-        >
-          Go Back
-        </Link>
-      </Container>
-    </Layout>
+    <Container>
+      <h1 style={{ padding: "10px" }}>Page not found</h1>
+      <p style={{ padding: "10px" }}>
+        The page you are looking for doesn't exist or has moved.
+      </p>
+      <Link
+        onClick={() => {
+          navigate(-1)
+        }}
+      >
+        Go Back
+      </Link>
+    </Container>
   )
 }
 

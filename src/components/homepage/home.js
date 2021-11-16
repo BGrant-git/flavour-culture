@@ -8,7 +8,7 @@ import ReviewsComponent from "./googleReviews/reviewsComponent"
 
 const Home = () => {
   return (
-    <Grid container>
+    <Grid container style={{ overflowX: "hidden" }}>
       <Grid item style={{ margin: "auto" }}>
         <GalleryComponent />
       </Grid>
